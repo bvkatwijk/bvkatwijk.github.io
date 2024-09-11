@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "fd6e24738b22f294",
+            "id": "e38da12bbcf7078e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Blog - Some Things.md",
+                "file": "blog/blog.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Blog - Some Things.md",
+                "file": "blog/blog.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Blog - Some Things.md",
+                "file": "blog/blog.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Blog - Some Things.md"
+                "file": "blog/blog.md"
               }
             }
           }
@@ -146,10 +146,25 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "fd6e24738b22f294",
+  "active": "e38da12bbcf7078e",
   "lastOpenFiles": [
-    "Mkdocs.md",
+    "mkdocs.md",
     "index.md",
-    "Blog - Some Things.md"
+    "blog/blog.md",
+    "blog/Blog.md",
+    "cv/topdesk.md",
+    "cv/cv.md",
+    "cv/TopDesk.md",
+    "cv/CV.md",
+    "cv",
+    "blog",
+    "Mkdocs.md",
+    "CV/TopDesk.md",
+    "Blog/Blog.md",
+    "CV/CV.md",
+    "CV",
+    "Blog - Some Things.md",
+    "Blog.md",
+    "Blog"
   ]
 }
