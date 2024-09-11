@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "blog/blog.md",
+                "file": "cv/cv.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "blog/blog.md",
+                "file": "cv/cv.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "blog/blog.md",
+                "file": "cv/cv.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "blog/blog.md"
+                "file": "cv/cv.md"
               }
             }
           }
@@ -148,9 +148,9 @@
   },
   "active": "e38da12bbcf7078e",
   "lastOpenFiles": [
+    "blog/blog.md",
     "mkdocs.md",
     "index.md",
-    "blog/blog.md",
     "blog/Blog.md",
     "cv/topdesk.md",
     "cv/cv.md",
