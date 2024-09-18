@@ -16,6 +16,7 @@ cmdRun () {
 }
 
 cmdPublish () {
+    rm -rf site/*
     obsidian_to_hugo
     hugo --destination site
 }
