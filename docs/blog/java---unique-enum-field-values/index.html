@@ -46,12 +46,12 @@ The test will automatically validate that all fields have distinct values, even 
     
     
     
-      <meta name="robots" content="noindex, nofollow">
+      <meta name="robots" content="index, follow">
     
     
 
     
-<link rel="stylesheet" href="/ananke/css/main.min.css" >
+<link rel="stylesheet" href="/ananke/css/main.min.3c911f173ca8bc0d24f4f190a869190760929ba5133c451c7ac90aa960eef591.css" >
 
 
 
@@ -93,10 +93,12 @@ import io.vavr.collection.HashMap; import io.vavr.collection.Vector; import org.
 @Getter @RequiredArgsConstructor @Accessors(fluent = true) public enum Sides { LEFT(&#34;left&#34;), RIGHT(&#34;right&#34;); final String label; } You can enforce uniqueness using a unit test:
 import io.vavr.collection.HashMap; import io.vavr.collection.Vector; import org.junit.jupiter.api.Test; import java.util.function.Function; import static org.junit.jupiter.api.Assertions.assertEquals; class SidesTest { @Test void unique() { assertUnique(Sides.values(), Sides::label); } private static &lt;T&gt; void assertUnique(T[] values, Function&lt;T, String&gt; fieldValue) { assertEquals( HashMap.empty(), Vector.of(values) .groupBy(fieldValue) .filter(it -&gt; it._2().size() &gt; 1)); } } The test will automatically validate that all fields have distinct values, even if the Enum expands or changes in the future. Failures will report the enum values that have the same property. If we misconfigure the enum above ( RIGHT(&#34;left&#34;)) we see:">
 
+      
+    
 	
   </head>
 
-  <body class="ma0 avenir bg-near-white">
+  <body class="ma0 avenir bg-near-white production">
 
     
    

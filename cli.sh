@@ -18,7 +18,7 @@ cmdRun () {
 cmdPublish () {
     rm -rf docs/*
     obsidian_to_hugo
-    hugo --destination docs
+    HUGO_ENV=production hugo --destination docs
 }
 
 case $CMD in
