@@ -6,7 +6,7 @@ CMD=$1
 obsidian_to_hugo () {
     rm -rf content/*
     python -m obsidian_to_hugo \
-    --obsidian-vault-dir=docs \
+    --obsidian-vault-dir=vault \
     --hugo-content-dir=content
 }
 
@@ -16,9 +16,9 @@ cmdRun () {
 }
 
 cmdPublish () {
-    rm -rf site/*
+    rm -rf docs/*
     obsidian_to_hugo
-    hugo --destination site
+    hugo --destination docs
 }
 
 case $CMD in
