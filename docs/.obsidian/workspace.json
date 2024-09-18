@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "blog/AWS CDK -  ID, names, and resource replacement.md",
+                "file": "blog/Lombok.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "blog/AWS CDK -  ID, names, and resource replacement.md",
+                "file": "blog/Lombok.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "blog/AWS CDK -  ID, names, and resource replacement.md",
+                "file": "blog/Lombok.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "blog/AWS CDK -  ID, names, and resource replacement.md"
+                "file": "blog/Lombok.md"
               }
             }
           }
@@ -149,15 +149,17 @@
   },
   "active": "e38da12bbcf7078e",
   "lastOpenFiles": [
+    "TODO.md",
+    "blog/Lombok.md",
+    "blog/AWS CDK -  ID, names, and resource replacement.md",
     "cv/HeadFirst Group.md",
+    "cv/topdesk/TopDesk Exchange Sync.md",
     "cv/cv.md",
     "blog/blog.md",
     "blog/devoxx2024.md",
-    "blog/AWS CDK -  ID, names, and resource replacement.md",
     "cv/headfirst-group.md",
     "cv/topdesk.md",
     "mkdocs.md",
-    "cv/topdesk/TopDesk Exchange Sync.md",
     "cv/topdesk",
     "main.md",
     "blog/Blog.md",
