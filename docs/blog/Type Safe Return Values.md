@@ -7,7 +7,7 @@ tags:
   - fp
 title: Type Safe Return Values
 date: 2024-09-18T13:33:23+00:00
-lastmod: 2024-09-18T15:31:05+00:00
+lastmod: 2024-09-18T15:40:14+00:00
 ---
 When writing high-level business logic, I prefer to expose an API that uses type safe constructs. An critical part is the return value.
 

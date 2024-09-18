@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Blog/Type Safe Return Values.md",
+                "file": "main.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "Some things",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Blog/Type Safe Return Values.md",
+                "file": "main.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Blog/Type Safe Return Values.md",
+                "file": "main.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Blog/Type Safe Return Values.md"
+                "file": "main.md"
               }
             }
           }
@@ -149,14 +149,14 @@
   },
   "active": "e38da12bbcf7078e",
   "lastOpenFiles": [
-    "blog/blog.md",
     "Blog/Type Safe Return Values.md",
+    "Blog/Java - Unique Enum Field values.md",
+    "Blog/Error Values.md",
     "Blog/AWS CDK -  ID, names, and resource replacement.md",
+    "main.md",
+    "blog/blog.md",
     "cv/cv.md",
     "blog/devoxx2024.md",
-    "Blog/Error Values.md",
-    "Blog/Java - Unique Enum Field values.md",
-    "main.md",
     "Work/TopDesk/TopDesk Exchange Sync.md",
     "Work/TopDesk",
     "Work/HeadFirst Group.md",
