@@ -63,7 +63,7 @@
       "date-created-key": "date",
       "force-retention-of-create-value": true,
       "date-modified": true,
-      "date-modified-key": "date modified",
+      "date-modified-key": "lastmod",
       "format": "YYYY-MM-DDTHH:mm:ssZ",
       "convert-to-utc": true
     },
