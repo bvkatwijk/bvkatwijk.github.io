@@ -12,3 +12,10 @@ name = "github"
 url = "https://github.com/bvkatwijk"
 label = "Boris van Katwijk GitHub"
 color = "#ff6800"
+
+
+[[params.ananke_socials]]
+name = "linkedin"
+url = "https://www.linkedin.com/in/bvankatwijk/"
+label = "Boris van Katwijk LinkedIn"
+color = "#0072b1"
