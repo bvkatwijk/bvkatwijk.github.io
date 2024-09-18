@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "blog/Error Values.md",
+                "file": "Blog/Type Safe Return Values.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "blog/Error Values.md",
+                "file": "Blog/Type Safe Return Values.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "blog/Error Values.md",
+                "file": "Blog/Type Safe Return Values.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "blog/Error Values.md"
+                "file": "Blog/Type Safe Return Values.md"
               }
             }
           }
@@ -147,38 +147,38 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "f364f9ca41f23602",
+  "active": "e38da12bbcf7078e",
   "lastOpenFiles": [
-    "blog/Type Safe Return Values.md",
-    "Wiki/Vavr.md",
-    "blog/devoxx2024.md",
-    "blog/Java - Unique Enum Field values.md",
-    "blog/Error Values.md",
     "blog/blog.md",
+    "Blog/Type Safe Return Values.md",
+    "Blog/AWS CDK -  ID, names, and resource replacement.md",
+    "cv/cv.md",
+    "blog/devoxx2024.md",
+    "Blog/Error Values.md",
+    "Blog/Java - Unique Enum Field values.md",
+    "main.md",
+    "Work/TopDesk/TopDesk Exchange Sync.md",
+    "Work/TopDesk",
+    "Work/HeadFirst Group.md",
+    "Wiki/Vavr.md",
     "Wiki/Lombok.md",
     "Wiki",
-    "blog/AWS CDK -  ID, names, and resource replacement.md",
-    "cv/topdesk/TopDesk Exchange Sync.md",
+    "index.md",
+    "Mkdocs.md",
     "TODO.md",
-    "cv/HeadFirst Group.md",
-    "cv/cv.md",
     "cv/headfirst-group.md",
-    "cv/topdesk.md",
+    "Work/topdesk.md",
     "mkdocs.md",
-    "cv/topdesk",
-    "main.md",
     "blog/Blog.md",
     "cv/TopDesk.md",
     "cv/CV.md",
-    "cv",
-    "blog",
-    "Mkdocs.md",
+    "Work",
+    "Blog",
     "CV/TopDesk.md",
     "Blog/Blog.md",
     "CV/CV.md",
-    "CV",
+    "Work",
     "Blog - Some Things.md",
-    "Blog.md",
     "Blog"
   ]
 }
