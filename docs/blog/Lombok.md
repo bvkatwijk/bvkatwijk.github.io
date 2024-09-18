@@ -3,7 +3,7 @@ aliases:
 tags: 
 title: Lombok
 date: 2024-09-18T11:31:32+00:00
-lastmod: 2024-09-18T11:37:41+00:00
+lastmod: 2024-09-18T11:47:19+00:00
 ---
 One of my favourite tools in the Java ecosystem is [Lombok](https://projectlombok.org/). It reduces the code you have to write, and increases the correctness of your code.
 
