@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Works on Boris van Katwijk</title>
+    <link>https://bvkatwijk.github.io/work/</link>
+    <description>Recent content in Works on Boris van Katwijk</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 18 Sep 2024 11:18:48 +0000</lastBuildDate>
+    <atom:link href="https://bvkatwijk.github.io/work/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TopDesk Exchange Sync</title>
+      <link>https://bvkatwijk.github.io/work/topdesk/topdesk-exchange-sync/</link>
+      <pubDate>Wed, 18 Sep 2024 09:57:57 +0000</pubDate>
+      <guid>https://bvkatwijk.github.io/work/topdesk/topdesk-exchange-sync/</guid>
+      <description>&lt;p&gt;At &lt;a href=&#34;https://bvkatwijk.github.io/work/topdesk/&#34;&gt;topdesk&lt;/a&gt; I was part of a team working on a two-way synchronisation between &lt;a href=&#34;https://www.microsoft.com/en/microsoft-365/exchange/&#34;&gt;Microsoft Exchange&lt;/a&gt; and &lt;a href=&#34;https://www.topdesk.com/en/features/reservations-management/&#34;&gt;Topdesk Reservations&lt;/a&gt;. The goal was to allow different departments of a large organisation to use the room reservation system of their preference. Most branches of this organisation used Microsoft Exchange to book meeting rooms, whereas Office Management staff used Topdesk Reservations.&lt;/p&gt;&#xA;&lt;h3 id=&#34;race-conditions&#34;&gt;Race Conditions&lt;/h3&gt;&#xA;&lt;p&gt;When working on a two-way integration, one of the challenges can be race conditions where conflicting valid data exists in both of the systems. For example, in this case multiple people could book a room at the same time in different systems. The application logic of both systems will allow the reservation, but the synchronisation needs to be able to resolve these conflicts gracefully.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://bvkatwijk.github.io/work/headfirst-group/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://bvkatwijk.github.io/work/headfirst-group/</guid>
+      <description>&lt;p&gt;At &lt;a href=&#34;https://headfirst.group/en/&#34;&gt;HeadFirst Group&lt;/a&gt; I am currently working on various projects in CI/CD, Cloud, Ops, DX, IAC.&lt;/p&gt;&#xA;&lt;h3 id=&#34;aws-cdk&#34;&gt;AWS CDK&lt;/h3&gt;&#xA;&lt;p&gt;Existing infrastructure was a mix between hand-managed and Ansible playbooks using a mix of community plugins. Since the cloud scope was strictly limited to AWS, we migrated our cloud setup to AWS CDK.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://bvkatwijk.github.io/work/topdesk/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://bvkatwijk.github.io/work/topdesk/</guid>
+      <description>&lt;p&gt;At topdesk it was so interesting haha&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://bvkatwijk.github.io/work/topdesk/topdesk-exchange-sync/&#34;&gt;Two-way synchronisation between Microsoft Exchange and Topdesk Reservations&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Catalog Webshop&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>
