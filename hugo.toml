@@ -1,0 +1,4 @@
+baseURL = 'https://bvkatwijk.github.io/'
+languageCode = 'en-us'
+title = 'Boris van Katwijk'
+theme = 'ananke'
