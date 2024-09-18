@@ -1,0 +1,21 @@
+baseURL = 'https://bvkatwijk.github.io/'
+languageCode = 'en-us'
+title = 'Boris van Katwijk'
+theme = 'ananke'
+[[params.ananke_socials]]
+name = "twitter"
+url = "https://twitter.com/boris_katwijk"
+label = "Boris van Katwijk Twitter"
+
+[[params.ananke_socials]]
+name = "github"
+url = "https://github.com/bvkatwijk"
+label = "Boris van Katwijk GitHub"
+color = "#ff6800"
+
+
+[[params.ananke_socials]]
+name = "linkedin"
+url = "https://www.linkedin.com/in/bvankatwijk/"
+label = "Boris van Katwijk LinkedIn"
+color = "#0072b1"
