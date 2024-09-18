@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "cv/cv.md",
+                "file": "cv/topdesk.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "cv/cv.md",
+                "file": "cv/topdesk.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "cv/cv.md",
+                "file": "cv/topdesk.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "cv/cv.md"
+                "file": "cv/topdesk.md"
               }
             }
           }
@@ -148,12 +148,15 @@
   },
   "active": "e38da12bbcf7078e",
   "lastOpenFiles": [
+    "cv/cv.md",
+    "cv/topdesk.md",
+    "cv/topdesk/TopDesk Exchange Sync.md",
+    "cv/topdesk",
+    "main.md",
+    "blog/devoxx2024.md",
     "blog/blog.md",
     "mkdocs.md",
-    "index.md",
     "blog/Blog.md",
-    "cv/topdesk.md",
-    "cv/cv.md",
     "cv/TopDesk.md",
     "cv/CV.md",
     "cv",
