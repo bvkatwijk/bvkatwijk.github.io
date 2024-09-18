@@ -1,6 +1,5 @@
 
 .DS_Store
-site/
 public/
 resources/_gen/
 *.lock
