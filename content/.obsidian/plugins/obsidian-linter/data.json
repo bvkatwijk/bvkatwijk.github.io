@@ -60,7 +60,7 @@
     "yaml-timestamp": {
       "enabled": true,
       "date-created": true,
-      "date-created-key": "date created",
+      "date-created-key": "date",
       "force-retention-of-create-value": false,
       "date-modified": true,
       "date-modified-key": "date_mod",
