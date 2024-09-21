@@ -31,11 +31,11 @@
       "force-multi-line-array-style": ""
     },
     "insert-yaml-attributes": {
-      "enabled": false,
+      "enabled": true,
       "text-to-insert": "aliases: \ntags: "
     },
     "move-tags-to-yaml": {
-      "enabled": false,
+      "enabled": true,
       "how-to-handle-existing-tags": "Nothing",
       "tags-to-ignore": ""
     },
@@ -58,14 +58,14 @@
       "yaml-sort-order-for-other-keys": "None"
     },
     "yaml-timestamp": {
-      "enabled": false,
+      "enabled": true,
       "date-created": true,
       "date-created-key": "date created",
       "force-retention-of-create-value": false,
       "date-modified": true,
-      "date-modified-key": "date modified",
+      "date-modified-key": "date_mod",
       "format": "dddd, MMMM Do YYYY, h:mm:ss a",
-      "convert-to-utc": false
+      "convert-to-utc": true
     },
     "yaml-title": {
       "enabled": false,
