@@ -2,9 +2,8 @@
 aliases: 
 tags: 
 title: TopDesk Exchange Sync
-date: Wednesday, September 18th 2024, 3:36:29 pm
+date: 2024-09-18T09:57:57+00:00
 lastmod: 2024-09-18T11:18:48+00:00
-date_mod: Saturday, September 21st 2024, 8:25:44 pm
 ---
 At [topdesk]({{< ref "topdesk" >}}) I was part of a team working on a two-way synchronisation between [Microsoft Exchange](https://www.microsoft.com/en/microsoft-365/exchange/) and [Topdesk Reservations](https://www.topdesk.com/en/features/reservations-management/). The goal was to allow different departments of a large organisation to use the room reservation system of their preference. Most branches of this organisation used Microsoft Exchange to book meeting rooms, whereas Office Management staff used Topdesk Reservations.
 
