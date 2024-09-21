@@ -13,14 +13,28 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Blog/Error Values.md",
+                "file": "Blog/Java - Unique Enum Field values.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "f03a3dcafd9d77e4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Wiki/Lombok.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -86,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Blog/Error Values.md",
+                "file": "Wiki/Lombok.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +117,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Blog/Error Values.md",
+                "file": "Wiki/Lombok.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +140,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Blog/Error Values.md"
+                "file": "Wiki/Lombok.md"
               }
             }
           }
@@ -147,27 +161,27 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e38da12bbcf7078e",
+  "active": "f03a3dcafd9d77e4",
   "lastOpenFiles": [
-    "Blog/Type Safe Return Values.md",
-    "Blog/Error Values.md",
-    "Blog/AWS CDK -  ID, names, and resource replacement.md",
     "Blog/Java - Unique Enum Field values.md",
+    "Blog/Java - Error Return Types.md",
+    "Work/HeadFirst Group.md",
+    "Work/TopDesk.md",
+    "Work/TopDesk/TopDesk Exchange Sync.md",
     "main.md",
+    "Blog/AWS CDK -  ID, names, and resource replacement.md",
+    "Blog/Error Values.md",
+    "Wiki/Lombok.md",
+    "Wiki/Vavr.md",
     "blog/blog.md",
     "cv/cv.md",
     "blog/devoxx2024.md",
-    "Work/TopDesk/TopDesk Exchange Sync.md",
     "Work/TopDesk",
-    "Work/HeadFirst Group.md",
-    "Wiki/Vavr.md",
-    "Wiki/Lombok.md",
     "Wiki",
     "index.md",
     "Mkdocs.md",
     "TODO.md",
     "cv/headfirst-group.md",
-    "Work/topdesk.md",
     "mkdocs.md",
     "blog/Blog.md",
     "cv/TopDesk.md",

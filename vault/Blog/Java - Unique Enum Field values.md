@@ -1,11 +1,15 @@
 ---
 aliases: 
-tags: 
+tags:
+  - java
+  - enum
+  - lombok
+  - test
 title: Java - Unique Enum Field values
 date: 2024-09-18T11:51:15+00:00
-lastmod: 2024-09-18T12:25:17+00:00
+lastmod: 2024-09-21T21:16:55+00:00
 ---
-When you have a [Java Enum](https://www.baeldung.com/a-guide-to-java-enums) with a field, a requirement can be that the field value needs to be unique. Using a utility method it can be easy to create a test for this. Given an Enum class with a field (using some [[Lombok]]):**
+When you have a [Java Enum](https://www.baeldung.com/a-guide-to-java-enums) with a field, a requirement can be that the field value needs to be unique. Using a utility method it can be easy to create a test for this. Given an Enum class with a field (using some [[Lombok]]): 
 
 ```java
 @Getter
@@ -47,7 +51,7 @@ class SidesTest {
 }
 ```
 
-The test will automatically validate that all fields have distinct values, even if the Enum expands or changes in the future. Failures will report the enum values that have the same property. If we misconfigure the enum above ( `RIGHT("left")`) we see:
+The test will automatically validate that all fields have distinct values, even if the Enum expands or changes in the future. Failures will report the enum values that have the same property. If we misconfigure the enum above ( `RIGHT("left")`) we see which value occurred multiple times, and in which Enum values:
 
 ```
 Expected :HashMap()
