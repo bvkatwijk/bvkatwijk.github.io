@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Work/TopDesk/TopDesk Exchange Sync.md",
+                "file": "Blog/Type Safe Return Values.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Work/TopDesk/TopDesk Exchange Sync.md",
+                "file": "Blog/Type Safe Return Values.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Work/TopDesk/TopDesk Exchange Sync.md",
+                "file": "Blog/Type Safe Return Values.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Work/TopDesk/TopDesk Exchange Sync.md"
+                "file": "Blog/Type Safe Return Values.md"
               }
             }
           }
@@ -148,6 +148,11 @@
   },
   "active": "15285daeee4fb4e1",
   "lastOpenFiles": [
+    "Blog/Java - Unique Enum Field values.md",
+    "Blog/Error Values.md",
+    "Wiki/Vavr.md",
+    "Wiki/Lombok.md",
+    "Work/TopDesk/TopDesk Exchange Sync.md",
     "Work/HeadFirst Group.md",
     "Blog/AWS CDK -  ID, names, and resource replacement.md"
   ]

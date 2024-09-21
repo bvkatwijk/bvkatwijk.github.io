@@ -63,8 +63,8 @@
       "date-created-key": "date",
       "force-retention-of-create-value": false,
       "date-modified": true,
-      "date-modified-key": "date_mod",
-      "format": "dddd, MMMM Do YYYY, h:mm:ss a",
+      "date-modified-key": "lastmod",
+      "format": "YYYY-MM-DDTHH:mm:ssZ",
       "convert-to-utc": true
     },
     "yaml-title": {

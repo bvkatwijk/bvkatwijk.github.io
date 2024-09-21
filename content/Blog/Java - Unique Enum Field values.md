@@ -2,8 +2,9 @@
 aliases: 
 tags: 
 title: Java - Unique Enum Field values
-date: 2024-09-18T11:51:15+00:00
+date: Wednesday, September 18th 2024, 3:35:33 pm
 lastmod: 2024-09-18T12:25:17+00:00
+date_mod: Saturday, September 21st 2024, 8:25:50 pm
 ---
 When you have a [Java Enum](https://www.baeldung.com/a-guide-to-java-enums) with a field, a requirement can be that the field value needs to be unique. Using a utility method it can be easy to create a test for this. Given an Enum class with a field (using some [Lombok]({{< ref "Lombok" >}})):**
 
