@@ -7,19 +7,17 @@ tags:
   - fp
 title: Java - Error Return Types
 date: 2024-09-18T13:33:23+00:00
-lastmod: 2024-09-21T21:09:13+00:00
+lastmod: 2024-09-24T19:07:14+00:00
 ---
 When writing high-level business logic, I prefer to expose an API that uses type safe constructs in the return value to express the possible outcomes.
 
-Suppose we design an API for baking pizza:
-
-Let's design a `Baker` capable of creating `Pizza`. I'll be using an `interface` here for the Baker since the actual logic is not relevant for this example. 
+Suppose we design a `Baker` capable of creating `Pizza`. I'll be using an `interface` here for the Baker since the actual logic is not relevant for this example. 
 
 ```java
 record Pizza() { }
 ```
 
-We will be deciding on the signature of a `createPizza` method. Unfortunately our `Baker` sometimes runs out of ingredients. However, our API does not reveal this fact. We can choose how we are going to express the possible paths of failure, and listed below are some common options. I frequently encounter solutions that results in poor handling and developer ergonomics. I have sorted them by my preference when it comes to handling domain errors, from worst to best.
+We will be deciding on the signature of a `createPizza` method. Our `Baker` sometimes runs out of ingredients, making it impossible to produce a `Pizza`. However, our API does not reveal this fact. We can choose how we are going to express the possible paths of failure, and listed below are some common options. I frequently encounter solutions that results in poor handling and developer ergonomics. I have sorted them by my preference when it comes to handling domain errors, from worst to best.
 
 ### Nullable
 ```java
