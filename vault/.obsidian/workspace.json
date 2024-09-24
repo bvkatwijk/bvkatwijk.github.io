@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Blog/Shell - Switch Statements.md",
+                "file": "Pages/Contact.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "form-contact",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -87,7 +87,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Blog/Shell - Switch Statements.md",
+                "file": "Pages/Contact.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Blog/Shell - Switch Statements.md",
+                "file": "Pages/Contact.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,7 +127,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Blog/Shell - Switch Statements.md"
+                "file": "Pages/Contact.md"
               }
             }
           }
@@ -148,18 +148,20 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "24f0172adca5fc18",
+  "active": "a0da98e660a2ade4",
   "lastOpenFiles": [
+    "main.md",
+    "Pages/Contact.md",
+    "Pages",
+    "Blog/Shell - Switch Statements.md",
     "Blog/Java - Unique Enum Field values.md",
     "Wiki/Tools - Lombok.md",
     "Wiki/Lombok.md",
-    "Blog/Shell - Switch Statements.md",
     "Blog/Java - Error Return Types.md",
     "Wiki/Vavr.md",
     "Work/HeadFirst Group.md",
     "Work/TopDesk.md",
     "Work/TopDesk/TopDesk Exchange Sync.md",
-    "main.md",
     "Blog/AWS CDK -  ID, names, and resource replacement.md",
     "Blog/Error Values.md",
     "blog/blog.md",
@@ -179,7 +181,6 @@
     "Blog",
     "CV/TopDesk.md",
     "Blog/Blog.md",
-    "CV/CV.md",
     "Work",
     "Blog"
   ]
