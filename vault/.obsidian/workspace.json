@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Pages/Contact.md",
+                "file": "Blog/Shell - Switch Statements.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -66,8 +66,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -87,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Pages/Contact.md",
+                "file": "Blog/Shell - Switch Statements.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Pages/Contact.md",
+                "file": "Blog/Shell - Switch Statements.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Pages/Contact.md"
+                "file": "Blog/Shell - Switch Statements.md"
               }
             }
           }
@@ -148,10 +147,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "a0da98e660a2ade4",
+  "active": "24f0172adca5fc18",
   "lastOpenFiles": [
-    "main.md",
+    "_index.md",
     "Pages/Contact.md",
+    "main.md",
     "Pages",
     "Blog/Shell - Switch Statements.md",
     "Blog/Java - Unique Enum Field values.md",
@@ -180,7 +180,6 @@
     "Work",
     "Blog",
     "CV/TopDesk.md",
-    "Blog/Blog.md",
     "Work",
     "Blog"
   ]

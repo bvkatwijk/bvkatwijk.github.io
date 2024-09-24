@@ -1,9 +1,12 @@
 ---
 aliases: 
-tags: 
+tags:
+  - shell
+  - bash
+  - switch
 title: Shell - Switch Statements
 date: 2024-09-21T21:28:03+00:00
-lastmod: 2024-09-24T17:31:19+00:00
+lastmod: 2024-09-24T18:09:25+00:00
 ---
 Recently I had to work a bit more than usual on shell scripting, and had to do a bunch of switches. I used this also in the scripts for this project. A simplified impression shows how we could implement a very basic CLI, matching the input with supported commands:
 
