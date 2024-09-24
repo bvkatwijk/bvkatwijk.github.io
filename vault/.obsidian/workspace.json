@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Blog/Shell - Switch Statements.md",
+                "file": "Wiki/Lombok.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -63,7 +63,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "Some things",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -80,7 +80,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -100,7 +101,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Blog/Shell - Switch Statements.md",
+                "file": "Wiki/Lombok.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Blog/Shell - Switch Statements.md",
+                "file": "Wiki/Lombok.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -140,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Blog/Shell - Switch Statements.md"
+                "file": "Wiki/Lombok.md"
               }
             }
           }
@@ -163,8 +164,8 @@
   },
   "active": "f03a3dcafd9d77e4",
   "lastOpenFiles": [
-    "Wiki/Lombok.md",
     "Blog/Shell - Switch Statements.md",
+    "Wiki/Lombok.md",
     "Blog/Java - Unique Enum Field values.md",
     "Blog/Java - Error Return Types.md",
     "Wiki/Vavr.md",
