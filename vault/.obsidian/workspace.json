@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Blog/Shell - Switch Statements.md",
+                "file": "Blog/Dev - Hugo.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Blog/Shell - Switch Statements.md",
+                "file": "Blog/Dev - Hugo.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Blog/Shell - Switch Statements.md",
+                "file": "Blog/Dev - Hugo.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Blog/Shell - Switch Statements.md"
+                "file": "Blog/Dev - Hugo.md"
               }
             }
           }
@@ -150,10 +150,11 @@
   "active": "24f0172adca5fc18",
   "lastOpenFiles": [
     "_index.md",
-    "Pages/Contact.md",
     "main.md",
-    "Pages",
+    "Blog/Dev - Hugo.md",
     "Blog/Shell - Switch Statements.md",
+    "Pages/Contact.md",
+    "Pages",
     "Blog/Java - Unique Enum Field values.md",
     "Wiki/Tools - Lombok.md",
     "Wiki/Lombok.md",
@@ -179,7 +180,6 @@
     "cv/CV.md",
     "Work",
     "Blog",
-    "CV/TopDesk.md",
     "Work",
     "Blog"
   ]
