@@ -4,7 +4,8 @@ set -euox pipefail
 CMD=$1
 
 obsidian_to_hugo () {
-    rm -rf content/*
+    rm -rf content/
+    mkdir content/
     python -m obsidian_to_hugo \
     --obsidian-vault-dir=vault \
     --hugo-content-dir=content
