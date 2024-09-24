@@ -1,7 +1,0 @@
-site_name: Boris van Katwijk
-nav:
-  - home: index.md
-  - blog: blog/blog.md
-  - cv: cv/cv.md
-theme:
-    name: dracula
