@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Blog/Dev - Hugo.md",
+                "file": "Blog/Java - Error Return Types.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "form-contact",
+                "query": "Error Values",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Blog/Dev - Hugo.md",
+                "file": "Blog/Java - Error Return Types.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Blog/Dev - Hugo.md",
+                "file": "Blog/Java - Error Return Types.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Blog/Dev - Hugo.md"
+                "file": "Blog/Java - Error Return Types.md"
               }
             }
           }
@@ -149,22 +149,21 @@
   },
   "active": "24f0172adca5fc18",
   "lastOpenFiles": [
-    "_index.md",
-    "main.md",
     "Blog/Dev - Hugo.md",
+    "Blog/Error Values.md",
     "Blog/Shell - Switch Statements.md",
+    "Blog/Java - Unique Enum Field values.md",
+    "Wiki/Lombok.md",
+    "main.md",
+    "_index.md",
     "Pages/Contact.md",
     "Pages",
-    "Blog/Java - Unique Enum Field values.md",
-    "Wiki/Tools - Lombok.md",
-    "Wiki/Lombok.md",
     "Blog/Java - Error Return Types.md",
     "Wiki/Vavr.md",
     "Work/HeadFirst Group.md",
     "Work/TopDesk.md",
     "Work/TopDesk/TopDesk Exchange Sync.md",
     "Blog/AWS CDK -  ID, names, and resource replacement.md",
-    "Blog/Error Values.md",
     "blog/blog.md",
     "cv/cv.md",
     "blog/devoxx2024.md",

@@ -3,13 +3,12 @@ aliases:
 tags:
   - java
   - enum
-  - lombok
   - test
 title: Java - Unique Enum Field values
 date: 2024-09-18T11:51:15+00:00
-lastmod: 2024-09-24T17:24:55+00:00
+lastmod: 2024-09-24T19:01:14+00:00
 ---
-When you have a [Java Enum](https://www.baeldung.com/a-guide-to-java-enums) with a field, a requirement can be that the field value needs to be unique. Using a utility method it can be easy to create a test for this. Given an Enum class with a field (using some [[Tools - Lombok|Lombok]]): 
+When you have a [Java Enum](https://www.baeldung.com/a-guide-to-java-enums) with a field, a requirement can be that the field value needs to be unique. Using a utility method it can be easy to create a test for this. Given an Enum class with a field (using some [[Lombok]]): 
 
 ```java
 @Getter
