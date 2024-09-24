@@ -6,21 +6,21 @@
     <description>Recent content in Wikis on Boris van Katwijk</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 18 Sep 2024 11:47:19 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 24 Sep 2024 17:24:39 +0000</lastBuildDate>
     <atom:link href="https://bvkatwijk.github.io/wiki/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Lombok</title>
-      <link>https://bvkatwijk.github.io/wiki/lombok/</link>
-      <pubDate>Wed, 18 Sep 2024 11:31:32 +0000</pubDate>
-      <guid>https://bvkatwijk.github.io/wiki/lombok/</guid>
-      <description>&lt;p&gt;One of my favourite tools in the Java ecosystem is &lt;a href=&#34;https://projectlombok.org/&#34;&gt;Lombok&lt;/a&gt;. It reduces the code you have to write, and increases the correctness of your code.&lt;/p&gt;&#xA;&lt;p&gt;These days I usually include this &lt;code&gt;lombok.config&lt;/code&gt; &lt;a href=&#34;https://projectlombok.org/features/configuration&#34;&gt;configuration file&lt;/a&gt; in the root of my projects:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-config&#34; data-lang=&#34;config&#34;&gt;config.stopBubbling = true&#xA;lombok.addLombokGeneratedAnnotation = true&#xA;lombok.fieldDefaults.defaultPrivate = true&#xA;lombok.fieldDefaults.defaultFinal = true&#xA;lombok.accessors.chain = true&#xA;lombok.accessors.fluent = true&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;configuration&#34;&gt;Configuration&lt;/h3&gt;&#xA;&lt;p&gt;When I use setters, I prefer to return the instance I&amp;rsquo;m working on to be able to chain a lot of calls together. This is set as the default using &lt;code&gt;lombok.accessors.chain = true&lt;/code&gt;.&lt;/p&gt;</description>
+      <title>Vavr</title>
+      <link>https://bvkatwijk.github.io/wiki/vavr/</link>
+      <pubDate>Wed, 18 Sep 2024 15:34:48 +0000</pubDate>
+      <guid>https://bvkatwijk.github.io/wiki/vavr/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;[!faq]- Are callouts foldable? &amp;gt; Yes! In a foldable callout, the contents are hidden when the callout is collapsed.&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
     </item>
     <item>
-      <title></title>
-      <link>https://bvkatwijk.github.io/wiki/vavr/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://bvkatwijk.github.io/wiki/vavr/</guid>
-      <description></description>
+      <title>Tools - Lombok</title>
+      <link>https://bvkatwijk.github.io/wiki/tools---lombok/</link>
+      <pubDate>Wed, 18 Sep 2024 11:31:32 +0000</pubDate>
+      <guid>https://bvkatwijk.github.io/wiki/tools---lombok/</guid>
+      <description>&lt;p&gt;One of my favourite tools in the Java ecosystem is &lt;a href=&#34;https://projectlombok.org/&#34;&gt;Lombok&lt;/a&gt;. It reduces the code you have to write, and increases the correctness of your code.&lt;/p&gt;&#xA;&lt;p&gt;These days I usually include this &lt;code&gt;lombok.config&lt;/code&gt; &lt;a href=&#34;https://projectlombok.org/features/configuration&#34;&gt;configuration file&lt;/a&gt; in the root of my projects:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-config&#34; data-lang=&#34;config&#34;&gt;config.stopBubbling = true&#xA;lombok.addLombokGeneratedAnnotation = true&#xA;lombok.fieldDefaults.defaultPrivate = true&#xA;lombok.fieldDefaults.defaultFinal = true&#xA;lombok.accessors.chain = true&#xA;lombok.accessors.fluent = true&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;configuration&#34;&gt;Configuration&lt;/h3&gt;&#xA;&lt;p&gt;When I use setters, I prefer to return the instance I&amp;rsquo;m working on to be able to chain a lot of calls together. This is set as the default using &lt;code&gt;lombok.accessors.chain = true&lt;/code&gt;.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

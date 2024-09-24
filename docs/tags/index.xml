@@ -6,8 +6,43 @@
     <description>Recent content in Tags on Boris van Katwijk</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 18 Sep 2024 15:40:14 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 24 Sep 2024 18:09:25 +0000</lastBuildDate>
     <atom:link href="https://bvkatwijk.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bash</title>
+      <link>https://bvkatwijk.github.io/tags/bash/</link>
+      <pubDate>Sat, 21 Sep 2024 21:28:03 +0000</pubDate>
+      <guid>https://bvkatwijk.github.io/tags/bash/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Shell</title>
+      <link>https://bvkatwijk.github.io/tags/shell/</link>
+      <pubDate>Sat, 21 Sep 2024 21:28:03 +0000</pubDate>
+      <guid>https://bvkatwijk.github.io/tags/shell/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Switch</title>
+      <link>https://bvkatwijk.github.io/tags/switch/</link>
+      <pubDate>Sat, 21 Sep 2024 21:28:03 +0000</pubDate>
+      <guid>https://bvkatwijk.github.io/tags/switch/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Gradle</title>
+      <link>https://bvkatwijk.github.io/tags/gradle/</link>
+      <pubDate>Wed, 18 Sep 2024 15:34:48 +0000</pubDate>
+      <guid>https://bvkatwijk.github.io/tags/gradle/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Java</title>
+      <link>https://bvkatwijk.github.io/tags/java/</link>
+      <pubDate>Wed, 18 Sep 2024 15:34:48 +0000</pubDate>
+      <guid>https://bvkatwijk.github.io/tags/java/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Todo</title>
       <link>https://bvkatwijk.github.io/tags/todo/</link>
@@ -37,10 +72,24 @@
       <description></description>
     </item>
     <item>
-      <title>Java</title>
-      <link>https://bvkatwijk.github.io/tags/java/</link>
-      <pubDate>Wed, 18 Sep 2024 13:33:23 +0000</pubDate>
-      <guid>https://bvkatwijk.github.io/tags/java/</guid>
+      <title>Enum</title>
+      <link>https://bvkatwijk.github.io/tags/enum/</link>
+      <pubDate>Wed, 18 Sep 2024 11:51:15 +0000</pubDate>
+      <guid>https://bvkatwijk.github.io/tags/enum/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lombok</title>
+      <link>https://bvkatwijk.github.io/tags/lombok/</link>
+      <pubDate>Wed, 18 Sep 2024 11:51:15 +0000</pubDate>
+      <guid>https://bvkatwijk.github.io/tags/lombok/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Test</title>
+      <link>https://bvkatwijk.github.io/tags/test/</link>
+      <pubDate>Wed, 18 Sep 2024 11:51:15 +0000</pubDate>
+      <guid>https://bvkatwijk.github.io/tags/test/</guid>
       <description></description>
     </item>
   </channel>

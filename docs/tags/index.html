@@ -46,8 +46,8 @@
   <meta property="og:type" content="website">
 
   <meta itemprop="name" content="Tags">
-  <meta itemprop="datePublished" content="2024-09-18T15:15:39+00:00">
-  <meta itemprop="dateModified" content="2024-09-18T15:40:14+00:00">
+  <meta itemprop="datePublished" content="2024-09-21T21:28:03+00:00">
+  <meta itemprop="dateModified" content="2024-09-24T18:09:25+00:00">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Tags">
 
@@ -60,8 +60,9 @@
 
     
 
-  <header>
-    <div class="pb3-m pb6-l bg-black">
+  
+  <header class="cover bg-top" style="background-image: url('https://bvkatwijk.github.io/images/background.png');">
+    <div class="bg-black-60">
       <nav class="pv3 ph3 ph4-ns" role="navigation">
   <div class="flex-l justify-between items-center center">
     <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
@@ -72,6 +73,16 @@
     <div class="flex-l items-center">
       
 
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/pages/contact/" title="Contact page">
+              Contact
+            </a>
+          </li>
+          
+        </ul>
       
       
 <div class="ananke-socials">
@@ -119,8 +130,8 @@
   </div>
 </nav>
 
-      <div class="tc-l pv3 ph3 ph4-ns">
-        <h1 class="f2 f-subheadline-l fw2 light-silver mb0 lh-title">
+      <div class="tc-l pv4 pv6-l ph3 ph4-ns">
+        <h1 class="f2 f-subheadline-l fw2 white-90 mb0 lh-title">
           Tags
         </h1>
         
@@ -139,6 +150,221 @@
   </article>
   <div class="mw8 center">
     <section class="ph4">
+      
+        <h2 class="f1">
+          <a href="/tags/bash/" class="link blue hover-black">
+            Tag: Bash
+          </a>
+        </h2>
+        
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Blogs</span>
+    <h1 class="f3 near-black">
+      <a href="/blog/shell---switch-statements/" class="link black dim">
+        Shell - Switch Statements
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <p>Recently I had to work a bit more than usual on shell scripting, and had to do a bunch of switches. I used this also in the scripts for this project. A simplified impression shows how we could implement a very basic CLI, matching the input with supported commands:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/sh
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>CMD<span style="color:#f92672">=</span>$1
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">case</span> $CMD in
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;run&#34;</span><span style="color:#f92672">)</span> echo <span style="color:#e6db74">&#34;cmdRun&#34;</span> ;;
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;publish&#34;</span><span style="color:#f92672">)</span> echo <span style="color:#e6db74">&#34;cmdPublish&#34;</span> ;;
+</span></span><span style="display:flex;"><span>	*<span style="color:#f92672">)</span> echo <span style="color:#e6db74">&#34;Unknown command </span>$CMD<span style="color:#e6db74">&#34;</span>; exit <span style="color:#ae81ff">1</span> ;;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">esac</span>
+</span></span></code></pre></div><p>This way we can match the provided input with supported cases (<code>&quot;run&quot;</code> and <code>&quot;publish&quot;</code>), and error otherwise (<code>*</code>).</p>
+    </div>
+    <a href="/blog/shell---switch-statements/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+  </div>
+</div>
+
+        
+      
+        <h2 class="f1">
+          <a href="/tags/shell/" class="link blue hover-black">
+            Tag: Shell
+          </a>
+        </h2>
+        
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Blogs</span>
+    <h1 class="f3 near-black">
+      <a href="/blog/shell---switch-statements/" class="link black dim">
+        Shell - Switch Statements
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <p>Recently I had to work a bit more than usual on shell scripting, and had to do a bunch of switches. I used this also in the scripts for this project. A simplified impression shows how we could implement a very basic CLI, matching the input with supported commands:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/sh
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>CMD<span style="color:#f92672">=</span>$1
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">case</span> $CMD in
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;run&#34;</span><span style="color:#f92672">)</span> echo <span style="color:#e6db74">&#34;cmdRun&#34;</span> ;;
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;publish&#34;</span><span style="color:#f92672">)</span> echo <span style="color:#e6db74">&#34;cmdPublish&#34;</span> ;;
+</span></span><span style="display:flex;"><span>	*<span style="color:#f92672">)</span> echo <span style="color:#e6db74">&#34;Unknown command </span>$CMD<span style="color:#e6db74">&#34;</span>; exit <span style="color:#ae81ff">1</span> ;;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">esac</span>
+</span></span></code></pre></div><p>This way we can match the provided input with supported cases (<code>&quot;run&quot;</code> and <code>&quot;publish&quot;</code>), and error otherwise (<code>*</code>).</p>
+    </div>
+    <a href="/blog/shell---switch-statements/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+  </div>
+</div>
+
+        
+      
+        <h2 class="f1">
+          <a href="/tags/switch/" class="link blue hover-black">
+            Tag: Switch
+          </a>
+        </h2>
+        
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Blogs</span>
+    <h1 class="f3 near-black">
+      <a href="/blog/shell---switch-statements/" class="link black dim">
+        Shell - Switch Statements
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <p>Recently I had to work a bit more than usual on shell scripting, and had to do a bunch of switches. I used this also in the scripts for this project. A simplified impression shows how we could implement a very basic CLI, matching the input with supported commands:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/sh
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>CMD<span style="color:#f92672">=</span>$1
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">case</span> $CMD in
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;run&#34;</span><span style="color:#f92672">)</span> echo <span style="color:#e6db74">&#34;cmdRun&#34;</span> ;;
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;publish&#34;</span><span style="color:#f92672">)</span> echo <span style="color:#e6db74">&#34;cmdPublish&#34;</span> ;;
+</span></span><span style="display:flex;"><span>	*<span style="color:#f92672">)</span> echo <span style="color:#e6db74">&#34;Unknown command </span>$CMD<span style="color:#e6db74">&#34;</span>; exit <span style="color:#ae81ff">1</span> ;;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">esac</span>
+</span></span></code></pre></div><p>This way we can match the provided input with supported cases (<code>&quot;run&quot;</code> and <code>&quot;publish&quot;</code>), and error otherwise (<code>*</code>).</p>
+    </div>
+    <a href="/blog/shell---switch-statements/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+  </div>
+</div>
+
+        
+      
+        <h2 class="f1">
+          <a href="/tags/gradle/" class="link blue hover-black">
+            Tag: Gradle
+          </a>
+        </h2>
+        
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Works</span>
+    <h1 class="f3 near-black">
+      <a href="/work/headfirst-group/" class="link black dim">
+        HeadFirst Group
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <p>At <a href="https://headfirst.group/en/">HeadFirst Group</a> I am currently working on various projects in CI/CD, Cloud, Ops, DX, IAC.</p>
+<h3 id="aws-cdk">AWS CDK</h3>
+<p>Existing infrastructure was a mix between hand-managed and <a href="https://www.ansible.com/">Ansible</a> playbooks using a mix of community plugins. Since the cloud scope was strictly limited to AWS, we migrated our cloud setup to <a href="https://aws.amazon.com/cdk/">AWS CDK</a>.</p>
+<p>We used #java , #gradle</p>
+    </div>
+    <a href="/work/headfirst-group/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+  </div>
+</div>
+
+        
+      
+        <h2 class="f1">
+          <a href="/tags/java/" class="link blue hover-black">
+            Tag: Java
+          </a>
+        </h2>
+        
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Works</span>
+    <h1 class="f3 near-black">
+      <a href="/work/headfirst-group/" class="link black dim">
+        HeadFirst Group
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <p>At <a href="https://headfirst.group/en/">HeadFirst Group</a> I am currently working on various projects in CI/CD, Cloud, Ops, DX, IAC.</p>
+<h3 id="aws-cdk">AWS CDK</h3>
+<p>Existing infrastructure was a mix between hand-managed and <a href="https://www.ansible.com/">Ansible</a> playbooks using a mix of community plugins. Since the cloud scope was strictly limited to AWS, we migrated our cloud setup to <a href="https://aws.amazon.com/cdk/">AWS CDK</a>.</p>
+<p>We used #java , #gradle</p>
+    </div>
+    <a href="/work/headfirst-group/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+  </div>
+</div>
+
+        
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Blogs</span>
+    <h1 class="f3 near-black">
+      <a href="/blog/java---error-return-types/" class="link black dim">
+        Java - Error Return Types
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <p>When writing high-level business logic, I prefer to expose an API that uses type safe constructs in the return value to express the possible outcomes.</p>
+<p>Suppose we design an API for baking pizza:</p>
+<p>Let&rsquo;s design a <code>Baker</code> capable of creating <code>Pizza</code>. I&rsquo;ll be using an <code>interface</code> here for the Baker since the actual logic is not relevant for this example.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">record</span> <span style="color:#a6e22e">Pizza</span>() { }
+</span></span></code></pre></div><p>We will be deciding on the signature of a <code>createPizza</code> method. Unfortunately our <code>Baker</code> sometimes runs out of ingredients. However, our API does not reveal this fact. We can choose how we are going to express the possible paths of failure, and listed below are some common options. I frequently encounter solutions that results in poor handling and developer ergonomics. I have sorted them by my preference when it comes to handling domain errors, from worst to best.</p>
+    </div>
+    <a href="/blog/java---error-return-types/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+  </div>
+</div>
+
+        
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Blogs</span>
+    <h1 class="f3 near-black">
+      <a href="/blog/java---unique-enum-field-values/" class="link black dim">
+        Java - Unique Enum Field values
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <p>When you have a <a href="https://www.baeldung.com/a-guide-to-java-enums">Java Enum</a> with a field, a requirement can be that the field value needs to be unique. Using a utility method it can be easy to create a test for this. Given an Enum class with a field (using some <a href="https://bvkatwijk.github.io/wiki/tools---lombok/">Lombok</a>):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Getter</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@RequiredArgsConstructor</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@Accessors</span>(fluent <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">enum</span> Sides {  
+</span></span><span style="display:flex;"><span>    LEFT(<span style="color:#e6db74">&#34;left&#34;</span>),  
+</span></span><span style="display:flex;"><span>    RIGHT(<span style="color:#e6db74">&#34;right&#34;</span>);  
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">final</span> String label;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>You can enforce uniqueness using a unit test:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> io.vavr.collection.HashMap;  
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> io.vavr.collection.Vector;  
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.junit.jupiter.api.Test;  
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.util.function.Function;  
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import static</span> org.junit.jupiter.api.Assertions.assertEquals;  
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SidesTest</span> {  
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Test</span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">unique</span>() {  
+</span></span><span style="display:flex;"><span>        assertUnique(Sides.<span style="color:#a6e22e">values</span>(), Sides::label);  
+</span></span><span style="display:flex;"><span>    }  
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">assertUnique</span>(T<span style="color:#f92672">[]</span> values, Function<span style="color:#f92672">&lt;</span>T, String<span style="color:#f92672">&gt;</span> fieldValue) {  
+</span></span><span style="display:flex;"><span>        assertEquals(  
+</span></span><span style="display:flex;"><span>            HashMap.<span style="color:#a6e22e">empty</span>(),  
+</span></span><span style="display:flex;"><span>            Vector.<span style="color:#a6e22e">of</span>(values)  
+</span></span><span style="display:flex;"><span>                .<span style="color:#a6e22e">groupBy</span>(fieldValue)  
+</span></span><span style="display:flex;"><span>                .<span style="color:#a6e22e">filter</span>(it <span style="color:#f92672">-&gt;</span> it.<span style="color:#a6e22e">_2</span>().<span style="color:#a6e22e">size</span>() <span style="color:#f92672">&gt;</span> 1));  
+</span></span><span style="display:flex;"><span>    }  
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>The test will automatically validate that all fields have distinct values, even if the Enum expands or changes in the future. Failures will report the enum values that have the same property. If we misconfigure the enum above ( <code>RIGHT(&quot;left&quot;)</code>) we see which value occurred multiple times, and in which Enum values:</p>
+    </div>
+    <a href="/blog/java---unique-enum-field-values/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+  </div>
+</div>
+
+        
       
         <h2 class="f1">
           <a href="/tags/todo/" class="link blue hover-black">
@@ -162,22 +388,6 @@
 </div>
 
         
-          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Blogs</span>
-    <h1 class="f3 near-black">
-      <a href="/blog/aws-cdk----id-names-and-resource-replacement/" class="link black dim">
-        AWS CDK -  ID, names, and resource replacement
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>Coming soon&hellip;</p>
-    </div>
-    <a href="/blog/aws-cdk----id-names-and-resource-replacement/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-  </div>
-</div>
-
-        
       
         <h2 class="f1">
           <a href="/tags/api/" class="link blue hover-black">
@@ -189,18 +399,18 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Blogs</span>
     <h1 class="f3 near-black">
-      <a href="/blog/type-safe-return-values/" class="link black dim">
-        Type Safe Return Values
+      <a href="/blog/java---error-return-types/" class="link black dim">
+        Java - Error Return Types
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>When writing high-level business logic, I prefer to expose an API that uses type safe constructs. An critical part is the return value.</p>
+      <p>When writing high-level business logic, I prefer to expose an API that uses type safe constructs in the return value to express the possible outcomes.</p>
 <p>Suppose we design an API for baking pizza:</p>
+<p>Let&rsquo;s design a <code>Baker</code> capable of creating <code>Pizza</code>. I&rsquo;ll be using an <code>interface</code> here for the Baker since the actual logic is not relevant for this example.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">record</span> <span style="color:#a6e22e">Pizza</span>() { }
-</span></span></code></pre></div><p>Let&rsquo;s design a <code>Baker</code> capable of creating <code>Pizza</code>. I&rsquo;ll be using an <code>interface</code> since the actual logic is not relevant for this example.</p>
-<p>Unfortunately our <code>Baker</code> sometimes runs out of ingredients. However, our API does not reveal this fact. We can choose how we are going to express the possible paths of failure, and listed below are some common options. I frequently encounter solutions that results in poor handling and developer ergonomics.</p>
+</span></span></code></pre></div><p>We will be deciding on the signature of a <code>createPizza</code> method. Unfortunately our <code>Baker</code> sometimes runs out of ingredients. However, our API does not reveal this fact. We can choose how we are going to express the possible paths of failure, and listed below are some common options. I frequently encounter solutions that results in poor handling and developer ergonomics. I have sorted them by my preference when it comes to handling domain errors, from worst to best.</p>
     </div>
-    <a href="/blog/type-safe-return-values/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+    <a href="/blog/java---error-return-types/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
   </div>
 </div>
 
@@ -216,18 +426,18 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Blogs</span>
     <h1 class="f3 near-black">
-      <a href="/blog/type-safe-return-values/" class="link black dim">
-        Type Safe Return Values
+      <a href="/blog/java---error-return-types/" class="link black dim">
+        Java - Error Return Types
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>When writing high-level business logic, I prefer to expose an API that uses type safe constructs. An critical part is the return value.</p>
+      <p>When writing high-level business logic, I prefer to expose an API that uses type safe constructs in the return value to express the possible outcomes.</p>
 <p>Suppose we design an API for baking pizza:</p>
+<p>Let&rsquo;s design a <code>Baker</code> capable of creating <code>Pizza</code>. I&rsquo;ll be using an <code>interface</code> here for the Baker since the actual logic is not relevant for this example.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">record</span> <span style="color:#a6e22e">Pizza</span>() { }
-</span></span></code></pre></div><p>Let&rsquo;s design a <code>Baker</code> capable of creating <code>Pizza</code>. I&rsquo;ll be using an <code>interface</code> since the actual logic is not relevant for this example.</p>
-<p>Unfortunately our <code>Baker</code> sometimes runs out of ingredients. However, our API does not reveal this fact. We can choose how we are going to express the possible paths of failure, and listed below are some common options. I frequently encounter solutions that results in poor handling and developer ergonomics.</p>
+</span></span></code></pre></div><p>We will be deciding on the signature of a <code>createPizza</code> method. Unfortunately our <code>Baker</code> sometimes runs out of ingredients. However, our API does not reveal this fact. We can choose how we are going to express the possible paths of failure, and listed below are some common options. I frequently encounter solutions that results in poor handling and developer ergonomics. I have sorted them by my preference when it comes to handling domain errors, from worst to best.</p>
     </div>
-    <a href="/blog/type-safe-return-values/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+    <a href="/blog/java---error-return-types/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
   </div>
 </div>
 
@@ -243,26 +453,26 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Blogs</span>
     <h1 class="f3 near-black">
-      <a href="/blog/type-safe-return-values/" class="link black dim">
-        Type Safe Return Values
+      <a href="/blog/java---error-return-types/" class="link black dim">
+        Java - Error Return Types
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>When writing high-level business logic, I prefer to expose an API that uses type safe constructs. An critical part is the return value.</p>
+      <p>When writing high-level business logic, I prefer to expose an API that uses type safe constructs in the return value to express the possible outcomes.</p>
 <p>Suppose we design an API for baking pizza:</p>
+<p>Let&rsquo;s design a <code>Baker</code> capable of creating <code>Pizza</code>. I&rsquo;ll be using an <code>interface</code> here for the Baker since the actual logic is not relevant for this example.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">record</span> <span style="color:#a6e22e">Pizza</span>() { }
-</span></span></code></pre></div><p>Let&rsquo;s design a <code>Baker</code> capable of creating <code>Pizza</code>. I&rsquo;ll be using an <code>interface</code> since the actual logic is not relevant for this example.</p>
-<p>Unfortunately our <code>Baker</code> sometimes runs out of ingredients. However, our API does not reveal this fact. We can choose how we are going to express the possible paths of failure, and listed below are some common options. I frequently encounter solutions that results in poor handling and developer ergonomics.</p>
+</span></span></code></pre></div><p>We will be deciding on the signature of a <code>createPizza</code> method. Unfortunately our <code>Baker</code> sometimes runs out of ingredients. However, our API does not reveal this fact. We can choose how we are going to express the possible paths of failure, and listed below are some common options. I frequently encounter solutions that results in poor handling and developer ergonomics. I have sorted them by my preference when it comes to handling domain errors, from worst to best.</p>
     </div>
-    <a href="/blog/type-safe-return-values/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+    <a href="/blog/java---error-return-types/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
   </div>
 </div>
 
         
       
         <h2 class="f1">
-          <a href="/tags/java/" class="link blue hover-black">
-            Tag: Java
+          <a href="/tags/enum/" class="link blue hover-black">
+            Tag: Enum
           </a>
         </h2>
         
@@ -270,18 +480,162 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Blogs</span>
     <h1 class="f3 near-black">
-      <a href="/blog/type-safe-return-values/" class="link black dim">
-        Type Safe Return Values
+      <a href="/blog/java---unique-enum-field-values/" class="link black dim">
+        Java - Unique Enum Field values
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>When writing high-level business logic, I prefer to expose an API that uses type safe constructs. An critical part is the return value.</p>
-<p>Suppose we design an API for baking pizza:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">record</span> <span style="color:#a6e22e">Pizza</span>() { }
-</span></span></code></pre></div><p>Let&rsquo;s design a <code>Baker</code> capable of creating <code>Pizza</code>. I&rsquo;ll be using an <code>interface</code> since the actual logic is not relevant for this example.</p>
-<p>Unfortunately our <code>Baker</code> sometimes runs out of ingredients. However, our API does not reveal this fact. We can choose how we are going to express the possible paths of failure, and listed below are some common options. I frequently encounter solutions that results in poor handling and developer ergonomics.</p>
+      <p>When you have a <a href="https://www.baeldung.com/a-guide-to-java-enums">Java Enum</a> with a field, a requirement can be that the field value needs to be unique. Using a utility method it can be easy to create a test for this. Given an Enum class with a field (using some <a href="https://bvkatwijk.github.io/wiki/tools---lombok/">Lombok</a>):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Getter</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@RequiredArgsConstructor</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@Accessors</span>(fluent <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">enum</span> Sides {  
+</span></span><span style="display:flex;"><span>    LEFT(<span style="color:#e6db74">&#34;left&#34;</span>),  
+</span></span><span style="display:flex;"><span>    RIGHT(<span style="color:#e6db74">&#34;right&#34;</span>);  
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">final</span> String label;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>You can enforce uniqueness using a unit test:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> io.vavr.collection.HashMap;  
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> io.vavr.collection.Vector;  
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.junit.jupiter.api.Test;  
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.util.function.Function;  
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import static</span> org.junit.jupiter.api.Assertions.assertEquals;  
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SidesTest</span> {  
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Test</span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">unique</span>() {  
+</span></span><span style="display:flex;"><span>        assertUnique(Sides.<span style="color:#a6e22e">values</span>(), Sides::label);  
+</span></span><span style="display:flex;"><span>    }  
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">assertUnique</span>(T<span style="color:#f92672">[]</span> values, Function<span style="color:#f92672">&lt;</span>T, String<span style="color:#f92672">&gt;</span> fieldValue) {  
+</span></span><span style="display:flex;"><span>        assertEquals(  
+</span></span><span style="display:flex;"><span>            HashMap.<span style="color:#a6e22e">empty</span>(),  
+</span></span><span style="display:flex;"><span>            Vector.<span style="color:#a6e22e">of</span>(values)  
+</span></span><span style="display:flex;"><span>                .<span style="color:#a6e22e">groupBy</span>(fieldValue)  
+</span></span><span style="display:flex;"><span>                .<span style="color:#a6e22e">filter</span>(it <span style="color:#f92672">-&gt;</span> it.<span style="color:#a6e22e">_2</span>().<span style="color:#a6e22e">size</span>() <span style="color:#f92672">&gt;</span> 1));  
+</span></span><span style="display:flex;"><span>    }  
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>The test will automatically validate that all fields have distinct values, even if the Enum expands or changes in the future. Failures will report the enum values that have the same property. If we misconfigure the enum above ( <code>RIGHT(&quot;left&quot;)</code>) we see which value occurred multiple times, and in which Enum values:</p>
     </div>
-    <a href="/blog/type-safe-return-values/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+    <a href="/blog/java---unique-enum-field-values/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+  </div>
+</div>
+
+        
+      
+        <h2 class="f1">
+          <a href="/tags/lombok/" class="link blue hover-black">
+            Tag: Lombok
+          </a>
+        </h2>
+        
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Blogs</span>
+    <h1 class="f3 near-black">
+      <a href="/blog/java---unique-enum-field-values/" class="link black dim">
+        Java - Unique Enum Field values
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <p>When you have a <a href="https://www.baeldung.com/a-guide-to-java-enums">Java Enum</a> with a field, a requirement can be that the field value needs to be unique. Using a utility method it can be easy to create a test for this. Given an Enum class with a field (using some <a href="https://bvkatwijk.github.io/wiki/tools---lombok/">Lombok</a>):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Getter</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@RequiredArgsConstructor</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@Accessors</span>(fluent <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">enum</span> Sides {  
+</span></span><span style="display:flex;"><span>    LEFT(<span style="color:#e6db74">&#34;left&#34;</span>),  
+</span></span><span style="display:flex;"><span>    RIGHT(<span style="color:#e6db74">&#34;right&#34;</span>);  
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">final</span> String label;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>You can enforce uniqueness using a unit test:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> io.vavr.collection.HashMap;  
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> io.vavr.collection.Vector;  
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.junit.jupiter.api.Test;  
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.util.function.Function;  
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import static</span> org.junit.jupiter.api.Assertions.assertEquals;  
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SidesTest</span> {  
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Test</span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">unique</span>() {  
+</span></span><span style="display:flex;"><span>        assertUnique(Sides.<span style="color:#a6e22e">values</span>(), Sides::label);  
+</span></span><span style="display:flex;"><span>    }  
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">assertUnique</span>(T<span style="color:#f92672">[]</span> values, Function<span style="color:#f92672">&lt;</span>T, String<span style="color:#f92672">&gt;</span> fieldValue) {  
+</span></span><span style="display:flex;"><span>        assertEquals(  
+</span></span><span style="display:flex;"><span>            HashMap.<span style="color:#a6e22e">empty</span>(),  
+</span></span><span style="display:flex;"><span>            Vector.<span style="color:#a6e22e">of</span>(values)  
+</span></span><span style="display:flex;"><span>                .<span style="color:#a6e22e">groupBy</span>(fieldValue)  
+</span></span><span style="display:flex;"><span>                .<span style="color:#a6e22e">filter</span>(it <span style="color:#f92672">-&gt;</span> it.<span style="color:#a6e22e">_2</span>().<span style="color:#a6e22e">size</span>() <span style="color:#f92672">&gt;</span> 1));  
+</span></span><span style="display:flex;"><span>    }  
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>The test will automatically validate that all fields have distinct values, even if the Enum expands or changes in the future. Failures will report the enum values that have the same property. If we misconfigure the enum above ( <code>RIGHT(&quot;left&quot;)</code>) we see which value occurred multiple times, and in which Enum values:</p>
+    </div>
+    <a href="/blog/java---unique-enum-field-values/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+  </div>
+</div>
+
+        
+      
+        <h2 class="f1">
+          <a href="/tags/test/" class="link blue hover-black">
+            Tag: Test
+          </a>
+        </h2>
+        
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Blogs</span>
+    <h1 class="f3 near-black">
+      <a href="/blog/java---unique-enum-field-values/" class="link black dim">
+        Java - Unique Enum Field values
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <p>When you have a <a href="https://www.baeldung.com/a-guide-to-java-enums">Java Enum</a> with a field, a requirement can be that the field value needs to be unique. Using a utility method it can be easy to create a test for this. Given an Enum class with a field (using some <a href="https://bvkatwijk.github.io/wiki/tools---lombok/">Lombok</a>):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Getter</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@RequiredArgsConstructor</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@Accessors</span>(fluent <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">enum</span> Sides {  
+</span></span><span style="display:flex;"><span>    LEFT(<span style="color:#e6db74">&#34;left&#34;</span>),  
+</span></span><span style="display:flex;"><span>    RIGHT(<span style="color:#e6db74">&#34;right&#34;</span>);  
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">final</span> String label;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>You can enforce uniqueness using a unit test:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> io.vavr.collection.HashMap;  
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> io.vavr.collection.Vector;  
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.junit.jupiter.api.Test;  
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.util.function.Function;  
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import static</span> org.junit.jupiter.api.Assertions.assertEquals;  
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SidesTest</span> {  
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Test</span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">unique</span>() {  
+</span></span><span style="display:flex;"><span>        assertUnique(Sides.<span style="color:#a6e22e">values</span>(), Sides::label);  
+</span></span><span style="display:flex;"><span>    }  
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">assertUnique</span>(T<span style="color:#f92672">[]</span> values, Function<span style="color:#f92672">&lt;</span>T, String<span style="color:#f92672">&gt;</span> fieldValue) {  
+</span></span><span style="display:flex;"><span>        assertEquals(  
+</span></span><span style="display:flex;"><span>            HashMap.<span style="color:#a6e22e">empty</span>(),  
+</span></span><span style="display:flex;"><span>            Vector.<span style="color:#a6e22e">of</span>(values)  
+</span></span><span style="display:flex;"><span>                .<span style="color:#a6e22e">groupBy</span>(fieldValue)  
+</span></span><span style="display:flex;"><span>                .<span style="color:#a6e22e">filter</span>(it <span style="color:#f92672">-&gt;</span> it.<span style="color:#a6e22e">_2</span>().<span style="color:#a6e22e">size</span>() <span style="color:#f92672">&gt;</span> 1));  
+</span></span><span style="display:flex;"><span>    }  
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>The test will automatically validate that all fields have distinct values, even if the Enum expands or changes in the future. Failures will report the enum values that have the same property. If we misconfigure the enum above ( <code>RIGHT(&quot;left&quot;)</code>) we see which value occurred multiple times, and in which Enum values:</p>
+    </div>
+    <a href="/blog/java---unique-enum-field-values/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
   </div>
 </div>
 

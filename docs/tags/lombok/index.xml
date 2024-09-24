@@ -1,27 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Java on Boris van Katwijk</title>
-    <link>https://bvkatwijk.github.io/tags/java/</link>
-    <description>Recent content in Java on Boris van Katwijk</description>
+    <title>Lombok on Boris van Katwijk</title>
+    <link>https://bvkatwijk.github.io/tags/lombok/</link>
+    <description>Recent content in Lombok on Boris van Katwijk</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 24 Sep 2024 17:24:55 +0000</lastBuildDate>
-    <atom:link href="https://bvkatwijk.github.io/tags/java/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>HeadFirst Group</title>
-      <link>https://bvkatwijk.github.io/work/headfirst-group/</link>
-      <pubDate>Wed, 18 Sep 2024 15:34:48 +0000</pubDate>
-      <guid>https://bvkatwijk.github.io/work/headfirst-group/</guid>
-      <description>&lt;p&gt;At &lt;a href=&#34;https://headfirst.group/en/&#34;&gt;HeadFirst Group&lt;/a&gt; I am currently working on various projects in CI/CD, Cloud, Ops, DX, IAC.&lt;/p&gt;&#xA;&lt;h3 id=&#34;aws-cdk&#34;&gt;AWS CDK&lt;/h3&gt;&#xA;&lt;p&gt;Existing infrastructure was a mix between hand-managed and &lt;a href=&#34;https://www.ansible.com/&#34;&gt;Ansible&lt;/a&gt; playbooks using a mix of community plugins. Since the cloud scope was strictly limited to AWS, we migrated our cloud setup to &lt;a href=&#34;https://aws.amazon.com/cdk/&#34;&gt;AWS CDK&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;We used #java , #gradle&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Java - Error Return Types</title>
-      <link>https://bvkatwijk.github.io/blog/java---error-return-types/</link>
-      <pubDate>Wed, 18 Sep 2024 13:33:23 +0000</pubDate>
-      <guid>https://bvkatwijk.github.io/blog/java---error-return-types/</guid>
-      <description>&lt;p&gt;When writing high-level business logic, I prefer to expose an API that uses type safe constructs in the return value to express the possible outcomes.&lt;/p&gt;&#xA;&lt;p&gt;Suppose we design an API for baking pizza:&lt;/p&gt;&#xA;&lt;p&gt;Let&amp;rsquo;s design a &lt;code&gt;Baker&lt;/code&gt; capable of creating &lt;code&gt;Pizza&lt;/code&gt;. I&amp;rsquo;ll be using an &lt;code&gt;interface&lt;/code&gt; here for the Baker since the actual logic is not relevant for this example.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;record&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Pizza&lt;/span&gt;() { }&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;We will be deciding on the signature of a &lt;code&gt;createPizza&lt;/code&gt; method. Unfortunately our &lt;code&gt;Baker&lt;/code&gt; sometimes runs out of ingredients. However, our API does not reveal this fact. We can choose how we are going to express the possible paths of failure, and listed below are some common options. I frequently encounter solutions that results in poor handling and developer ergonomics. I have sorted them by my preference when it comes to handling domain errors, from worst to best.&lt;/p&gt;</description>
-    </item>
+    <atom:link href="https://bvkatwijk.github.io/tags/lombok/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Java - Unique Enum Field values</title>
       <link>https://bvkatwijk.github.io/blog/java---unique-enum-field-values/</link>

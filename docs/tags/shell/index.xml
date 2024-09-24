@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Shell on Boris van Katwijk</title>
+    <link>https://bvkatwijk.github.io/tags/shell/</link>
+    <description>Recent content in Shell on Boris van Katwijk</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 24 Sep 2024 18:09:25 +0000</lastBuildDate>
+    <atom:link href="https://bvkatwijk.github.io/tags/shell/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Shell - Switch Statements</title>
+      <link>https://bvkatwijk.github.io/blog/shell---switch-statements/</link>
+      <pubDate>Sat, 21 Sep 2024 21:28:03 +0000</pubDate>
+      <guid>https://bvkatwijk.github.io/blog/shell---switch-statements/</guid>
+      <description>&lt;p&gt;Recently I had to work a bit more than usual on shell scripting, and had to do a bunch of switches. I used this also in the scripts for this project. A simplified impression shows how we could implement a very basic CLI, matching the input with supported commands:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#!/bin/sh&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;CMD&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;$1&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;case&lt;/span&gt; $CMD in&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#x9;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;run&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; echo &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;cmdRun&amp;#34;&lt;/span&gt; ;;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#x9;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;publish&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; echo &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;cmdPublish&amp;#34;&lt;/span&gt; ;;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#x9;*&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; echo &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Unknown command &lt;/span&gt;$CMD&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;; exit &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; ;;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;esac&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This way we can match the provided input with supported cases (&lt;code&gt;&amp;quot;run&amp;quot;&lt;/code&gt; and &lt;code&gt;&amp;quot;publish&amp;quot;&lt;/code&gt;), and error otherwise (&lt;code&gt;*&lt;/code&gt;).&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

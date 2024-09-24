@@ -6,14 +6,14 @@
     <description>Recent content in Fp on Boris van Katwijk</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 18 Sep 2024 15:40:14 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 21 Sep 2024 21:09:13 +0000</lastBuildDate>
     <atom:link href="https://bvkatwijk.github.io/tags/fp/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Type Safe Return Values</title>
-      <link>https://bvkatwijk.github.io/blog/type-safe-return-values/</link>
+      <title>Java - Error Return Types</title>
+      <link>https://bvkatwijk.github.io/blog/java---error-return-types/</link>
       <pubDate>Wed, 18 Sep 2024 13:33:23 +0000</pubDate>
-      <guid>https://bvkatwijk.github.io/blog/type-safe-return-values/</guid>
-      <description>&lt;p&gt;When writing high-level business logic, I prefer to expose an API that uses type safe constructs. An critical part is the return value.&lt;/p&gt;&#xA;&lt;p&gt;Suppose we design an API for baking pizza:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;record&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Pizza&lt;/span&gt;() { }&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Let&amp;rsquo;s design a &lt;code&gt;Baker&lt;/code&gt; capable of creating &lt;code&gt;Pizza&lt;/code&gt;. I&amp;rsquo;ll be using an &lt;code&gt;interface&lt;/code&gt; since the actual logic is not relevant for this example.&lt;/p&gt;&#xA;&lt;p&gt;Unfortunately our &lt;code&gt;Baker&lt;/code&gt; sometimes runs out of ingredients. However, our API does not reveal this fact. We can choose how we are going to express the possible paths of failure, and listed below are some common options. I frequently encounter solutions that results in poor handling and developer ergonomics.&lt;/p&gt;</description>
+      <guid>https://bvkatwijk.github.io/blog/java---error-return-types/</guid>
+      <description>&lt;p&gt;When writing high-level business logic, I prefer to expose an API that uses type safe constructs in the return value to express the possible outcomes.&lt;/p&gt;&#xA;&lt;p&gt;Suppose we design an API for baking pizza:&lt;/p&gt;&#xA;&lt;p&gt;Let&amp;rsquo;s design a &lt;code&gt;Baker&lt;/code&gt; capable of creating &lt;code&gt;Pizza&lt;/code&gt;. I&amp;rsquo;ll be using an &lt;code&gt;interface&lt;/code&gt; here for the Baker since the actual logic is not relevant for this example.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;record&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Pizza&lt;/span&gt;() { }&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;We will be deciding on the signature of a &lt;code&gt;createPizza&lt;/code&gt; method. Unfortunately our &lt;code&gt;Baker&lt;/code&gt; sometimes runs out of ingredients. However, our API does not reveal this fact. We can choose how we are going to express the possible paths of failure, and listed below are some common options. I frequently encounter solutions that results in poor handling and developer ergonomics. I have sorted them by my preference when it comes to handling domain errors, from worst to best.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

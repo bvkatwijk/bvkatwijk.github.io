@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gradle on Boris van Katwijk</title>
+    <link>https://bvkatwijk.github.io/tags/gradle/</link>
+    <description>Recent content in Gradle on Boris van Katwijk</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 21 Sep 2024 21:19:51 +0000</lastBuildDate>
+    <atom:link href="https://bvkatwijk.github.io/tags/gradle/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HeadFirst Group</title>
+      <link>https://bvkatwijk.github.io/work/headfirst-group/</link>
+      <pubDate>Wed, 18 Sep 2024 15:34:48 +0000</pubDate>
+      <guid>https://bvkatwijk.github.io/work/headfirst-group/</guid>
+      <description>&lt;p&gt;At &lt;a href=&#34;https://headfirst.group/en/&#34;&gt;HeadFirst Group&lt;/a&gt; I am currently working on various projects in CI/CD, Cloud, Ops, DX, IAC.&lt;/p&gt;&#xA;&lt;h3 id=&#34;aws-cdk&#34;&gt;AWS CDK&lt;/h3&gt;&#xA;&lt;p&gt;Existing infrastructure was a mix between hand-managed and &lt;a href=&#34;https://www.ansible.com/&#34;&gt;Ansible&lt;/a&gt; playbooks using a mix of community plugins. Since the cloud scope was strictly limited to AWS, we migrated our cloud setup to &lt;a href=&#34;https://aws.amazon.com/cdk/&#34;&gt;AWS CDK&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;We used #java , #gradle&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

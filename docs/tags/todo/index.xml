@@ -6,20 +6,13 @@
     <description>Recent content in Todo on Boris van Katwijk</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 18 Sep 2024 15:36:07 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 21 Sep 2024 20:36:22 +0000</lastBuildDate>
     <atom:link href="https://bvkatwijk.github.io/tags/todo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Error Values</title>
       <link>https://bvkatwijk.github.io/blog/error-values/</link>
       <pubDate>Wed, 18 Sep 2024 15:15:39 +0000</pubDate>
       <guid>https://bvkatwijk.github.io/blog/error-values/</guid>
-      <description>&lt;p&gt;Coming soon&amp;hellip;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>AWS CDK -  ID, names, and resource replacement</title>
-      <link>https://bvkatwijk.github.io/blog/aws-cdk----id-names-and-resource-replacement/</link>
-      <pubDate>Wed, 18 Sep 2024 10:32:08 +0000</pubDate>
-      <guid>https://bvkatwijk.github.io/blog/aws-cdk----id-names-and-resource-replacement/</guid>
       <description>&lt;p&gt;Coming soon&amp;hellip;&lt;/p&gt;</description>
     </item>
   </channel>

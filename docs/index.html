@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>Boris van Katwijk</title>
+    <title>Boris van Katwijk | Boris van Katwijk</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="">
     <meta name="generator" content="Hugo 0.134.2">
@@ -46,8 +46,8 @@
   <meta property="og:type" content="website">
 
   <meta itemprop="name" content="Boris van Katwijk">
-  <meta itemprop="datePublished" content="2024-09-18T15:34:48+00:00">
-  <meta itemprop="dateModified" content="2024-09-18T15:40:19+00:00">
+  <meta itemprop="datePublished" content="2024-09-24T18:02:06+00:00">
+  <meta itemprop="dateModified" content="2024-09-24T18:03:35+00:00">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Boris van Katwijk">
 
@@ -60,8 +60,9 @@
 
     
 
-  <header>
-    <div class="pb3-m pb6-l bg-black">
+  
+  <header class="cover bg-top" style="background-image: url('https://bvkatwijk.github.io/images/background.png');">
+    <div class="bg-black-60">
       <nav class="pv3 ph3 ph4-ns" role="navigation">
   <div class="flex-l justify-between items-center center">
     <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
@@ -72,6 +73,16 @@
     <div class="flex-l items-center">
       
 
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/pages/contact/" title="Contact page">
+              Contact
+            </a>
+          </li>
+          
+        </ul>
       
       
 <div class="ananke-socials">
@@ -119,8 +130,8 @@
   </div>
 </nav>
 
-      <div class="tc-l pv3 ph3 ph4-ns">
-        <h1 class="f2 f-subheadline-l fw2 light-silver mb0 lh-title">
+      <div class="tc-l pv4 pv6-l ph3 ph4-ns">
+        <h1 class="f2 f-subheadline-l fw2 white-90 mb0 lh-title">
           Boris van Katwijk
         </h1>
         
@@ -164,7 +175,53 @@
   <div class="db pv4 ph3 ph0-l no-underline dark-gray">
     <div class="flex flex-column flex-row-ns">
       
-      <div class="blah w-100">
+          
+        <div class="pr3-ns mb4 mb0-ns w-100 w-40-ns">
+          <a href="/blog/shell---switch-statements/" class="db grow">
+            <img src="https://bvkatwijk.github.io/images/background.png" class="img" alt="image from Shell - Switch Statements">
+          </a>
+        </div>
+      
+      <div class="blah w-100 w-60-ns pl3-ns">
+        <h1 class="f3 fw1 athelas mt0 lh-title">
+          <a href="/blog/shell---switch-statements/" class="color-inherit dim link">
+            Shell - Switch Statements
+            </a>
+        </h1>
+        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
+          <p>Recently I had to work a bit more than usual on shell scripting, and had to do a bunch of switches. I used this also in the scripts for this project. A simplified impression shows how we could implement a very basic CLI, matching the input with supported commands:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/sh
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>CMD<span style="color:#f92672">=</span>$1
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">case</span> $CMD in
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;run&#34;</span><span style="color:#f92672">)</span> echo <span style="color:#e6db74">&#34;cmdRun&#34;</span> ;;
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;publish&#34;</span><span style="color:#f92672">)</span> echo <span style="color:#e6db74">&#34;cmdPublish&#34;</span> ;;
+</span></span><span style="display:flex;"><span>	*<span style="color:#f92672">)</span> echo <span style="color:#e6db74">&#34;Unknown command </span>$CMD<span style="color:#e6db74">&#34;</span>; exit <span style="color:#ae81ff">1</span> ;;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">esac</span>
+</span></span></code></pre></div><p>This way we can match the provided input with supported cases (<code>&quot;run&quot;</code> and <code>&quot;publish&quot;</code>), and error otherwise (<code>*</code>).</p>
+        </div>
+          <a href="/blog/shell---switch-statements/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+            </div>
+          
+            <div class="relative w-100 mb4">
+              
+<article class="bb b--black-10">
+  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
+    <div class="flex flex-column flex-row-ns">
+      
+          
+        <div class="pr3-ns mb4 mb0-ns w-100 w-40-ns">
+          <a href="/main/" class="db grow">
+            <img src="https://bvkatwijk.github.io/images/background.png" class="img" alt="image from BORIS VAN KATWIJK">
+          </a>
+        </div>
+      
+      <div class="blah w-100 w-60-ns pl3-ns">
         <h1 class="f3 fw1 athelas mt0 lh-title">
           <a href="/main/" class="color-inherit dim link">
             BORIS VAN KATWIJK
@@ -189,7 +246,14 @@
   <div class="db pv4 ph3 ph0-l no-underline dark-gray">
     <div class="flex flex-column flex-row-ns">
       
-      <div class="blah w-100">
+          
+        <div class="pr3-ns mb4 mb0-ns w-100 w-40-ns">
+          <a href="/blog/error-values/" class="db grow">
+            <img src="https://bvkatwijk.github.io/images/background.png" class="img" alt="image from Error Values">
+          </a>
+        </div>
+      
+      <div class="blah w-100 w-60-ns pl3-ns">
         <h1 class="f3 fw1 athelas mt0 lh-title">
           <a href="/blog/error-values/" class="color-inherit dim link">
             Error Values
@@ -207,34 +271,6 @@
 
             </div>
           
-            <div class="relative w-100 mb4">
-              
-<article class="bb b--black-10">
-  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
-    <div class="flex flex-column flex-row-ns">
-      
-      <div class="blah w-100">
-        <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="/blog/type-safe-return-values/" class="color-inherit dim link">
-            Type Safe Return Values
-            </a>
-        </h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          <p>When writing high-level business logic, I prefer to expose an API that uses type safe constructs. An critical part is the return value.</p>
-<p>Suppose we design an API for baking pizza:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">record</span> <span style="color:#a6e22e">Pizza</span>() { }
-</span></span></code></pre></div><p>Let&rsquo;s design a <code>Baker</code> capable of creating <code>Pizza</code>. I&rsquo;ll be using an <code>interface</code> since the actual logic is not relevant for this example.</p>
-<p>Unfortunately our <code>Baker</code> sometimes runs out of ingredients. However, our API does not reveal this fact. We can choose how we are going to express the possible paths of failure, and listed below are some common options. I frequently encounter solutions that results in poor handling and developer ergonomics.</p>
-        </div>
-          <a href="/blog/type-safe-return-values/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-        
-      </div>
-    </div>
-  </div>
-</article>
-
-            </div>
-          
         </section>
 
         
@@ -243,14 +279,14 @@
           
           
             <h2 class="f5 fw4 mb4 dib mr3">
-              <a href="/blog/java---unique-enum-field-values/" class="link black dim">
-                Java - Unique Enum Field values
+              <a href="/blog/java---error-return-types/" class="link black dim">
+                Java - Error Return Types
               </a>
             </h2>
           
             <h2 class="f5 fw4 mb4 dib mr3">
-              <a href="/blog/aws-cdk----id-names-and-resource-replacement/" class="link black dim">
-                AWS CDK -  ID, names, and resource replacement
+              <a href="/blog/java---unique-enum-field-values/" class="link black dim">
+                Java - Unique Enum Field values
               </a>
             </h2>
           

@@ -46,8 +46,8 @@
   <meta property="og:type" content="website">
 
   <meta itemprop="name" content="Works">
-  <meta itemprop="datePublished" content="2024-09-18T09:57:57+00:00">
-  <meta itemprop="dateModified" content="2024-09-18T11:18:48+00:00">
+  <meta itemprop="datePublished" content="2024-09-18T15:34:48+00:00">
+  <meta itemprop="dateModified" content="2024-09-21T21:19:51+00:00">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Works">
 
@@ -60,8 +60,9 @@
 
     
 
-  <header>
-    <div class="pb3-m pb6-l bg-black">
+  
+  <header class="cover bg-top" style="background-image: url('https://bvkatwijk.github.io/images/background.png');">
+    <div class="bg-black-60">
       <nav class="pv3 ph3 ph4-ns" role="navigation">
   <div class="flex-l justify-between items-center center">
     <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
@@ -72,6 +73,16 @@
     <div class="flex-l items-center">
       
 
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/pages/contact/" title="Contact page">
+              Contact
+            </a>
+          </li>
+          
+        </ul>
       
       
 <div class="ananke-socials">
@@ -119,8 +130,8 @@
   </div>
 </nav>
 
-      <div class="tc-l pv3 ph3 ph4-ns">
-        <h1 class="f2 f-subheadline-l fw2 light-silver mb0 lh-title">
+      <div class="tc-l pv4 pv6-l ph3 ph4-ns">
+        <h1 class="f2 f-subheadline-l fw2 white-90 mb0 lh-title">
           Works
         </h1>
         
@@ -140,34 +151,15 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Works</span>
     <h1 class="f3 near-black">
-      <a href="/work/topdesk/topdesk-exchange-sync/" class="link black dim">
-        TopDesk Exchange Sync
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>At <a href="https://bvkatwijk.github.io/work/topdesk/">topdesk</a> I was part of a team working on a two-way synchronisation between <a href="https://www.microsoft.com/en/microsoft-365/exchange/">Microsoft Exchange</a> and <a href="https://www.topdesk.com/en/features/reservations-management/">Topdesk Reservations</a>. The goal was to allow different departments of a large organisation to use the room reservation system of their preference. Most branches of this organisation used Microsoft Exchange to book meeting rooms, whereas Office Management staff used Topdesk Reservations.</p>
-<h3 id="race-conditions">Race Conditions</h3>
-<p>When working on a two-way integration, one of the challenges can be race conditions where conflicting valid data exists in both of the systems. For example, in this case multiple people could book a room at the same time in different systems. The application logic of both systems will allow the reservation, but the synchronisation needs to be able to resolve these conflicts gracefully.</p>
-    </div>
-    <a href="/work/topdesk/topdesk-exchange-sync/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-  </div>
-</div>
-
-        </div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white">
-          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Works</span>
-    <h1 class="f3 near-black">
       <a href="/work/headfirst-group/" class="link black dim">
-        
+        HeadFirst Group
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
       <p>At <a href="https://headfirst.group/en/">HeadFirst Group</a> I am currently working on various projects in CI/CD, Cloud, Ops, DX, IAC.</p>
 <h3 id="aws-cdk">AWS CDK</h3>
-<p>Existing infrastructure was a mix between hand-managed and Ansible playbooks using a mix of community plugins. Since the cloud scope was strictly limited to AWS, we migrated our cloud setup to AWS CDK.</p>
+<p>Existing infrastructure was a mix between hand-managed and <a href="https://www.ansible.com/">Ansible</a> playbooks using a mix of community plugins. Since the cloud scope was strictly limited to AWS, we migrated our cloud setup to <a href="https://aws.amazon.com/cdk/">AWS CDK</a>.</p>
+<p>We used #java , #gradle</p>
     </div>
     <a href="/work/headfirst-group/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
   </div>
@@ -181,17 +173,37 @@
     <span class="f6 db">Works</span>
     <h1 class="f3 near-black">
       <a href="/work/topdesk/" class="link black dim">
-        
+        TopDesk
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>At topdesk it was so interesting haha</p>
+      <p>At TopDesk it was so interesting haha</p>
 <ul>
 <li><a href="https://bvkatwijk.github.io/work/topdesk/topdesk-exchange-sync/">Two-way synchronisation between Microsoft Exchange and Topdesk Reservations</a></li>
 <li>Catalog Webshop</li>
 </ul>
     </div>
     <a href="/work/topdesk/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Works</span>
+    <h1 class="f3 near-black">
+      <a href="/work/topdesk/topdesk-exchange-sync/" class="link black dim">
+        TopDesk Exchange Sync
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <p>At <a href="https://bvkatwijk.github.io/work/topdesk/">TopDesk</a> I was part of a team working on a two-way synchronisation between <a href="https://www.microsoft.com/en/microsoft-365/exchange/">Microsoft Exchange</a> and <a href="https://www.topdesk.com/en/features/reservations-management/">Topdesk Reservations</a>. The goal was to allow different departments of a large organisation to use the room reservation system of their preference. Most branches of this organisation used Microsoft Exchange to book meeting rooms, whereas Office Management staff used Topdesk Reservations.</p>
+<h3 id="race-conditions">Race Conditions</h3>
+<p>When working on a two-way integration, one of the challenges can be race conditions where conflicting valid data exists in both of the systems. For example, in this case multiple people could book a room at the same time in different systems. The application logic of both systems will allow the reservation, but the synchronisation needs to be able to resolve these conflicts gracefully.</p>
+    </div>
+    <a href="/work/topdesk/topdesk-exchange-sync/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
   </div>
 </div>
 
