@@ -71,7 +71,7 @@ cmdIssues () {
     checkBlogs
 }
 
-case $CMD in
+case "$CMD" in
     "run") cmdRun ;;
     "issues") cmdIssues ;;
     "publish") cmdPublish ;;

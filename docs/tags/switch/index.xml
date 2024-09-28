@@ -1,20 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blogs on Boris van Katwijk</title>
-    <link>https://bvkatwijk.github.io/blog/</link>
-    <description>Recent content in Blogs on Boris van Katwijk</description>
+    <title>Switch on Boris van Katwijk</title>
+    <link>https://bvkatwijk.github.io/tags/switch/</link>
+    <description>Recent content in Switch on Boris van Katwijk</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 28 Sep 2024 13:34:38 +0000</lastBuildDate>
-    <atom:link href="https://bvkatwijk.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Hugo</title>
-      <link>https://bvkatwijk.github.io/blog/dev---hugo/</link>
-      <pubDate>Tue, 24 Sep 2024 18:48:00 +0000</pubDate>
-      <guid>https://bvkatwijk.github.io/blog/dev---hugo/</guid>
-      <description>&lt;p&gt;This website was made using &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;, following the quick start tutorial and iterating from there. So far its been a lot of fun, and gradually expanding website functionality has been a very natural process.&lt;/p&gt;&#xA;&lt;h3 id=&#34;content&#34;&gt;Content&lt;/h3&gt;&#xA;&lt;p&gt;I use &lt;a href=&#34;https://obsidian.md/&#34;&gt;Obsidian&lt;/a&gt; to create my content, allowing me to write using &lt;a href=&#34;https://en.wikipedia.org/wiki/Markdown&#34;&gt;MarkDown&lt;/a&gt;. Using &lt;a href=&#34;https://github.com/platers/obsidian-linter&#34;&gt;Obsidian Linter&lt;/a&gt; I can automatically insert &lt;a href=&#34;https://en.wikipedia.org/wiki/YAML&#34;&gt;YAML&lt;/a&gt; properties that Hugo will pick up as metadata.&#xA;Using this setup there is a nice separation between site content and site functionality.&lt;/p&gt;</description>
-    </item>
+    <atom:link href="https://bvkatwijk.github.io/tags/switch/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Shell - Switch Statements</title>
       <link>https://bvkatwijk.github.io/blog/shell---switch-statements/</link>

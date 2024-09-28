@@ -6,7 +6,7 @@
     <description>Recent content in Tags on Boris van Katwijk</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 28 Sep 2024 13:29:28 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 28 Sep 2024 13:34:38 +0000</lastBuildDate>
     <atom:link href="https://bvkatwijk.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Dx</title>
@@ -20,6 +20,27 @@
       <link>https://bvkatwijk.github.io/tags/web/</link>
       <pubDate>Tue, 24 Sep 2024 18:48:00 +0000</pubDate>
       <guid>https://bvkatwijk.github.io/tags/web/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Bash</title>
+      <link>https://bvkatwijk.github.io/tags/bash/</link>
+      <pubDate>Sat, 21 Sep 2024 21:28:03 +0000</pubDate>
+      <guid>https://bvkatwijk.github.io/tags/bash/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Shell</title>
+      <link>https://bvkatwijk.github.io/tags/shell/</link>
+      <pubDate>Sat, 21 Sep 2024 21:28:03 +0000</pubDate>
+      <guid>https://bvkatwijk.github.io/tags/shell/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Switch</title>
+      <link>https://bvkatwijk.github.io/tags/switch/</link>
+      <pubDate>Sat, 21 Sep 2024 21:28:03 +0000</pubDate>
+      <guid>https://bvkatwijk.github.io/tags/switch/</guid>
       <description></description>
     </item>
   </channel>
