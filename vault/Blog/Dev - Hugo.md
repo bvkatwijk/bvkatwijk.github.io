@@ -21,5 +21,5 @@ I use [obsidian-to-hugo](https://github.com/devidw/obsidian-to-hugo) to transfor
 Using Hugo, I publish the site into the `/docs` directory and push it, where Github Pages automatically hosts the site for me. 
 
 ### Github Comments
-Comments are available via Github Issues. When browsing to a page, if an issue link exists the comments will be displayed under it. I followed the strategy outlined in this[blog post by Declaration of VAR](https://decovar.dev/blog/2019/04/19/github-comments-hugo/). I added a script to automatically create issues for pages which do not have an issue id linked.
+Comments are available via Github Issues. When browsing to a page, if an issue link exists the comments will be displayed under it. I followed the strategy outlined in this [blog post by Declaration of VAR](https://decovar.dev/blog/2019/04/19/github-comments-hugo/). I added a script to automatically create issues for pages which do not have an issue id linked.
 
