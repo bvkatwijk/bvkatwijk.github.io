@@ -1,6 +1,8 @@
 #!/bin/bash
 set -euox pipefail
 
+set -a; source .env; set +a
+
 CMD=$1
 
 obsidian_to_hugo () {

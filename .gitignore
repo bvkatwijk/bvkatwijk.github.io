@@ -5,3 +5,5 @@ resources/_gen/
 *.lock
 themes/
 content/
+*.env
+!example.env
