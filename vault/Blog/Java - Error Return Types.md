@@ -7,15 +7,20 @@ tags:
   - fp
 title: Java - Error Return Types
 date: 2024-09-18T13:33:23+00:00
-lastmod: 2024-09-28T10:32:38+00:00
+lastmod: 2024-09-28T11:01:33+00:00
 GHissueID: "5"
 ---
-When writing high-level business logic, I prefer to expose an API that uses type safe constructs in the return value to express the possible outcomes.
+Writing code assuming everything will follow the happy path may not result in the best software quality or user experience. Sometimes we choose to ignore unhappy paths, or lack awareness of the existence of unhappy paths. Both of these scenarios can lead to runtime bugs and problems for customers which may be good to prevent.
 
-Suppose we design a `Baker` capable of creating `Pizza`. I'll be using an `interface` here for the Baker since the actual logic is not relevant for this example. 
+Many strategies and coding styles exist in different languages to give the developer tools to address this issue. In this post I'd like to explore some of them and illustrate my preferences.
+
+To illustrate this I'll use a very minimal example where we design a `Baker` capable of creating `Pizza`. I'll be using an `interface` here for the Baker since the actual implementation is not relevant.
 
 ```java
 record Pizza() { }
+interface Baker {  
+    <?> createPizza() <?>;  
+}
 ```
 
 We will be deciding on the signature of a `createPizza` method. Our `Baker` sometimes runs out of ingredients, making it impossible to produce a `Pizza`. However, our API does not reveal this fact. We can choose how we are going to express the possible paths of failure, and listed below are some common options. I frequently encounter solutions that results in poor handling and developer ergonomics. I have sorted them by my preference when it comes to handling domain errors, from worst to best.
@@ -27,7 +32,7 @@ interface Baker {
 }
 ```
 
-Returning `null` may be the worst option. It does not express the possibility of failure in any way, the compiler cannot help us and if failure happened, there is no way to figure out what went wrong. Personally I would like it if I could disable `null`  entirely.
+Returning `null` may be the worst option available. It does not express the possibility of failure in any way, the compiler cannot help us and if failure happened, there is no way to figure out what went wrong. Users of your code will have to either guess nullability or inspect the implementation to see if this can happen. Some languages don't support the concept of null. In Java, I find that banning `null` from application logic greatly improves code quality.
 
 ### Documentation
 ```java
