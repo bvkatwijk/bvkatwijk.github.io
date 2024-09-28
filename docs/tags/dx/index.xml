@@ -6,7 +6,7 @@
     <description>Recent content in Dx on Boris van Katwijk</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 28 Sep 2024 11:07:13 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 28 Sep 2024 13:29:28 +0000</lastBuildDate>
     <atom:link href="https://bvkatwijk.github.io/tags/dx/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo</title>
@@ -14,13 +14,6 @@
       <pubDate>Tue, 24 Sep 2024 18:48:00 +0000</pubDate>
       <guid>https://bvkatwijk.github.io/blog/dev---hugo/</guid>
       <description>&lt;p&gt;This website was made using &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;, following the quick start tutorial and iterating from there. So far its been a lot of fun, and gradually expanding website functionality has been a very natural process.&lt;/p&gt;&#xA;&lt;h3 id=&#34;content&#34;&gt;Content&lt;/h3&gt;&#xA;&lt;p&gt;I use &lt;a href=&#34;https://obsidian.md/&#34;&gt;Obsidian&lt;/a&gt; to create my content, allowing me to write using &lt;a href=&#34;https://en.wikipedia.org/wiki/Markdown&#34;&gt;MarkDown&lt;/a&gt;. Using &lt;a href=&#34;https://github.com/platers/obsidian-linter&#34;&gt;Obsidian Linter&lt;/a&gt; I can automatically insert &lt;a href=&#34;https://en.wikipedia.org/wiki/YAML&#34;&gt;YAML&lt;/a&gt; properties that Hugo will pick up as metadata.&#xA;Using this setup there is a nice separation between site content and site functionality.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Java - Error Return Types</title>
-      <link>https://bvkatwijk.github.io/blog/java---error-return-types/</link>
-      <pubDate>Wed, 18 Sep 2024 13:33:23 +0000</pubDate>
-      <guid>https://bvkatwijk.github.io/blog/java---error-return-types/</guid>
-      <description>&lt;p&gt;Writing code assuming everything will follow the happy path may not result in the best software quality or user experience. Sometimes we choose to ignore unhappy paths, or lack awareness of the existence of unhappy paths. Both of these scenarios can lead to runtime bugs and problems for customers which may be good to prevent.&lt;/p&gt;&#xA;&lt;p&gt;Many strategies and coding styles exist in different languages to give the developer tools to address this issue. In this post I&amp;rsquo;d like to explore some of them and illustrate my preferences.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
