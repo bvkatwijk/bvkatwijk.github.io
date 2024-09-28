@@ -7,7 +7,8 @@ tags:
   - fp
 title: Java - Error Return Types
 date: 2024-09-18T13:33:23+00:00
-lastmod: 2024-09-24T19:07:14+00:00
+lastmod: 2024-09-28T10:32:38+00:00
+GHissueID: "5"
 ---
 When writing high-level business logic, I prefer to expose an API that uses type safe constructs in the return value to express the possible outcomes.
 

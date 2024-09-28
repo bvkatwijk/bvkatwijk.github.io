@@ -42,8 +42,21 @@ cmdPublish () {
 }
 
 checkBlog () {
-    blog=$1
-    echo =$blog=
+    blog=$(echo $1 | cut -d "," -f 1,8,9,10)
+    IFS=',' read -r -a array <<< "$blog"
+    path="${array[0]}"
+    if cat "$path" | grep "GHissueID" > /dev/null ; then
+        echo "$path already has issue"
+    else
+        title=$(echo "${array[0]}" | sed -r 's/content/Article/g' | sed -r 's/\// - /g')
+        label="${array[2]},${array[3]}"
+        gh label create "${array[2]}" --force
+        gh label create "${array[3]}" --force
+        gh issue create \
+            --title "$title" \
+            --body "Issue for article: $title" \
+            --label "$label"  
+    fi
 }
 
 checkBlogs () {

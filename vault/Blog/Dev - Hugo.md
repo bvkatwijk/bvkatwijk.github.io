@@ -4,8 +4,9 @@ tags:
   - web
   - dx
 date: 2024-09-24T18:48:00+00:00
-lastmod: 2024-09-24T19:03:25+00:00
+lastmod: 2024-09-28T10:32:31+00:00
 title: Hugo
+GHissueID: "4"
 ---
 This website was made using [Hugo](https://gohugo.io/), following the quick start tutorial and iterating from there. So far its been a lot of fun, and gradually expanding website functionality has been a very natural process.
 
