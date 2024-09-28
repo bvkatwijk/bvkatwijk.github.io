@@ -6,7 +6,7 @@ tags:
   - dx
   - fp
 title: Java - Error Return Types
-date: 2024-09-18T13:33:23+00:00
+date: 2030-09-18T13:33:23+00:00
 lastmod: 2024-09-28T11:01:33+00:00
 GHissueID: "5"
 ---

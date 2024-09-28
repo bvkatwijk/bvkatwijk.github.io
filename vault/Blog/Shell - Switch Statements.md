@@ -5,7 +5,7 @@ tags:
   - bash
   - switch
 title: Shell - Switch Statements
-date: 2024-09-21T21:28:03+00:00
+date: 2030-09-21T21:28:03+00:00
 lastmod: 2024-09-28T10:35:56+00:00
 GHissueID: "7"
 ---

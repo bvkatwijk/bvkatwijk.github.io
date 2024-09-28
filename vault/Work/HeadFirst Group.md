@@ -1,8 +1,10 @@
 ---
 aliases: 
-tags: [java, gradle]
+tags:
+  - java
+  - gradle
 title: HeadFirst Group
-date: 2024-09-18T15:34:48+00:00
+date: 2030-09-18T15:34:48+00:00
 lastmod: 2024-09-21T21:19:51+00:00
 ---
 At [HeadFirst Group](https://headfirst.group/en/) I am currently working on various projects in CI/CD, Cloud, Ops, DX, IAC.

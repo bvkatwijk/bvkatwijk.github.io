@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "Suppose",
+                "query": "publish",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -66,8 +66,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -151,20 +150,20 @@
   "active": "24f0172adca5fc18",
   "lastOpenFiles": [
     "Blog/Java - Error Return Types.md",
-    "Blog/Dev - Hugo.md",
-    "Blog/Shell - Switch Statements.md",
     "Blog/Java - Unique Enum Field values.md",
+    "Blog/Shell - Switch Statements.md",
     "Pages/Contact.md",
     "Wiki/Lombok.md",
     "Wiki/Vavr.md",
+    "Work/TopDesk.md",
+    "Work/HeadFirst Group.md",
+    "Work/TopDesk/TopDesk Exchange Sync.md",
+    "_index.md",
+    "Blog/Dev - Hugo.md",
     "main.md",
     "Blog/AWS CDK -  ID, names, and resource replacement.md",
     "Blog/Error Values.md",
-    "_index.md",
     "Pages",
-    "Work/HeadFirst Group.md",
-    "Work/TopDesk.md",
-    "Work/TopDesk/TopDesk Exchange Sync.md",
     "blog/blog.md",
     "cv/cv.md",
     "blog/devoxx2024.md",

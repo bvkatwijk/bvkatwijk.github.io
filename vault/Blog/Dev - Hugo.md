@@ -4,7 +4,7 @@ tags:
   - web
   - dx
 date: 2024-09-24T18:48:00+00:00
-lastmod: 2024-09-28T11:07:13+00:00
+lastmod: 2024-09-28T13:25:39+00:00
 title: Hugo
 GHissueID: "4"
 ---

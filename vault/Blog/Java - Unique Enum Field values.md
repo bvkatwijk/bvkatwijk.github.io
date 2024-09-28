@@ -5,7 +5,7 @@ tags:
   - enum
   - test
 title: Java - Unique Enum Field values
-date: 2024-09-18T11:51:15+00:00
+date: 2030-09-18T11:51:15+00:00
 lastmod: 2024-09-28T10:32:45+00:00
 GHissueID: "6"
 ---
