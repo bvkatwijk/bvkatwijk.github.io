@@ -47,7 +47,7 @@
 
   <meta itemprop="name" content="Boris van Katwijk">
   <meta itemprop="datePublished" content="2024-09-24T18:02:06+00:00">
-  <meta itemprop="dateModified" content="2024-09-24T18:03:35+00:00">
+  <meta itemprop="dateModified" content="2024-09-24T18:50:44+00:00">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Boris van Katwijk">
 
@@ -177,6 +177,40 @@
       
           
         <div class="pr3-ns mb4 mb0-ns w-100 w-40-ns">
+          <a href="/blog/dev---hugo/" class="db grow">
+            <img src="https://bvkatwijk.github.io/images/background.png" class="img" alt="image from Hugo">
+          </a>
+        </div>
+      
+      <div class="blah w-100 w-60-ns pl3-ns">
+        <h1 class="f3 fw1 athelas mt0 lh-title">
+          <a href="/blog/dev---hugo/" class="color-inherit dim link">
+            Hugo
+            </a>
+        </h1>
+        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
+          <p>This website was made using <a href="https://gohugo.io/">Hugo</a>, following the quick start tutorial and iterating from there. So far its been a lot of fun, and gradually expanding website functionality has been a very natural process.</p>
+<h3 id="content">Content</h3>
+<p>I use <a href="https://obsidian.md/">Obsidian</a> to create my content, allowing me to write using <a href="https://en.wikipedia.org/wiki/Markdown">MarkDown</a>. Using <a href="https://github.com/platers/obsidian-linter">Obsidian Linter</a> I can automatically insert <a href="https://en.wikipedia.org/wiki/YAML">YAML</a> properties that Hugo will pick up as metadata.
+Using this setup there is a nice separation between site content and site functionality.</p>
+        </div>
+          <a href="/blog/dev---hugo/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+            </div>
+          
+            <div class="relative w-100 mb4">
+              
+<article class="bb b--black-10">
+  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
+    <div class="flex flex-column flex-row-ns">
+      
+          
+        <div class="pr3-ns mb4 mb0-ns w-100 w-40-ns">
           <a href="/blog/shell---switch-statements/" class="db grow">
             <img src="https://bvkatwijk.github.io/images/background.png" class="img" alt="image from Shell - Switch Statements">
           </a>
@@ -216,53 +250,24 @@
       
           
         <div class="pr3-ns mb4 mb0-ns w-100 w-40-ns">
-          <a href="/main/" class="db grow">
-            <img src="https://bvkatwijk.github.io/images/background.png" class="img" alt="image from BORIS VAN KATWIJK">
+          <a href="/blog/java---error-return-types/" class="db grow">
+            <img src="https://bvkatwijk.github.io/images/background.png" class="img" alt="image from Java - Error Return Types">
           </a>
         </div>
       
       <div class="blah w-100 w-60-ns pl3-ns">
         <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="/main/" class="color-inherit dim link">
-            BORIS VAN KATWIJK
+          <a href="/blog/java---error-return-types/" class="color-inherit dim link">
+            Java - Error Return Types
             </a>
         </h1>
         <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          <h1 id="boris-van-katwijk">BORIS VAN KATWIJK</h1>
-<p>Software Engineer</p>
+          <p>When writing high-level business logic, I prefer to expose an API that uses type safe constructs in the return value to express the possible outcomes.</p>
+<p>Suppose we design a <code>Baker</code> capable of creating <code>Pizza</code>. I&rsquo;ll be using an <code>interface</code> here for the Baker since the actual logic is not relevant for this example.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">record</span> <span style="color:#a6e22e">Pizza</span>() { }
+</span></span></code></pre></div><p>We will be deciding on the signature of a <code>createPizza</code> method. Our <code>Baker</code> sometimes runs out of ingredients, making it impossible to produce a <code>Pizza</code>. However, our API does not reveal this fact. We can choose how we are going to express the possible paths of failure, and listed below are some common options. I frequently encounter solutions that results in poor handling and developer ergonomics. I have sorted them by my preference when it comes to handling domain errors, from worst to best.</p>
         </div>
-          <a href="/main/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-        
-      </div>
-    </div>
-  </div>
-</article>
-
-            </div>
-          
-            <div class="relative w-100 mb4">
-              
-<article class="bb b--black-10">
-  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
-    <div class="flex flex-column flex-row-ns">
-      
-          
-        <div class="pr3-ns mb4 mb0-ns w-100 w-40-ns">
-          <a href="/blog/error-values/" class="db grow">
-            <img src="https://bvkatwijk.github.io/images/background.png" class="img" alt="image from Error Values">
-          </a>
-        </div>
-      
-      <div class="blah w-100 w-60-ns pl3-ns">
-        <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="/blog/error-values/" class="color-inherit dim link">
-            Error Values
-            </a>
-        </h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          <p>Coming soon&hellip;</p>
-        </div>
-          <a href="/blog/error-values/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+          <a href="/blog/java---error-return-types/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
         
       </div>
     </div>
@@ -277,12 +282,6 @@
         <section class="w-100">
           <h1 class="f3">More</h1>
           
-          
-            <h2 class="f5 fw4 mb4 dib mr3">
-              <a href="/blog/java---error-return-types/" class="link black dim">
-                Java - Error Return Types
-              </a>
-            </h2>
           
             <h2 class="f5 fw4 mb4 dib mr3">
               <a href="/blog/java---unique-enum-field-values/" class="link black dim">
