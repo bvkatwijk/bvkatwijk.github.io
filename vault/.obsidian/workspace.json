@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Blog/Java - Error Return Types.md",
+                "file": "Blog/Shell - Switch Statements.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Blog/Java - Error Return Types.md",
+                "file": "Blog/Shell - Switch Statements.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Blog/Java - Error Return Types.md",
+                "file": "Blog/Shell - Switch Statements.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Blog/Java - Error Return Types.md"
+                "file": "Blog/Shell - Switch Statements.md"
               }
             }
           }
@@ -149,6 +149,8 @@
   },
   "active": "24f0172adca5fc18",
   "lastOpenFiles": [
+    "Pages/Contact.md",
+    "Blog/Java - Error Return Types.md",
     "Wiki/Lombok.md",
     "Blog/Java - Unique Enum Field values.md",
     "Blog/Shell - Switch Statements.md",
@@ -156,10 +158,8 @@
     "Blog/Dev - Hugo.md",
     "main.md",
     "Blog/AWS CDK -  ID, names, and resource replacement.md",
-    "Blog/Java - Error Return Types.md",
     "Blog/Error Values.md",
     "_index.md",
-    "Pages/Contact.md",
     "Pages",
     "Work/HeadFirst Group.md",
     "Work/TopDesk.md",
