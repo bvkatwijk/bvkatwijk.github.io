@@ -4,7 +4,7 @@ tags:
   - web
   - dx
 date: 2024-09-24T18:48:00+00:00
-lastmod: 2024-09-28T10:32:31+00:00
+lastmod: 2024-09-28T11:07:13+00:00
 title: Hugo
 GHissueID: "4"
 ---
@@ -19,4 +19,7 @@ I use [obsidian-to-hugo](https://github.com/devidw/obsidian-to-hugo) to transfor
 
 ### Publication
 Using Hugo, I publish the site into the `/docs` directory and push it, where Github Pages automatically hosts the site for me. 
+
+### Comments
+Comments are available via Github Issues. When browsing to a page, if an issue link exists the comments will be displayed under it. I followed the strategy outlined in this[blog post by Declaration of VAR](https://decovar.dev/blog/2019/04/19/github-comments-hugo/). I added a script to automatically create issues for pages which do not have an issue id linked.
 
