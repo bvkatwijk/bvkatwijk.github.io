@@ -39,6 +39,7 @@ cmdPublish () {
     rm -rf docs/*
     obsidian_to_hugo
     HUGO_ENV=production hugo --destination docs
+    echo -n "bvankatwijk.nl" > ./docs/CNAME
 }
 
 # Create github issue for blog if no GHissueID frontmatter set
