@@ -16,13 +16,18 @@ obsidian_to_hugo () {
 }
 
 createIssue () {
-    curl -L \
-        -X POST \
-        -H "Accept: application/vnd.github+json" \
-        -H "Authorization: Bearer $TOKEN" \
-        -H "X-GitHub-Api-Version: 2022-11-28" \
-        https://api.github.com/repos/${OWNER_REPO}/issues \
-        -d '{"title":"Found a bug","body":"I'\''m having a problem with this.","labels":["bug"]}'
+    gh issue create \
+        --title "I found a bug" \
+        --body "Nothing works" \
+        --label "bug,help wanted"
+}
+
+listIssues() {
+    gh issue list
+}
+
+listBlogs() {
+    hugo list published | grep /Blog/
 }
 
 cmdRun () {
@@ -36,17 +41,29 @@ cmdPublish () {
     HUGO_ENV=production hugo --destination docs
 }
 
+checkBlog () {
+    blog=$1
+    echo =$blog=
+}
+
+checkBlogs () {
+    listBlogs | while read blog ; do
+        checkBlog "$blog"
+    done
+}
+
 cmdCheck () {
-    hugo list published \
-        | cut -d "," -f 1 \
-        | grep Blog \
-        | sed -r 's/content/Article/g' \
-        | sed -r 's/\// - /g'
+    checkBlogs
+    # for blog 
+    #     | cut -d "," -f 1,8,9,10
+    #     # \
+    #     # | sed -r 's/content/Article/g' \
+    #     # | sed -r 's/\// - /g'
 }
 
 case $CMD in
     "run") cmdRun ;;
-    "issue") createIssue ;;
+    "issues") listIssues ;;
     "check") cmdCheck ;;
     "publish") cmdPublish ;;
     *) echo "Unknown command $CMD"; exit 1 ;;
