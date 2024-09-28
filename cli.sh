@@ -1,5 +1,5 @@
 #!/bin/bash
-set -euox pipefail
+set -euo pipefail
 
 OWNER_REPO=bvkatwijk/bvkatwijk.github.io
 
@@ -36,9 +36,18 @@ cmdPublish () {
     HUGO_ENV=production hugo --destination docs
 }
 
+cmdCheck () {
+    hugo list published \
+        | cut -d "," -f 1 \
+        | grep Blog \
+        | sed -r 's/content/Article/g' \
+        | sed -r 's/\// - /g'
+}
+
 case $CMD in
     "run") cmdRun ;;
     "issue") createIssue ;;
+    "check") cmdCheck ;;
     "publish") cmdPublish ;;
     *) echo "Unknown command $CMD"; exit 1 ;;
 esac
