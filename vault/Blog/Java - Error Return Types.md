@@ -6,9 +6,9 @@ tags:
   - dx
   - fp
 title: Java - Error Return Types
-date: 2030-09-18T13:33:23+00:00
-lastmod: 2024-09-28T11:01:33+00:00
+lastmod: 2024-09-28T13:37:23+00:00
 GHissueID: "5"
+date: 2024-09-18T15:34:48+00:00
 ---
 Writing code assuming everything will follow the happy path may not result in the best software quality or user experience. Sometimes we choose to ignore unhappy paths, or lack awareness of the existence of unhappy paths. Both of these scenarios can lead to runtime bugs and problems for customers which may be good to prevent.
 
@@ -78,7 +78,7 @@ interface Baker {
     Either<Failure, Pizza> createPizza();  
 }
 ```
-We finally have arrived at an expressive, type-safe API. Calling `createPizza` will give us a type containing either a failure or the pizza. For `Java` the type can be supplied by a functional programming library like [[Vavr]], and implementations exists for most programming languages where functional programming is viable.
+We finally have arrived at an expressive, type-safe API. Calling `createPizza` will give us a type containing either a failure or the pizza. For `Java` the type can be supplied by a functional programming library like [Vavr](https://github.com/vavr-io/vavr), and implementations exists for most programming languages where functional programming is viable.
 
 Since the type is not directly usable as an instance of `Pizza` but instead (maybe) contains it, it requires some work on behalf of the programmer to resolve the possibility of getting a `Failure`, with the compiler assisting you every step of the way. The `Either` type is specifically designed to help you do this. 
 
