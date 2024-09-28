@@ -41,6 +41,7 @@ cmdPublish () {
     HUGO_ENV=production hugo --destination docs
 }
 
+# Create github issue for blog if no GHissueID frontmatter set
 checkBlog () {
     blog=$(echo $1 | cut -d "," -f 1,8,9,10)
     IFS=',' read -r -a array <<< "$blog"
@@ -65,19 +66,13 @@ checkBlogs () {
     done
 }
 
-cmdCheck () {
+cmdIssues () {
     checkBlogs
-    # for blog 
-    #     | cut -d "," -f 1,8,9,10
-    #     # \
-    #     # | sed -r 's/content/Article/g' \
-    #     # | sed -r 's/\// - /g'
 }
 
 case $CMD in
     "run") cmdRun ;;
-    "issues") listIssues ;;
-    "check") cmdCheck ;;
+    "issues") cmdIssues ;;
     "publish") cmdPublish ;;
     *) echo "Unknown command $CMD"; exit 1 ;;
 esac
