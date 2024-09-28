@@ -50,8 +50,8 @@ checkBlog () {
     else
         title=$(echo "${array[0]}" | sed -r 's/content/Article/g' | sed -r 's/\// - /g')
         label="${array[2]},${array[3]}"
-        gh label create "${array[2]}" --force
-        gh label create "${array[3]}" --force
+        gh label create "${array[2]}" || true
+        gh label create "${array[3]}" || true
         gh issue create \
             --title "$title" \
             --body "Issue for article: $title" \
