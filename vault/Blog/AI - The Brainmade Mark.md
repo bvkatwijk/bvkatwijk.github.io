@@ -3,7 +3,7 @@ aliases:
 tags:
   - ai
 date: 2024-10-04T12:57:23+00:00
-lastmod: 2024-10-04T16:42:08+00:00
+lastmod: 2024-10-04T16:56:52+00:00
 title: The Brainmade Mark
 GHissueID: "8"
 featured_image: /images/brainmade.png
@@ -18,6 +18,6 @@ For me it's not that AI is not useful - it obviously is - but it is my assumptio
 
 Currently (2024) it's still doable to confidently identify many posts as being AI-generated, but the opposite is not true. I have no way of knowing that a piece of information is actual human-made content or that the generative model used is just one that has become good enough to fool me.
 
-YouTuber [Tris Oaten at NoBoilerplate](https://www.youtube.com/@NoBoilerplate) created a video  [The "BrainMade" mark](https://www.youtube.com/watch?v=kul0z3OTmVM) where he explains his initiative of including a logo, [BrainMade](https://brainmade.org/) - indicating what you are looking at is content of a real human being. I like this - it is an explicit statement that what you are looking at is created by an actual human being.
+YouTuber [Tris Oaten at NoBoilerplate](https://www.youtube.com/@NoBoilerplate) created a video  [The "BrainMade" mark](https://www.youtube.com/watch?v=kul0z3OTmVM) where he explains his initiative of including a logo, [BrainMade](https://brainmade.org/) - indicating what you are looking at is content of a real human being. I like this - it is an explicit statement that what you are looking at is created by someone real. With intent, effort and passion.
 
 I use AI here and there - for example, finding a few ways to phrase something differently. But everything on this site is me, my opinions, my experience. My goal is to have a place to show who I am, and AI is (and will not be) a part of that.
