@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Blog/Java - Error Return Types.md",
+                "file": "Blog/AI - The Brainmade Mark.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Blog/Java - Error Return Types.md",
+                "file": "Blog/AI - The Brainmade Mark.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Blog/Java - Error Return Types.md",
+                "file": "Blog/AI - The Brainmade Mark.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Blog/Java - Error Return Types.md"
+                "file": "Blog/AI - The Brainmade Mark.md"
               }
             }
           }
@@ -149,12 +149,19 @@
   },
   "active": "24f0172adca5fc18",
   "lastOpenFiles": [
-    "Wiki/Vavr.md",
+    "Blog/Security.md",
+    "Blog/AI - The Brainmade Mark.md",
+    "Blog/Dev - Persistent Data Structures.md",
+    "Blog/Shell - Switch Statements.md",
+    "Work/Ideas.md",
+    "Blog/Dev - Hugo.md",
+    "Pasted image 20241001210233.png",
+    "Pasted image 20241001210151.png",
+    "Pasted image 20241001210149.png",
     "Blog/Java - Error Return Types.md",
     "Blog/Java - Unique Enum Field values.md",
-    "Blog/Shell - Switch Statements.md",
-    "Blog/Dev - Hugo.md",
     "Pages/Contact.md",
+    "Wiki/Vavr.md",
     "Wiki/Lombok.md",
     "Work/TopDesk.md",
     "Work/HeadFirst Group.md",
@@ -174,9 +181,6 @@
     "TODO.md",
     "cv/headfirst-group.md",
     "mkdocs.md",
-    "blog/Blog.md",
-    "cv/TopDesk.md",
-    "cv/CV.md",
     "Work",
     "Blog",
     "Work",

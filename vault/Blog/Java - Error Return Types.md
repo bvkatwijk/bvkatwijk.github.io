@@ -92,7 +92,7 @@ I've been using `Either` to express error paths in core domain functions, and it
 ## Appendix
 
 ### Option
-``
+
 ```java
 interface Baker {  
     Option<Pizza> createPizza();  

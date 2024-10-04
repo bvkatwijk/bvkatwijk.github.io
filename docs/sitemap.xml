@@ -2,23 +2,29 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://bvkatwijk.github.io/blog/</loc>
+    <lastmod>2024-10-04T16:17:41+00:00</lastmod>
+  </url><url>
+    <loc>https://bvkatwijk.github.io/work/</loc>
+    <lastmod>2024-09-30T19:36:22+00:00</lastmod>
+  </url><url>
     <loc>https://bvkatwijk.github.io/wiki/</loc>
     <lastmod>2024-09-28T13:24:29+00:00</lastmod>
   </url><url>
-    <loc>https://bvkatwijk.github.io/work/</loc>
-    <lastmod>2024-09-28T13:24:22+00:00</lastmod>
+    <loc>https://bvkatwijk.github.io/tags/ai/</loc>
+    <lastmod>2024-10-04T16:17:41+00:00</lastmod>
   </url><url>
-    <loc>https://bvkatwijk.github.io/blog/</loc>
-    <lastmod>2024-09-28T13:37:23+00:00</lastmod>
+    <loc>https://bvkatwijk.github.io/tags/</loc>
+    <lastmod>2024-10-04T16:17:41+00:00</lastmod>
+  </url><url>
+    <loc>https://bvkatwijk.github.io/blog/ai---the-brainmade-mark/</loc>
+    <lastmod>2024-10-04T16:17:41+00:00</lastmod>
   </url><url>
     <loc>https://bvkatwijk.github.io/tags/dx/</loc>
     <lastmod>2024-09-28T13:37:23+00:00</lastmod>
   </url><url>
     <loc>https://bvkatwijk.github.io/blog/dev---hugo/</loc>
     <lastmod>2024-09-28T13:29:28+00:00</lastmod>
-  </url><url>
-    <loc>https://bvkatwijk.github.io/tags/</loc>
-    <lastmod>2024-09-28T13:37:23+00:00</lastmod>
   </url><url>
     <loc>https://bvkatwijk.github.io/tags/web/</loc>
     <lastmod>2024-09-28T13:29:28+00:00</lastmod>
