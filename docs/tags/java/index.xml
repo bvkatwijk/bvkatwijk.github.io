@@ -6,8 +6,15 @@
     <description>Recent content in Java on Boris van Katwijk</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 28 Sep 2024 13:37:23 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 07 Oct 2024 19:20:35 +0000</lastBuildDate>
     <atom:link href="https://bvkatwijk.github.io/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Awaitility</title>
+      <link>https://bvkatwijk.github.io/blog/awaitility/</link>
+      <pubDate>Mon, 07 Oct 2024 10:01:38 +0000</pubDate>
+      <guid>https://bvkatwijk.github.io/blog/awaitility/</guid>
+      <description>&lt;p&gt;Writing tests on asynchronous code can be a challenge. Given an asynchronous process to test, we may try to use custom code to wait for the process to finish or reach a certain state. This may cause us to end up with tests that are flaky, slow, or hard to understand. It is not uncommon for legacy projects to have these setups, and perhaps they can be improved a little.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Java - Unique Enum Field values</title>
       <link>https://bvkatwijk.github.io/blog/java---unique-enum-field-values/</link>

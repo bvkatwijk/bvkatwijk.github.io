@@ -19,3 +19,6 @@ name = "linkedin"
 url = "https://www.linkedin.com/in/bvankatwijk/"
 label = "Boris van Katwijk LinkedIn"
 color = "#0072b1"
+
+[markup.goldmark.renderer]
+unsafe= true
