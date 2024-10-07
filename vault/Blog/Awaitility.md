@@ -9,7 +9,7 @@ tags:
   - short
   - spring
 date: 2024-10-07T10:01:38+00:00
-lastmod: 2024-10-07T19:20:35+00:00
+lastmod: 2024-10-07T19:58:57+00:00
 title: Awaitility
 featured_image: /images/awaitility.png
 GHissueID: "11"
@@ -43,7 +43,7 @@ Awaitility.await()
  
  Internally, Awaitility will repeatedly check the condition until success or until timeout. It has a rich fluent DSL to add configuration. Awaitility is [included in Spring Boot Starter Test](https://github.com/spring-projects/spring-boot/issues/37195) by default. 
  
- [Daniel Garnier-Moiroux](https://github.com/Kehrlann) showed this tool in action In his presentation [Spring Boot testing: Zero to Hero](https://devoxx.be/talk/spring-boot-testing-zero-to-hero/) at [Devoxx Belgium 2024](https://devoxx.be/).
+ [Daniel Garnier-Moiroux](https://github.com/Kehrlann) showed this tool in action in his presentation [Spring Boot testing: Zero to Hero](https://devoxx.be/talk/spring-boot-testing-zero-to-hero/) at [Devoxx Belgium 2024](https://devoxx.be/).
  
  Happy testing!
 ### Links

@@ -42,7 +42,7 @@
   <meta property="og:type" content="article">
     <meta property="article:section" content="blog">
     <meta property="article:published_time" content="2024-10-07T10:01:38+00:00">
-    <meta property="article:modified_time" content="2024-10-07T19:20:35+00:00">
+    <meta property="article:modified_time" content="2024-10-07T19:58:57+00:00">
     <meta property="article:tag" content="Devoxx">
     <meta property="article:tag" content="Java">
     <meta property="article:tag" content="Test">
@@ -53,7 +53,7 @@
   <meta itemprop="name" content="Awaitility">
   <meta itemprop="description" content="Writing tests on asynchronous code can be a challenge. Given an asynchronous process to test, we may try to use custom code to wait for the process to finish or reach a certain state. This may cause us to end up with tests that are flaky, slow, or hard to understand. It is not uncommon for legacy projects to have these setups, and perhaps they can be improved a little.">
   <meta itemprop="datePublished" content="2024-10-07T10:01:38+00:00">
-  <meta itemprop="dateModified" content="2024-10-07T19:20:35+00:00">
+  <meta itemprop="dateModified" content="2024-10-07T19:58:57+00:00">
   <meta itemprop="wordCount" content="254">
   <meta itemprop="keywords" content="Devoxx,Java,Test,Dx,Api,Short,Spring">
   <meta name="twitter:card" content="summary">
@@ -219,7 +219,7 @@
 </span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">atMost</span>(Duration.<span style="color:#a6e22e">ofSeconds</span>(5))  
 </span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">until</span>(() <span style="color:#f92672">-&gt;</span> result.<span style="color:#a6e22e">get</span>().<span style="color:#a6e22e">equals</span>(<span style="color:#e6db74">&#34;done!&#34;</span>));
 </span></span></code></pre></div><p>Internally, Awaitility will repeatedly check the condition until success or until timeout. It has a rich fluent DSL to add configuration. Awaitility is <a href="https://github.com/spring-projects/spring-boot/issues/37195">included in Spring Boot Starter Test</a> by default.</p>
-<p><a href="https://github.com/Kehrlann">Daniel Garnier-Moiroux</a> showed this tool in action In his presentation <a href="https://devoxx.be/talk/spring-boot-testing-zero-to-hero/">Spring Boot testing: Zero to Hero</a> at <a href="https://devoxx.be/">Devoxx Belgium 2024</a>.</p>
+<p><a href="https://github.com/Kehrlann">Daniel Garnier-Moiroux</a> showed this tool in action in his presentation <a href="https://devoxx.be/talk/spring-boot-testing-zero-to-hero/">Spring Boot testing: Zero to Hero</a> at <a href="https://devoxx.be/">Devoxx Belgium 2024</a>.</p>
 <p>Happy testing!</p>
 <h3 id="links">Links</h3>
 <ul>
