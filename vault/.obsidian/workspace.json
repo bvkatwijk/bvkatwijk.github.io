@@ -13,14 +13,28 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Wiki/Lombok.md",
+                "file": "Pages/Contact.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "78f54344edf0b20e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Work/HeadFirst Group/AWS CDK.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -86,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Wiki/Lombok.md",
+                "file": "Work/HeadFirst Group/AWS CDK.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +117,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Wiki/Lombok.md",
+                "file": "Work/HeadFirst Group/AWS CDK.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +140,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Wiki/Lombok.md"
+                "file": "Work/HeadFirst Group/AWS CDK.md"
               }
             }
           }
@@ -147,26 +161,31 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "610fb635479196a9",
+  "active": "78f54344edf0b20e",
   "lastOpenFiles": [
-    "Blog/Awaitility.md",
+    "Pages/Untitled.md",
+    "Work/HeadFirst Group/AWS CDK.md",
+    "Work/HeadFirst Group.md",
     "Blog/Security - Link Swapping.md",
-    "Blog/AI - The Brainmade Mark.md",
+    "Blog/Dev - Persistent Data Structures.md",
+    "Blog/Java - Unique Enum Field values.md",
+    "Blog/Dev - Intellij Hot Reload.md",
+    "Pages/Contact.md",
+    "Work/HeadFirst Group/Untitled.md",
+    "Work/HeadFirst Group",
+    "Blog/Work - An impression of Software Engineering for Absolute Beginners.md",
     "Work/Ideas.md",
+    "Wiki/Lombok.md",
+    "Blog/Awaitility.md",
+    "Blog/AI - The Brainmade Mark.md",
     "Blog/Shell - Switch Statements.md",
     "Blog/Dev - Hugo.md",
     "Blog/Java - Error Return Types.md",
-    "Blog/Dev - Persistent Data Structures.md",
-    "Blog/Work - An impression of Software Engineering for Absolute Beginners.md",
-    "Blog/Java - Unique Enum Field values.md",
     "Pasted image 20241001210233.png",
     "Pasted image 20241001210151.png",
     "Pasted image 20241001210149.png",
-    "Pages/Contact.md",
     "Wiki/Vavr.md",
-    "Wiki/Lombok.md",
     "Work/TopDesk.md",
-    "Work/HeadFirst Group.md",
     "Work/TopDesk/TopDesk Exchange Sync.md",
     "_index.md",
     "main.md",
@@ -175,12 +194,8 @@
     "Pages",
     "blog/blog.md",
     "cv/cv.md",
-    "blog/devoxx2024.md",
     "Work/TopDesk",
     "Wiki",
-    "index.md",
-    "Mkdocs.md",
-    "TODO.md",
     "Work",
     "Blog",
     "Work",

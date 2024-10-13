@@ -2,7 +2,7 @@
 aliases: 
 tags: 
 date: 2050-09-29T08:26:11+00:00
-lastmod: 2024-09-30T19:36:22+00:00
+lastmod: 2024-10-09T13:03:35+00:00
 ---
 - Function vs Method vs Closure vs Anonymous Function
 - Concept of Persistent Data Structure
@@ -19,9 +19,13 @@ lastmod: 2024-09-30T19:36:22+00:00
 - Stack vs Heap Memory
 - // Brainmade (NoBoilerplate)
 - graphviz on source code graph
-- Devoxx
 - Security - Don't trust that link
 - What even is DevOps
 - Make illegal states impossible
 - Application URIs (obsidian://open)
 - oh my zsh plugins
+- scala context bounds
+- Devoxx
+	- submodule for project development
+		- gradle substitute builds
+	- cpu architecture visual from image - caches
