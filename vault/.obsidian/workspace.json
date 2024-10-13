@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Work/HeadFirst Group/AWS CDK.md",
+                "file": "Blog/Security - Link Swapping.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -100,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Work/HeadFirst Group/AWS CDK.md",
+                "file": "Blog/Security - Link Swapping.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +117,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Work/HeadFirst Group/AWS CDK.md",
+                "file": "Blog/Security - Link Swapping.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -140,7 +140,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Work/HeadFirst Group/AWS CDK.md"
+                "file": "Blog/Security - Link Swapping.md"
               }
             }
           }
@@ -163,8 +163,9 @@
   },
   "active": "78f54344edf0b20e",
   "lastOpenFiles": [
-    "Pages/Untitled.md",
+    "Blog/Awaitility.md",
     "Work/HeadFirst Group/AWS CDK.md",
+    "Pages/Untitled.md",
     "Work/HeadFirst Group.md",
     "Blog/Security - Link Swapping.md",
     "Blog/Dev - Persistent Data Structures.md",
@@ -176,7 +177,6 @@
     "Blog/Work - An impression of Software Engineering for Absolute Beginners.md",
     "Work/Ideas.md",
     "Wiki/Lombok.md",
-    "Blog/Awaitility.md",
     "Blog/AI - The Brainmade Mark.md",
     "Blog/Shell - Switch Statements.md",
     "Blog/Dev - Hugo.md",
