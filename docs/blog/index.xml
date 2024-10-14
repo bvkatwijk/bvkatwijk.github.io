@@ -6,8 +6,15 @@
     <description>Recent content in Blogs on Boris van Katwijk</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 07 Oct 2024 19:58:57 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 14 Oct 2024 06:15:51 +0000</lastBuildDate>
     <atom:link href="https://bvkatwijk.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Link Swapping</title>
+      <link>https://bvkatwijk.github.io/blog/security---link-swapping/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://bvkatwijk.github.io/blog/security---link-swapping/</guid>
+      <description>&lt;p&gt;If you&amp;rsquo;re on a website and you see a link, how do you figure out where that link will take you? Just hover over it right? Try to hovering this &lt;a href = &#34;https://wikipedia.org&#34; onclick=&#34;this.href = &#39;https://www.youtube.com/watch?v=dQw4w9WgXcQ&#39;;&#34; target=&#34;_blank&#34;&gt;Totally Legitimate Link&lt;/a&gt;. If you dare, click it.&lt;/p&gt;&#xA;&lt;p&gt;If you&amp;rsquo;ve clicked the link, welcome back! Refresh the page to have the link in it&amp;rsquo;s initial state again. Not everything is what it seems, and this is also very true when browsing the web.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Awaitility</title>
       <link>https://bvkatwijk.github.io/blog/awaitility/</link>
