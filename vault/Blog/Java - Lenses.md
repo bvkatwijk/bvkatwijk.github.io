@@ -8,6 +8,7 @@ tags:
 date: 2024-10-26T18:26:22+00:00
 lastmod: 2024-11-15T15:15:23+00:00
 title: Lenses
+GHissueID: "13"
 ---
 
 ### Immutability
