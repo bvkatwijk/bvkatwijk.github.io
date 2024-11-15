@@ -6,7 +6,7 @@ tags:
   - data
   - api
 date: 2024-10-26T18:26:22+00:00
-lastmod: 2024-11-15T15:52:50+00:00
+lastmod: 2024-11-15T16:10:10+00:00
 title: Lenses
 GHissueID: "13"
 featured_image: /images/lens.webp
@@ -124,7 +124,7 @@ I've [created a library](https://github.com/bvkatwijk/java-lens) to automate the
 @With @Lenses record City(String name) { }
 ```
 
-This will generate a helper class holding `Lens` instances that can be applied at will. To enable the method chain for nested lensing it also contains a `ROOT` instance.
+This will generate a helper class holding `Lens` instances that can be applied at will. To enable the method chain for nested lensing it also contains a `µ` instance. The name is chosen to make collisions with field names very unlikely.
 
 The library is a work-in-progress. Feel free to try it out - I hope the examples (implemented as unit tests) serve both as documentation and a quick way to experiment. It is published on [Maven Central](https://mvnrepository.com/artifact/nl.bvkatwijk/java-lens) . Currently it is still necessary to also use Lombok's `@With` annotation, this requirement may be dropped in a future release.
 

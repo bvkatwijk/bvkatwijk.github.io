@@ -43,7 +43,7 @@ Using immutable types has a number of benefits. Since it eliminates mutation, it
   <meta property="og:type" content="article">
     <meta property="article:section" content="blog">
     <meta property="article:published_time" content="2024-10-26T18:26:22+00:00">
-    <meta property="article:modified_time" content="2024-11-15T15:52:50+00:00">
+    <meta property="article:modified_time" content="2024-11-15T16:10:10+00:00">
     <meta property="article:tag" content="Fp">
     <meta property="article:tag" content="Java">
     <meta property="article:tag" content="Data">
@@ -52,8 +52,8 @@ Using immutable types has a number of benefits. Since it eliminates mutation, it
   <meta itemprop="name" content="Lenses">
   <meta itemprop="description" content="Immutability Using immutable types has a number of benefits. Since it eliminates mutation, it makes code easier to reason about. Also, it eliminates concurrent modification problems, thereby unlocking a lot of performance improvement opportunities. Java originally was fully Object-Oriented but it adapted to other paradigms. The language itself still lacks some features that makes it convenient to work with immutable data. In this post I’d like to show what can currently be done in vanilla Java and show a powerful concept to transform immutable data.">
   <meta itemprop="datePublished" content="2024-10-26T18:26:22+00:00">
-  <meta itemprop="dateModified" content="2024-11-15T15:52:50+00:00">
-  <meta itemprop="wordCount" content="1208">
+  <meta itemprop="dateModified" content="2024-11-15T16:10:10+00:00">
+  <meta itemprop="wordCount" content="1220">
   <meta itemprop="keywords" content="Fp,Java,Data,Api">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Lenses">
@@ -274,7 +274,7 @@ Using immutable types has a number of benefits. Since it eliminates mutation, it
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">@With</span> <span style="color:#a6e22e">@Lenses</span> <span style="color:#66d9ef">record</span> <span style="color:#a6e22e">House</span>(Address address) { }
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">@With</span> <span style="color:#a6e22e">@Lenses</span> <span style="color:#66d9ef">record</span> <span style="color:#a6e22e">Address</span>(String street, String zipCode, City city) { }
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">@With</span> <span style="color:#a6e22e">@Lenses</span> <span style="color:#66d9ef">record</span> <span style="color:#a6e22e">City</span>(String name) { }
-</span></span></code></pre></div><p>This will generate a helper class holding <code>Lens</code> instances that can be applied at will. To enable the method chain for nested lensing it also contains a <code>ROOT</code> instance.</p>
+</span></span></code></pre></div><p>This will generate a helper class holding <code>Lens</code> instances that can be applied at will. To enable the method chain for nested lensing it also contains a <code>µ</code> instance. The name is chosen to make collisions with field names very unlikely.</p>
 <p>The library is a work-in-progress. Feel free to try it out - I hope the examples (implemented as unit tests) serve both as documentation and a quick way to experiment. It is published on <a href="https://mvnrepository.com/artifact/nl.bvkatwijk/java-lens">Maven Central</a> . Currently it is still necessary to also use Lombok&rsquo;s <code>@With</code> annotation, this requirement may be dropped in a future release.</p>
 <h3 id="inspiration">Inspiration</h3>
 <p>The implementation of this library was driven by inspiration from <code>Monocle</code>, a more powerful library for  <code>Scala</code> authored by <a href="https://github.com/julien-truffaut">Julien Truffaut</a>. Monocle mentions <a href="https://github.com/ekmett/lens">Haskell Lens</a>  (authored by <a href="https://github.com/ekmett">Edward Kmett</a> as its own main inspiration. I would like to express gratitude and admiration for their work.</p>
