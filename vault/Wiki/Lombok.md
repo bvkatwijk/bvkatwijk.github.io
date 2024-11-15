@@ -3,9 +3,9 @@ aliases:
 tags: 
 title: Lombok
 date: 2024-09-18T11:31:32+00:00
-lastmod: 2024-09-24T19:00:48+00:00
+lastmod: 2024-10-18T05:54:11+00:00
 ---
-One of my favourite tools in the Java ecosystem is [Lombok](https://projectlombok.org/). It reduces the code you have to write, and increases the correctness of your code.
+One of my favourite tools in the Java ecosystem is [Lombok](https://projectlombok.org/). It eliminates boilerplate by automatically generating it at compile-time. This has two important side effects: you cannot make mistakes in this generated code, and generated code keeps up to date with code changes.
 
 These days I usually include this `lombok.config` [configuration file](https://projectlombok.org/features/configuration) in the root of my projects:
 
@@ -21,18 +21,21 @@ lombok.accessors.fluent = true
 
 When I use setters, I prefer to return the instance I'm working on to be able to chain a lot of calls together. This is set as the default using `lombok.accessors.chain = true`.
 
-I've never been too fond of having to prefix getters with `get`, so by setting `lombok.accessors.fluent = true` I can omit that everywhere.
+In projects using only immutable data there is no need to do any work in getter methods and thus little use for prefixing getters with `get`, so by setting `lombok.accessors.fluent = true` I can omit that everywhere.
 
 > [!WARNING]
 > The [Accessors](https://projectlombok.org/features/experimental/Accessors) features are `experimental`, and may change in the future.
 
-Now that our accessor methods are very smooth we will rarely need field access so we can set `lombok.fieldDefaults.defaultPrivate = true` to make everything private unless specified otherwise.
+In business-level immutable code there should be no need to access fields directly so we can set `lombok.fieldDefaults.defaultPrivate = true` to make everything private unless specified otherwise.
 
 I prefer immutability in my projects, so setting `lombok.fieldDefaults.defaultFinal = true` sets this as the default, making me do extra work when I have to make fields mutable, and saves a lot of `final` keywords.
 
 Setting `lombok.addLombokGeneratedAnnotation = true` helps with some tools that inspect code to indicate that this is generated code.
 
 Lombok can `bubble up` when searching for configuration. This means that it will traverse up the directories and use the configuration file(s) that it can find. Setting `config.stopBubbling = true` tells Lombok to stop looking for more files.
+
+### `@With`
+Lombok will generate a `with` method for each field of the type. A `with` method is like a `set` method for immutable programming. Instead of mutating a field in-place, it returns a new instance with only the field changed, saving a lot of boilerplate. In [JEP 468](https://openjdk.org/jeps/468) a replacement feature could be added in Java itself, although it is not clear yet if this will have an exact overlap with what `@With` currently provides.
 
 ### IDE Generation
 
