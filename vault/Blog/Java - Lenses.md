@@ -6,7 +6,8 @@ tags:
   - data
   - api
 date: 2024-10-26T18:26:22+00:00
-lastmod: 2024-11-15T15:07:57+00:00
+lastmod: 2024-11-15T15:09:46+00:00
+title: Lenses
 ---
 
 ### Immutability
