@@ -6,14 +6,14 @@ tags:
   - data
   - api
 date: 2024-10-26T18:26:22+00:00
-lastmod: 2024-11-15T15:46:27+00:00
+lastmod: 2024-11-15T15:52:50+00:00
 title: Lenses
 GHissueID: "13"
 featured_image: /images/lens.webp
 ---
 
 ### Immutability
-Using immutable types has a number of benefits. Since it eliminates mutation, it makes code easier to reason about. Also, it eliminates concurrent modification problems, thereby unlocking a lot of performance improvement opportunities. Java originally was fully Object-Oriented but it adapting to other paradigms. The language itself still lacks some features that makes it convenient to work with immutable data. In this post I'd like to show what can currently be done in vanilla Java and show a powerful concept to work with immutable data transformation.
+Using immutable types has a number of benefits. Since it eliminates mutation, it makes code easier to reason about. Also, it eliminates concurrent modification problems, thereby unlocking a lot of performance improvement opportunities. Java originally was fully Object-Oriented but it adapted to other paradigms. The language itself still lacks some features that makes it convenient to work with immutable data. In this post I'd like to show what can currently be done in vanilla Java and show a powerful concept to transform immutable data.
 
 ### Java Records
 Since Java 16, `record` classes were finalised and added to the language, which are described in [JEP 395](https://openjdk.org/jeps/395) as  "transparent carriers for immutable data". The canonical example of this is a `Point` in two-dimensional space. A `Point` is defined by an `x` and `y` coordinate - nothing more, nothing less. 

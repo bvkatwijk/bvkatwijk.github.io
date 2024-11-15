@@ -6,14 +6,14 @@
     <description>Recent content in Fp on Boris van Katwijk</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 15 Nov 2024 15:46:27 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 15 Nov 2024 15:52:50 +0000</lastBuildDate>
     <atom:link href="https://bvkatwijk.github.io/tags/fp/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Lenses</title>
       <link>https://bvkatwijk.github.io/blog/java---lenses/</link>
       <pubDate>Sat, 26 Oct 2024 18:26:22 +0000</pubDate>
       <guid>https://bvkatwijk.github.io/blog/java---lenses/</guid>
-      <description>&lt;h3 id=&#34;immutability&#34;&gt;Immutability&lt;/h3&gt;&#xA;&lt;p&gt;Using immutable types has a number of benefits. Since it eliminates mutation, it makes code easier to reason about. Also, it eliminates concurrent modification problems, thereby unlocking a lot of performance improvement opportunities. Java originally was fully Object-Oriented but it adapting to other paradigms. The language itself still lacks some features that makes it convenient to work with immutable data. In this post I&amp;rsquo;d like to show what can currently be done in vanilla Java and show a powerful concept to work with immutable data transformation.&lt;/p&gt;</description>
+      <description>&lt;h3 id=&#34;immutability&#34;&gt;Immutability&lt;/h3&gt;&#xA;&lt;p&gt;Using immutable types has a number of benefits. Since it eliminates mutation, it makes code easier to reason about. Also, it eliminates concurrent modification problems, thereby unlocking a lot of performance improvement opportunities. Java originally was fully Object-Oriented but it adapted to other paradigms. The language itself still lacks some features that makes it convenient to work with immutable data. In this post I&amp;rsquo;d like to show what can currently be done in vanilla Java and show a powerful concept to transform immutable data.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Java - Error Return Types</title>
