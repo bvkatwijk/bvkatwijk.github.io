@@ -6,8 +6,15 @@
     <description>Recent content on Boris van Katwijk</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 14 Oct 2024 06:15:51 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 15 Nov 2024 15:15:23 +0000</lastBuildDate>
     <atom:link href="https://bvkatwijk.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lenses</title>
+      <link>https://bvkatwijk.github.io/blog/java---lenses/</link>
+      <pubDate>Sat, 26 Oct 2024 18:26:22 +0000</pubDate>
+      <guid>https://bvkatwijk.github.io/blog/java---lenses/</guid>
+      <description>&lt;h3 id=&#34;immutability&#34;&gt;Immutability&lt;/h3&gt;&#xA;&lt;p&gt;Using immutable types has a number of benefits. Since it eliminates mutation, it makes code easier to reason about. Also, it eliminates concurrent modification problems, thereby unlocking a lot of performance improvement opportunities. Java originally was fully Object-Oriented but it adapting to other paradigms. The language itself still lacks some features that makes it convenient to work with immutable data. In this post I&amp;rsquo;d like to show what can currently be done in vanilla Java and show a powerful concept to work with immutable data transformation.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Link Swapping</title>
       <link>https://bvkatwijk.github.io/blog/security---link-swapping/</link>
@@ -69,7 +76,7 @@
       <link>https://bvkatwijk.github.io/wiki/lombok/</link>
       <pubDate>Wed, 18 Sep 2024 11:31:32 +0000</pubDate>
       <guid>https://bvkatwijk.github.io/wiki/lombok/</guid>
-      <description>&lt;p&gt;One of my favourite tools in the Java ecosystem is &lt;a href=&#34;https://projectlombok.org/&#34;&gt;Lombok&lt;/a&gt;. It reduces the code you have to write, and increases the correctness of your code.&lt;/p&gt;&#xA;&lt;p&gt;These days I usually include this &lt;code&gt;lombok.config&lt;/code&gt; &lt;a href=&#34;https://projectlombok.org/features/configuration&#34;&gt;configuration file&lt;/a&gt; in the root of my projects:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-config&#34; data-lang=&#34;config&#34;&gt;config.stopBubbling = true&#xA;lombok.addLombokGeneratedAnnotation = true&#xA;lombok.fieldDefaults.defaultPrivate = true&#xA;lombok.fieldDefaults.defaultFinal = true&#xA;lombok.accessors.chain = true&#xA;lombok.accessors.fluent = true&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;configuration&#34;&gt;Configuration&lt;/h3&gt;&#xA;&lt;p&gt;When I use setters, I prefer to return the instance I&amp;rsquo;m working on to be able to chain a lot of calls together. This is set as the default using &lt;code&gt;lombok.accessors.chain = true&lt;/code&gt;.&lt;/p&gt;</description>
+      <description>&lt;p&gt;One of my favourite tools in the Java ecosystem is &lt;a href=&#34;https://projectlombok.org/&#34;&gt;Lombok&lt;/a&gt;. It eliminates boilerplate by automatically generating it at compile-time. This has two important side effects: you cannot make mistakes in this generated code, and generated code keeps up to date with code changes.&lt;/p&gt;&#xA;&lt;p&gt;These days I usually include this &lt;code&gt;lombok.config&lt;/code&gt; &lt;a href=&#34;https://projectlombok.org/features/configuration&#34;&gt;configuration file&lt;/a&gt; in the root of my projects:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-config&#34; data-lang=&#34;config&#34;&gt;config.stopBubbling = true&#xA;lombok.addLombokGeneratedAnnotation = true&#xA;lombok.fieldDefaults.defaultPrivate = true&#xA;lombok.fieldDefaults.defaultFinal = true&#xA;lombok.accessors.chain = true&#xA;lombok.accessors.fluent = true&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;configuration&#34;&gt;Configuration&lt;/h3&gt;&#xA;&lt;p&gt;When I use setters, I prefer to return the instance I&amp;rsquo;m working on to be able to chain a lot of calls together. This is set as the default using &lt;code&gt;lombok.accessors.chain = true&lt;/code&gt;.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -6,8 +6,36 @@
     <description>Recent content in Tags on Boris van Katwijk</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 14 Oct 2024 06:15:51 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 15 Nov 2024 15:15:23 +0000</lastBuildDate>
     <atom:link href="https://bvkatwijk.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Api</title>
+      <link>https://bvkatwijk.github.io/tags/api/</link>
+      <pubDate>Sat, 26 Oct 2024 18:26:22 +0000</pubDate>
+      <guid>https://bvkatwijk.github.io/tags/api/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Data</title>
+      <link>https://bvkatwijk.github.io/tags/data/</link>
+      <pubDate>Sat, 26 Oct 2024 18:26:22 +0000</pubDate>
+      <guid>https://bvkatwijk.github.io/tags/data/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Fp</title>
+      <link>https://bvkatwijk.github.io/tags/fp/</link>
+      <pubDate>Sat, 26 Oct 2024 18:26:22 +0000</pubDate>
+      <guid>https://bvkatwijk.github.io/tags/fp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Java</title>
+      <link>https://bvkatwijk.github.io/tags/java/</link>
+      <pubDate>Sat, 26 Oct 2024 18:26:22 +0000</pubDate>
+      <guid>https://bvkatwijk.github.io/tags/java/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Html</title>
       <link>https://bvkatwijk.github.io/tags/html/</link>
@@ -30,13 +58,6 @@
       <description></description>
     </item>
     <item>
-      <title>Api</title>
-      <link>https://bvkatwijk.github.io/tags/api/</link>
-      <pubDate>Mon, 07 Oct 2024 10:01:38 +0000</pubDate>
-      <guid>https://bvkatwijk.github.io/tags/api/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Devoxx</title>
       <link>https://bvkatwijk.github.io/tags/devoxx/</link>
       <pubDate>Mon, 07 Oct 2024 10:01:38 +0000</pubDate>
@@ -48,13 +69,6 @@
       <link>https://bvkatwijk.github.io/tags/dx/</link>
       <pubDate>Mon, 07 Oct 2024 10:01:38 +0000</pubDate>
       <guid>https://bvkatwijk.github.io/tags/dx/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Java</title>
-      <link>https://bvkatwijk.github.io/tags/java/</link>
-      <pubDate>Mon, 07 Oct 2024 10:01:38 +0000</pubDate>
-      <guid>https://bvkatwijk.github.io/tags/java/</guid>
       <description></description>
     </item>
     <item>
@@ -111,13 +125,6 @@
       <link>https://bvkatwijk.github.io/tags/switch/</link>
       <pubDate>Sat, 21 Sep 2024 21:28:03 +0000</pubDate>
       <guid>https://bvkatwijk.github.io/tags/switch/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Fp</title>
-      <link>https://bvkatwijk.github.io/tags/fp/</link>
-      <pubDate>Wed, 18 Sep 2024 15:34:48 +0000</pubDate>
-      <guid>https://bvkatwijk.github.io/tags/fp/</guid>
       <description></description>
     </item>
   </channel>

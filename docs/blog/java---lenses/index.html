@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Lenses | Boris van Katwijk</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="Immutability
+Using immutable types has a number of benefits. Since it eliminates mutation, it makes code easier to reason about. Also, it eliminates concurrent modification problems, thereby unlocking a lot of performance improvement opportunities. Java originally was fully Object-Oriented but it adapting to other paradigms. The language itself still lacks some features that makes it convenient to work with immutable data. In this post I&rsquo;d like to show what can currently be done in vanilla Java and show a powerful concept to work with immutable data transformation.">
+    <meta name="generator" content="Hugo 0.134.2">
+    
+    
+    
+    
+      <meta name="robots" content="index, follow">
+    
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.3c911f173ca8bc0d24f4f190a869190760929ba5133c451c7ac90aa960eef591.css" >
+
+
+
+    
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="https://bvkatwijk.github.io/blog/java---lenses/">
+    
+
+    <meta property="og:url" content="https://bvkatwijk.github.io/blog/java---lenses/">
+  <meta property="og:site_name" content="Boris van Katwijk">
+  <meta property="og:title" content="Lenses">
+  <meta property="og:description" content="Immutability Using immutable types has a number of benefits. Since it eliminates mutation, it makes code easier to reason about. Also, it eliminates concurrent modification problems, thereby unlocking a lot of performance improvement opportunities. Java originally was fully Object-Oriented but it adapting to other paradigms. The language itself still lacks some features that makes it convenient to work with immutable data. In this post I’d like to show what can currently be done in vanilla Java and show a powerful concept to work with immutable data transformation.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2024-10-26T18:26:22+00:00">
+    <meta property="article:modified_time" content="2024-11-15T15:15:23+00:00">
+    <meta property="article:tag" content="Fp">
+    <meta property="article:tag" content="Java">
+    <meta property="article:tag" content="Data">
+    <meta property="article:tag" content="Api">
+
+  <meta itemprop="name" content="Lenses">
+  <meta itemprop="description" content="Immutability Using immutable types has a number of benefits. Since it eliminates mutation, it makes code easier to reason about. Also, it eliminates concurrent modification problems, thereby unlocking a lot of performance improvement opportunities. Java originally was fully Object-Oriented but it adapting to other paradigms. The language itself still lacks some features that makes it convenient to work with immutable data. In this post I’d like to show what can currently be done in vanilla Java and show a powerful concept to work with immutable data transformation.">
+  <meta itemprop="datePublished" content="2024-10-26T18:26:22+00:00">
+  <meta itemprop="dateModified" content="2024-11-15T15:15:23+00:00">
+  <meta itemprop="wordCount" content="1210">
+  <meta itemprop="keywords" content="Fp,Java,Data,Api">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Lenses">
+  <meta name="twitter:description" content="Immutability Using immutable types has a number of benefits. Since it eliminates mutation, it makes code easier to reason about. Also, it eliminates concurrent modification problems, thereby unlocking a lot of performance improvement opportunities. Java originally was fully Object-Oriented but it adapting to other paradigms. The language itself still lacks some features that makes it convenient to work with immutable data. In this post I’d like to show what can currently be done in vanilla Java and show a powerful concept to work with immutable data transformation.">
+
+      
+    
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white production">
+
+    
+   
+  
+
+  
+  <header class="cover bg-top" style="background-image: url('https://bvkatwijk.github.io/images/background.png');">
+    <div class="bg-black-60">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        Boris van Katwijk
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/pages/contact/" title="Contact page">
+              Contact
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+<div class="ananke-socials">
+  
+    
+    <a href="https://twitter.com/boris_katwijk" target="_blank" rel="noopener" class="twitter ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="Boris van Katwijk Twitter link" aria-label="follow on Boris van Katwijk Twitter——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;"/></svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+    
+    <a href="https://github.com/bvkatwijk" target="_blank" rel="noopener" class="github ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="Boris van Katwijk GitHub link" aria-label="follow on Boris van Katwijk GitHub——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+    
+    <a href="https://www.linkedin.com/in/bvankatwijk/" target="_blank" rel="noopener" class="linkedin ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="Boris van Katwijk LinkedIn link" aria-label="follow on Boris van Katwijk LinkedIn——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+      <div class="tc-l pv6 ph3 ph4-ns">
+        
+          <div class="f2 f1-l fw2 white-90 mb0 lh-title">Lenses</div>
+          
+        
+      </div>
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Blogs
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+      
+      <a href="https://twitter.com/intent/tweet?url=https://bvkatwijk.github.io/blog/java---lenses/&amp;text=Lenses" class="ananke-social-link twitter no-underline" aria-label="share on Boris van Katwijk Twitter">
+        
+        <span class="icon"> <svg style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;"/></svg>
+</span>
+        
+      </a>
+    
+      
+      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://bvkatwijk.github.io/blog/java---lenses/&amp;title=Lenses" class="ananke-social-link linkedin no-underline" aria-label="share on Boris van Katwijk LinkedIn">
+        
+        <span class="icon"> <svg style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span>
+        
+      </a>
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">Lenses</h1>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2024-10-26T18:26:22Z">October 26, 2024</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h3 id="immutability">Immutability</h3>
+<p>Using immutable types has a number of benefits. Since it eliminates mutation, it makes code easier to reason about. Also, it eliminates concurrent modification problems, thereby unlocking a lot of performance improvement opportunities. Java originally was fully Object-Oriented but it adapting to other paradigms. The language itself still lacks some features that makes it convenient to work with immutable data. In this post I&rsquo;d like to show what can currently be done in vanilla Java and show a powerful concept to work with immutable data transformation.</p>
+<h3 id="java-records">Java Records</h3>
+<p>Since Java 16, <code>record</code> classes were finalised and added to the language, which are described in <a href="https://openjdk.org/jeps/395">JEP 395</a> as  &ldquo;transparent carriers for immutable data&rdquo;. The canonical example of this is a <code>Point</code> in two-dimensional space. A <code>Point</code> is defined by an <code>x</code> and <code>y</code> coordinate - nothing more, nothing less.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">record</span> <span style="color:#a6e22e">Point</span>(<span style="color:#66d9ef">int</span> x, <span style="color:#66d9ef">int</span> y) { }
+</span></span></code></pre></div><p>Using a <code>record</code> gives us a lot of functionality out of the box like proper <code>equals</code>/<code>hashcode</code> implementations, constructors, accessor methods, and more. The type is shallowly immutable, meaning that there is no way to reassign its components. This restriction gives us a lot of benefits - we can safely distribute instances to different parts of our logic and safely use concurrent programming without fear, since there is no way to mutate the instance itself.</p>
+<h3 id="data-transformation">Data Transformation</h3>
+<p>There are of course plenty of situations where we do need data deviating from the data that we received. For example, updating the <code>x</code> value of a given <code>Point</code> . We do not mutate our input, but we create a new <code>Point</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">record</span> <span style="color:#a6e22e">Point</span>(<span style="color:#66d9ef">int</span> x, <span style="color:#66d9ef">int</span> y) {
+</span></span><span style="display:flex;"><span>	Point <span style="color:#a6e22e">withX</span>(<span style="color:#66d9ef">int</span> input) {
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> Point(input, <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">y</span>());
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>	Point <span style="color:#a6e22e">withY</span>(<span style="color:#66d9ef">int</span> input) {
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> Point(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">x</span>(), input);
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>We successfully create a new instance, but we do have to specify the value for each component explicitly, even when it is the same as the input value. When our code grows in volume (more creation methods or more record components) this becomes tedious and error-prone.</p>
+<h3 id="derived-creation">Derived Creation</h3>
+<p>To solve this we need a mechanism for <em>derived instance creation</em>, a way to specify that we want to create new instances with only some modifications. <a href="https://openjdk.org/jeps/468">JEP 468</a> is exploring this as part of Project Amber.</p>
+<p>One way to already get this functionality is to use Lombok <code>@With</code> annotation. It generates <code>with</code> methods for each record component, allowing derived creation altering only that component</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@With</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">record</span> <span style="color:#a6e22e">Point</span>(<span style="color:#66d9ef">int</span> x, <span style="color:#66d9ef">int</span> y) {
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// withX, withY generated automatically</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>This enables convenient shallow derived creation for <em>single components</em>, a valuable step, but we can take it a lot further. What if we want to make deep transformations?</p>
+<h3 id="deep-transformation">Deep Transformation</h3>
+<p>As an example, suppose we have record classes for <code>Person</code> , <code>House</code>, <code>Address</code> and <code>City</code>. A <code>Person</code> has a <code>House</code>, which has an <code>Address</code>, which has a <code>City</code> as follows:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@With</span> <span style="color:#66d9ef">record</span> <span style="color:#a6e22e">Person</span>(String firstName, String lastName, House house) { }
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@With</span> <span style="color:#66d9ef">record</span> <span style="color:#a6e22e">House</span>(Address address) { }
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@With</span> <span style="color:#66d9ef">record</span> <span style="color:#a6e22e">Address</span>(String street, String zipCode, City city) { }
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@With</span> <span style="color:#66d9ef">record</span> <span style="color:#a6e22e">City</span>(String name) { }
+</span></span></code></pre></div><p>Suppose <code>alice</code> wants to move to New York. Using the most convenient strategy discussed we end up with the following:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">static</span> City NEW_YORK <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> City(<span style="color:#e6db74">&#34;New York&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> Person <span style="color:#a6e22e">moveToNewYork</span>(Person person) {
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> person.<span style="color:#a6e22e">withHouse</span>(
+</span></span><span style="display:flex;"><span>		person.<span style="color:#a6e22e">house</span>().<span style="color:#a6e22e">withAddress</span>(
+</span></span><span style="display:flex;"><span>			person.<span style="color:#a6e22e">house</span>().<span style="color:#a6e22e">address</span>().<span style="color:#a6e22e">withCity</span>(NEW_YORK)
+</span></span><span style="display:flex;"><span>		)
+</span></span><span style="display:flex;"><span>	);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>In order to provide the new <code>City</code> for a <code>Person</code> we have to call <code>withHouse</code>, and specify explicitly that we would like to use the existing <code>house</code> with a transformation to <code>address</code>. Then we use the existing <code>address</code> but specify a new value for <code>city</code>. That was a lot of code to write, and we can see that this does not scale well when nesting grows deeper or when we have a lot of transformations that we would like to express.</p>
+<h3 id="lenses">Lenses</h3>
+<p>What is needed here is an API to express the intent to apply nested transformations. In <code>Haskell</code> and <code>Scala</code> the paradigm of immutable programming has existed for a long time and thus support has emerged to effectively work with immutable data. One option is to use a  <code>Lens</code> paradigm.</p>
+<p>Before exploring what a <code>Lens</code> is and how it works, lets demonstrate the above example in a <code>Lens</code> style, expressing the intent to change the city of the address of the house of the person:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">static</span> City NEW_YORK <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> City(<span style="color:#e6db74">&#34;New York&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> Person <span style="color:#a6e22e">moveToNewYork</span>(Person person) {
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> PersonLens.<span style="color:#a6e22e">µ</span>
+</span></span><span style="display:flex;"><span>		.<span style="color:#a6e22e">house</span>()
+</span></span><span style="display:flex;"><span>		.<span style="color:#a6e22e">address</span>()
+</span></span><span style="display:flex;"><span>		.<span style="color:#a6e22e">city</span>()
+</span></span><span style="display:flex;"><span>		.<span style="color:#a6e22e">with</span>(NEW_YORK)
+</span></span><span style="display:flex;"><span>		.<span style="color:#a6e22e">apply</span>(person);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>This enables a fluent style where the implementation is declarative and non-repetitive. This eliminates scaling issues with record size, nesting level, or amount of transformations.</p>
+<h3 id="foundation">Foundation</h3>
+<p>The design behind the above paradigm is called <code>Lensing</code>. A <code>Lens</code> is a type with two essential functionalities: <em>retrieving</em> nested data, and <em>transforming</em> it. This is implemented by adding these functionalities as components of a record class. The <code>Lens</code> &ldquo;zooms into&rdquo; a child property of type <code>T</code> of a parent type <code>S</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">record</span> <span style="color:#a6e22e">Lens</span><span style="color:#f92672">&lt;</span>S, T<span style="color:#f92672">&gt;</span>(Function2<span style="color:#f92672">&lt;</span>S, T, S<span style="color:#f92672">&gt;</span> with, Function1<span style="color:#f92672">&lt;</span>S, T<span style="color:#f92672">&gt;</span> get)
+</span></span></code></pre></div><h3 id="creating-a-lens">Creating a Lens</h3>
+<p>To create a <code>Lens</code> allowing us to change the <code>City</code> of an <code>Address</code> we write the following:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>Lens<span style="color:#f92672">&lt;</span>Address, City<span style="color:#f92672">&gt;</span> addressCityLens <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Lens<span style="color:#f92672">&lt;&gt;</span>(Address::withCity, Address::city);
+</span></span></code></pre></div><p>Writing all this by hand sounds like effort, so&hellip;</p>
+<h3 id="automatic-lenses">Automatic Lenses</h3>
+<p>I&rsquo;ve <a href="https://github.com/bvkatwijk/java-lens">created a library</a> to automate the above using annotation processing. All that is required is annotating the records that you want to use the Lens paradigm on.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@With</span> <span style="color:#a6e22e">@Lenses</span> <span style="color:#66d9ef">record</span> <span style="color:#a6e22e">Person</span>(String firstName, String lastName, House house) { }
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@With</span> <span style="color:#a6e22e">@Lenses</span> <span style="color:#66d9ef">record</span> <span style="color:#a6e22e">House</span>(Address address) { }
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@With</span> <span style="color:#a6e22e">@Lenses</span> <span style="color:#66d9ef">record</span> <span style="color:#a6e22e">Address</span>(String street, String zipCode, City city) { }
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@With</span> <span style="color:#a6e22e">@Lenses</span> <span style="color:#66d9ef">record</span> <span style="color:#a6e22e">City</span>(String name) { }
+</span></span></code></pre></div><p>This will generate a helper class holding <code>Lens</code> instances that can be applied at will. To enable the method chain for nested lensing it also contains a <code>ROOT</code> instance.</p>
+<p>The library is a work-in-progress. Feel free to try it out - I hope the examples (implemented as unit tests) serve both as documentation and a quick way to experiment. It is published on <a href="https://mvnrepository.com/artifact/nl.bvkatwijk/java-lens">Maven Central</a> . Currently it is still necessary to also use Lombok&rsquo;s <code>@With</code> annotation, this requirement may be dropped in a future release.</p>
+<h3 id="inspiration">Inspiration</h3>
+<p>The implementation of this library was driven by inspiration from <code>Monocle</code>, a more powerful library for  <code>Scala</code> authored by <a href="https://github.com/julien-truffaut">Julien Truffaut</a>. Monocle mentions <a href="https://github.com/ekmett/lens">Haskell Lens</a>  (authored by <a href="https://github.com/ekmett">Edward Kmett</a> as its own main inspiration. I would like to express gratitude and admiration for their work.</p>
+<hr>
+<h2 id="appendix">Appendix</h2>
+<h3 id="lens-composition">Lens Composition</h3>
+<p>An important property of <code>Lens</code> (driving its main power) is that you can compose them - meaning you can chain multiple lenses. We have showed how to create a <code>addressCityLens</code>, capable of transforming the <code>City</code> of an <code>Address</code>.</p>
+<p>So a <code>Lens</code> of <code>Person</code> into <code>City</code> would be a chain <code>Person -&gt; House -&gt; Address -&gt; City</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>Lens<span style="color:#f92672">&lt;</span>Person, City<span style="color:#f92672">&gt;</span> personCityLens <span style="color:#f92672">=</span> PersonLens.<span style="color:#a6e22e">House</span>
+</span></span><span style="display:flex;"><span>	.<span style="color:#a6e22e">andThen</span>(HouseLens.<span style="color:#a6e22e">Address</span>)
+</span></span><span style="display:flex;"><span>	.<span style="color:#a6e22e">andThen</span>(AddressLens.<span style="color:#a6e22e">City</span>);
+</span></span></code></pre></div><h3 id="interface">Interface</h3>
+<p>To keep the implementation choice of a <code>Lens</code> record separated from the library API i&rsquo;ve added an <code>ILens</code>  interface. Providing the two foundational functions, <code>get</code> and <code>with</code>, all other behaviour can be implemented. For example, I&rsquo;ve added <code>get(S s)</code> and <code>with(S s, T t)</code> to be able to directly apply a lens onto an instance of <code>S</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">ILens</span><span style="color:#f92672">&lt;</span>S, T<span style="color:#f92672">&gt;</span> {  
+</span></span><span style="display:flex;"><span>    Function1<span style="color:#f92672">&lt;</span>S, T<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">get</span>();  
+</span></span><span style="display:flex;"><span>    Function2<span style="color:#f92672">&lt;</span>S, T, S<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">with</span>();  
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">default</span> T <span style="color:#a6e22e">get</span>(S s) {  
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> get().<span style="color:#a6e22e">apply</span>(s);  
+</span></span><span style="display:flex;"><span>    }  
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">default</span> S <span style="color:#a6e22e">with</span>(S subject, T value) {  
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> with().<span style="color:#a6e22e">apply</span>(subject, value);  
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/fp/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Fp</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/java/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Java</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/data/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Data</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/api/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Api</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+      <div id="comments">
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/blog/java---error-return-types/">Java - Error Return Types</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/blog/awaitility/">Awaitility</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/blog/java---unique-enum-field-values/">Java - Unique Enum Field values</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://bvkatwijk.github.io/" >
+    &copy;  Boris van Katwijk 2024 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+    
+    <a href="https://twitter.com/boris_katwijk" target="_blank" rel="noopener" class="twitter ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="Boris van Katwijk Twitter link" aria-label="follow on Boris van Katwijk Twitter——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;"/></svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+    
+    <a href="https://github.com/bvkatwijk" target="_blank" rel="noopener" class="github ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="Boris van Katwijk GitHub link" aria-label="follow on Boris van Katwijk GitHub——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+    
+    <a href="https://www.linkedin.com/in/bvankatwijk/" target="_blank" rel="noopener" class="linkedin ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="Boris van Katwijk LinkedIn link" aria-label="follow on Boris van Katwijk LinkedIn——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>
