@@ -6,7 +6,7 @@ tags:
   - data
   - api
 date: 2024-10-26T18:26:22+00:00
-lastmod: 2024-11-15T15:09:46+00:00
+lastmod: 2024-11-15T15:15:23+00:00
 title: Lenses
 ---
 
@@ -124,7 +124,7 @@ I've [created a library](https://github.com/bvkatwijk/java-lens) to automate the
 
 This will generate a helper class holding `Lens` instances that can be applied at will. To enable the method chain for nested lensing it also contains a `ROOT` instance.
 
-The library is a work-in-progress. Feel free to try it out - I hope the examples (implemented as unit tests) serve both as documentation and a quick way to experiment. It is published on [Maven Central](https://mvnrepository.com/artifact/nl.bvkatwijk/java-lens) .
+The library is a work-in-progress. Feel free to try it out - I hope the examples (implemented as unit tests) serve both as documentation and a quick way to experiment. It is published on [Maven Central](https://mvnrepository.com/artifact/nl.bvkatwijk/java-lens) . Currently it is still necessary to also use Lombok's `@With` annotation, this requirement may be dropped in a future release.
 
 ### Inspiration
 The implementation of this library was driven by inspiration from `Monocle`, a more powerful library for  `Scala` authored by [Julien Truffaut](https://github.com/julien-truffaut). Monocle mentions [Haskell Lens](https://github.com/ekmett/lens)  (authored by [Edward Kmett](https://github.com/ekmett) as its own main inspiration. I would like to express gratitude and admiration for their work.
