@@ -14,6 +14,9 @@
           */}}
         {{ .CurrentSection.Title }}
       </aside>
+      {{ partial "social/follow.html" . }}
+{{ partial "social/share.html" . }}
+      
       {{- partialCached "social/share.html" . . -}}
       <h1 class="f1 athelas mt3 mb1">
         {{- .Title -}}
@@ -51,7 +54,6 @@
       {{- .Content -}}
       {{- partial "tags.html" . -}}
       <div class="mt6 instapaper_ignoref">
-
         <div id="comments">
           {{ with .Params.GHissueID }}
             {{ partial "comments.html" $ }}
