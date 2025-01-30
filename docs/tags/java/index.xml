@@ -6,8 +6,15 @@
     <description>Recent content in Java on Boris van Katwijk</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 15 Nov 2024 16:10:10 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 30 Jan 2025 12:37:45 +0000</lastBuildDate>
     <atom:link href="https://bvkatwijk.github.io/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>j2html</title>
+      <link>https://bvkatwijk.github.io/blog/java---j2html/</link>
+      <pubDate>Thu, 30 Jan 2025 10:33:19 +0000</pubDate>
+      <guid>https://bvkatwijk.github.io/blog/java---j2html/</guid>
+      <description>&lt;p&gt;For my full-stack projects I like to use Server-Side rendering with &lt;a href=&#34;https://javalin.io/&#34;&gt;Javalin&lt;/a&gt;, &lt;a href=&#34;https://j2html.com/&#34;&gt;j2html&lt;/a&gt; and &lt;a href=&#34;https://htmx.org/&#34;&gt;htmx&lt;/a&gt;. Together, these libraries allow you to write interactive full-stack web applications in vanilla java. In this post I&amp;rsquo;d like to explain how the &lt;a href=&#34;https://j2html.com/&#34;&gt;j2html&lt;/a&gt; library fits in this setup, go over a few benefits, and link a &lt;a href=&#34;https://bvankatwijk.nl/j2html-converter/&#34;&gt;converter&lt;/a&gt; that I wrote to make building the user interface easier.&lt;/p&gt;&#xA;&lt;h3 id=&#34;server-side-rendering&#34;&gt;Server Side Rendering&lt;/h3&gt;&#xA;&lt;p&gt;While the last decade was dominated by client-side frameworks, many applications could perhaps have saved a lot of development time by using server-side rendering. This means that the resulting html is built on the server, including its data, styling and behaviour.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Lenses</title>
       <link>https://bvkatwijk.github.io/blog/java---lenses/</link>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>j2html | Boris van Katwijk</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="For my full-stack projects I like to use Server-Side rendering with Javalin, j2html and htmx. Together, these libraries allow you to write interactive full-stack web applications in vanilla java. In this post I&rsquo;d like to explain how the j2html library fits in this setup, go over a few benefits, and link a converter that I wrote to make building the user interface easier.
+Server Side Rendering
+While the last decade was dominated by client-side frameworks, many applications could perhaps have saved a lot of development time by using server-side rendering. This means that the resulting html is built on the server, including its data, styling and behaviour.">
+    <meta name="generator" content="Hugo 0.142.0">
+    
+    
+    
+      <meta name="robots" content="index, follow">
+    
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.d05fb5f317fcf33b3a52936399bdf6f47dc776516e1692e412ec7d76f4a5faa2.css" >
+
+
+
+    
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="https://bvkatwijk.github.io/blog/java---j2html/">
+    
+
+    <meta property="og:url" content="https://bvkatwijk.github.io/blog/java---j2html/">
+  <meta property="og:site_name" content="Boris van Katwijk">
+  <meta property="og:title" content="j2html">
+  <meta property="og:description" content="For my full-stack projects I like to use Server-Side rendering with Javalin, j2html and htmx. Together, these libraries allow you to write interactive full-stack web applications in vanilla java. In this post I’d like to explain how the j2html library fits in this setup, go over a few benefits, and link a converter that I wrote to make building the user interface easier.
+Server Side Rendering While the last decade was dominated by client-side frameworks, many applications could perhaps have saved a lot of development time by using server-side rendering. This means that the resulting html is built on the server, including its data, styling and behaviour.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2025-01-30T10:33:19+00:00">
+    <meta property="article:modified_time" content="2025-01-30T12:37:45+00:00">
+    <meta property="article:tag" content="Java">
+    <meta property="article:tag" content="Ssr">
+    <meta property="article:tag" content="Dx">
+    <meta property="article:tag" content="Html">
+    <meta property="article:tag" content="Tools">
+
+  <meta itemprop="name" content="j2html">
+  <meta itemprop="description" content="For my full-stack projects I like to use Server-Side rendering with Javalin, j2html and htmx. Together, these libraries allow you to write interactive full-stack web applications in vanilla java. In this post I’d like to explain how the j2html library fits in this setup, go over a few benefits, and link a converter that I wrote to make building the user interface easier.
+Server Side Rendering While the last decade was dominated by client-side frameworks, many applications could perhaps have saved a lot of development time by using server-side rendering. This means that the resulting html is built on the server, including its data, styling and behaviour.">
+  <meta itemprop="datePublished" content="2025-01-30T10:33:19+00:00">
+  <meta itemprop="dateModified" content="2025-01-30T12:37:45+00:00">
+  <meta itemprop="wordCount" content="519">
+  <meta itemprop="keywords" content="Java,Ssr,Dx,Html,Tools">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="j2html">
+  <meta name="twitter:description" content="For my full-stack projects I like to use Server-Side rendering with Javalin, j2html and htmx. Together, these libraries allow you to write interactive full-stack web applications in vanilla java. In this post I’d like to explain how the j2html library fits in this setup, go over a few benefits, and link a converter that I wrote to make building the user interface easier.
+Server Side Rendering While the last decade was dominated by client-side frameworks, many applications could perhaps have saved a lot of development time by using server-side rendering. This means that the resulting html is built on the server, including its data, styling and behaviour.">
+
+      
+    
+	
+  </head><body class="ma0 avenir bg-near-white production">
+
+    
+   
+  
+
+  
+  
+  
+  <header class="cover bg-center" style="background-image: url('https://bvkatwijk.github.io/images/j2html_converter.png');">
+    <div class="bg-black-60">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        Boris van Katwijk
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/pages/contact/" title="Contact page">
+              Contact
+            </a>
+          </li>
+          
+        </ul>
+      
+      <div class="ananke-socials"></div>
+
+    </div>
+  </div>
+</nav>
+
+      <div class="tc-l pv6 ph3 ph4-ns">
+        
+          <div class="f2 f1-l fw2 white-90 mb0 lh-title">j2html</div>
+          
+        
+      </div>
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Blogs
+      </aside><div id="sharing" class="mt3 ananke-socials"></div>
+<h1 class="f1 athelas mt3 mb1">j2html</h1>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2025-01-30T10:33:19Z">January 30, 2025</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>For my full-stack projects I like to use Server-Side rendering with <a href="https://javalin.io/">Javalin</a>, <a href="https://j2html.com/">j2html</a> and <a href="https://htmx.org/">htmx</a>. Together, these libraries allow you to write interactive full-stack web applications in vanilla java. In this post I&rsquo;d like to explain how the <a href="https://j2html.com/">j2html</a> library fits in this setup, go over a few benefits, and link a <a href="https://bvankatwijk.nl/j2html-converter/">converter</a> that I wrote to make building the user interface easier.</p>
+<h3 id="server-side-rendering">Server Side Rendering</h3>
+<p>While the last decade was dominated by client-side frameworks, many applications could perhaps have saved a lot of development time by using server-side rendering. This means that the resulting html is built on the server, including its data, styling and behaviour.</p>
+<p>With the incredible stability and performance of servers and networks nowadays, a lot of arguments to move work to the client side have become less relevant. Servers can render the page within a millisecond and the client can immediately display it without invoking front-end data processing. With parallel processing, servers can easily handle thousands of requests per second.</p>
+<h3 id="suitable-projects">Suitable projects</h3>
+<p>Not every project is a great fit, but in my view, too many B2B projects reach for elaborate heavy frameworks by default without considering the speed and simplicity of just doing all the work on the server. The most suitable projects are administrative business projects needing to show data fast, reliable and cleanly.</p>
+<h3 id="benefits">Benefits</h3>
+<p>Using j2html for server-side rendering gives you a number of immediate benefits:</p>
+<h4 id="1-no-framework">1. No Framework</h4>
+<p>Since it is just a libary, learning <a href="https://j2html.com/">j2html</a> takes about ten seconds. There is no framework to learn. This allows you and your team to use the tool you already know best - the programming language itself - without spending time learning a lot of framework quirks.</p>
+<h4 id="2-no-api">2. No API</h4>
+<p>Since there is no front-end framework demanding an API to communicate with, you can skip creating it entirely. Not having to create and maintain an API saves a lot of time and effort.</p>
+<h4 id="3-no-business-logic-replication">3. No business logic replication</h4>
+<p>Another benefit is that business logic stays in one place and does not have to be replicated inside front-end code. This can save an enormous amount of time up front, and when evolving a project. Changing a business rule can be done in a single place in server-side code.</p>
+<h4 id="4-no-html-duplication">4. No HTML duplication</h4>
+<p>HTML has no built-in way to reuse code. Creating your html with vanilla java means that you can reuse any html by extracting functions. There is no need to learn how front-end framework components or web components work.</p>
+<p>The reduction in project size and complexity is also illustrated in <a href="https://www.radicalsimpli.city/">Radical Simplicity</a>. The amount of time needed to change a business rule or implement a new feature is cut down from days to hours, if not minutes.</p>
+<h3 id="html-to-j2html">HTML to j2html</h3>
+<p>Building a UI quickly can involve copy-pasting ready made HTML, so we need a way to quickly convert it to j2html code. I&rsquo;ve written an <a href="https://bvankatwijk.nl/j2html-converter/">online converter </a> that fulfills this purpose. Please consider starring it, and if you notice missing or incorrect behaviour, consider creating an issue. Contributions are also more than welcome! If you like the library, consider starring <a href="https://github.com/tipsy/j2html">j2html on GitHub</a>.</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/java/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Java</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/ssr/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Ssr</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/dx/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Dx</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/html/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Html</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/tools/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Tools</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/blog/awaitility/">Awaitility</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/blog/java---error-return-types/">Java - Error Return Types</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/blog/java---lenses/">Lenses</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/blog/security---link-swapping/">Link Swapping</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/blog/dev---hugo/">Hugo</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/blog/java---unique-enum-field-values/">Java - Unique Enum Field values</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://bvkatwijk.github.io/" >
+    &copy;  Boris van Katwijk 2025 
+  </a>
+    <div><div class="ananke-socials"></div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

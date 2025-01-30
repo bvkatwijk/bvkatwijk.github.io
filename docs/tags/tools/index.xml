@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Html on Boris van Katwijk</title>
-    <link>https://bvkatwijk.github.io/tags/html/</link>
-    <description>Recent content in Html on Boris van Katwijk</description>
+    <title>Tools on Boris van Katwijk</title>
+    <link>https://bvkatwijk.github.io/tags/tools/</link>
+    <description>Recent content in Tools on Boris van Katwijk</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 30 Jan 2025 12:37:45 +0000</lastBuildDate>
-    <atom:link href="https://bvkatwijk.github.io/tags/html/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://bvkatwijk.github.io/tags/tools/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>j2html</title>
       <link>https://bvkatwijk.github.io/blog/java---j2html/</link>
       <pubDate>Thu, 30 Jan 2025 10:33:19 +0000</pubDate>
       <guid>https://bvkatwijk.github.io/blog/java---j2html/</guid>
       <description>&lt;p&gt;For my full-stack projects I like to use Server-Side rendering with &lt;a href=&#34;https://javalin.io/&#34;&gt;Javalin&lt;/a&gt;, &lt;a href=&#34;https://j2html.com/&#34;&gt;j2html&lt;/a&gt; and &lt;a href=&#34;https://htmx.org/&#34;&gt;htmx&lt;/a&gt;. Together, these libraries allow you to write interactive full-stack web applications in vanilla java. In this post I&amp;rsquo;d like to explain how the &lt;a href=&#34;https://j2html.com/&#34;&gt;j2html&lt;/a&gt; library fits in this setup, go over a few benefits, and link a &lt;a href=&#34;https://bvankatwijk.nl/j2html-converter/&#34;&gt;converter&lt;/a&gt; that I wrote to make building the user interface easier.&lt;/p&gt;&#xA;&lt;h3 id=&#34;server-side-rendering&#34;&gt;Server Side Rendering&lt;/h3&gt;&#xA;&lt;p&gt;While the last decade was dominated by client-side frameworks, many applications could perhaps have saved a lot of development time by using server-side rendering. This means that the resulting html is built on the server, including its data, styling and behaviour.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Link Swapping</title>
-      <link>https://bvkatwijk.github.io/blog/security---link-swapping/</link>
-      <pubDate>Tue, 01 Oct 2024 09:14:11 +0000</pubDate>
-      <guid>https://bvkatwijk.github.io/blog/security---link-swapping/</guid>
-      <description>&lt;p&gt;If you&amp;rsquo;re on a website and you see a link, how do you figure out where that link will take you? Just hover over it right? Try to hovering this &lt;a href = &#34;https://wikipedia.org&#34; onclick=&#34;this.href = &#39;https://www.youtube.com/watch?v=dQw4w9WgXcQ&#39;;&#34; target=&#34;_blank&#34;&gt;Totally Legitimate Link&lt;/a&gt;. If you dare, click it.&lt;/p&gt;&#xA;&lt;p&gt;If you&amp;rsquo;ve clicked the link, welcome back! Refresh the page to have the link in it&amp;rsquo;s initial state again. Not everything is what it seems, and this is also very true when browsing the web.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
