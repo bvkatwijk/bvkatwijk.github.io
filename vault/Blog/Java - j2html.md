@@ -8,9 +8,10 @@ tags:
   - html
   - tools
 date: 2025-01-30T10:33:19+00:00
-lastmod: 2025-01-30T12:37:45+00:00
+lastmod: 2025-01-30T13:01:00+00:00
 featured_image: /images/j2html_converter.png
 title: j2html
+GHissueID: "14"
 ---
 
 For my full-stack projects I like to use Server-Side rendering with [Javalin](https://javalin.io/), [j2html](https://j2html.com/) and [htmx](https://htmx.org/). Together, these libraries allow you to write interactive full-stack web applications in vanilla java. In this post I'd like to explain how the [j2html](https://j2html.com/) library fits in this setup, go over a few benefits, and link a [converter](https://bvankatwijk.nl/j2html-converter/) that I wrote to make building the user interface easier.
