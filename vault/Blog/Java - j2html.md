@@ -8,11 +8,14 @@ tags:
   - html
   - tools
 date: 2025-01-30T10:33:19+00:00
-lastmod: 2025-01-30T12:22:23+00:00
+lastmod: 2025-01-30T12:37:45+00:00
+featured_image: /images/j2html_converter.png
+title: j2html
 ---
+
 For my full-stack projects I like to use Server-Side rendering with [Javalin](https://javalin.io/), [j2html](https://j2html.com/) and [htmx](https://htmx.org/). Together, these libraries allow you to write interactive full-stack web applications in vanilla java. In this post I'd like to explain how the [j2html](https://j2html.com/) library fits in this setup, go over a few benefits, and link a [converter](https://bvankatwijk.nl/j2html-converter/) that I wrote to make building the user interface easier.
 ### Server Side Rendering
-While the last decade was dominated by client-side frameworks, many applications could perhaps have saved a lot of development time by using server-side rendering. This means that the resulting page is built on the server, including its data, styling and behaviour.
+While the last decade was dominated by client-side frameworks, many applications could perhaps have saved a lot of development time by using server-side rendering. This means that the resulting html is built on the server, including its data, styling and behaviour.
 
 With the incredible stability and performance of servers and networks nowadays, a lot of arguments to move work to the client side have become less relevant. Servers can render the page within a millisecond and the client can immediately display it without invoking front-end data processing. With parallel processing, servers can easily handle thousands of requests per second.
 ### Suitable projects
