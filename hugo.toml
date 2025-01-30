@@ -2,21 +2,26 @@ baseURL = 'https://bvkatwijk.github.io/'
 languageCode = 'en-us'
 title = 'Boris van Katwijk'
 theme = 'ananke'
-[[params.ananke_socials]]
-name = "twitter"
-url = "https://twitter.com/boris_katwijk"
-label = "Boris van Katwijk Twitter"
 
-[[params.ananke_socials]]
+[[ananke.social.twitter]]
+username = "theNewDynamic"
+profilelink = "https://twitter.com/theNewDynamic" #
+
+[ananke.social.follow]
+new_window_icon = false
+networks = [
+  "linkedin"
+]
+
+[ananke.social.github]
 name = "github"
 url = "https://github.com/bvkatwijk"
 label = "Boris van Katwijk GitHub"
 color = "#ff6800"
 
 
-[[params.ananke_socials]]
-name = "linkedin"
-url = "https://www.linkedin.com/in/bvankatwijk/"
+[ananke.social.linkedin]
+username = "bvankatwijk"
 label = "Boris van Katwijk LinkedIn"
 color = "#0072b1"
 
