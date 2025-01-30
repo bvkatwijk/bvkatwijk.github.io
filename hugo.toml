@@ -8,7 +8,8 @@ new_window_icon = false
 networks = [
     "twitter",
     "github",
-  "linkedin"
+  "linkedin",
+  "stackoverflow"
 ]
 
 [params.ananke.social.twitter]
@@ -19,6 +20,9 @@ username = "bvkatwijk"
 
 [params.ananke.social.linkedin]
 username = "bvankatwijk"
+
+[params.ananke.social.stackoverflow]
+username = "5722607"
 
 [markup.goldmark.renderer]
 unsafe= true
