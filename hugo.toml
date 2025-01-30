@@ -12,6 +12,15 @@ networks = [
   "stackoverflow"
 ]
 
+[params.ananke.social.share]
+icons = true
+sharetext = true
+networks = [
+  "email",
+  "twitter",
+  "linkedin"
+]
+
 [params.ananke.social.twitter]
 username = "boris_katwijk"
 
