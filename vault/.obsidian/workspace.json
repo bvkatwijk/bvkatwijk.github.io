@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Blog/Java - Lenses.md",
+                "file": "Blog/Java - j2html.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Java - Lenses"
+              "title": "Java - j2html"
             }
           }
         ]
@@ -165,8 +165,9 @@
   },
   "active": "9b329d71268eebcd",
   "lastOpenFiles": [
-    "Blog/Security - Link Swapping.md",
     "Blog/Java - Lenses.md",
+    "Blog/Java - j2html.md",
+    "Blog/Security - Link Swapping.md",
     "Blog/Java - Unique Enum Field values.md",
     "Work/Ideas.md",
     "Wiki/Lombok.md",
@@ -194,7 +195,6 @@
     "Work/TopDesk/TopDesk Exchange Sync.md",
     "_index.md",
     "main.md",
-    "Blog/AWS CDK -  ID, names, and resource replacement.md",
     "Pages",
     "Work/TopDesk",
     "Wiki",
