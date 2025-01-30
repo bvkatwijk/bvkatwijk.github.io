@@ -4,8 +4,8 @@ tags:
   - security
   - web
   - html
-date: 2024-13-03T09:14:11+00:00
-lastmod: 2024-10-14T06:15:51+00:00
+date: 2024-10-01T09:14:11+00:00
+lastmod: 2025-01-30T12:33:43+00:00
 title: Link Swapping
 featured_image: /images/link_swap.png
 GHissueID: "12"
