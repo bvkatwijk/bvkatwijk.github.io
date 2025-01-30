@@ -11,21 +11,14 @@ networks = [
   "linkedin"
 ]
 
-[[params.ananke.social.twitter]]
+[params.ananke.social.twitter]
 username = "boris_katwijk"
-label = "Boris van Katwijk Twitter"
-rel = "me"
 
-[[params.ananke.social.github]]
+[params.ananke.social.github]
 username = "bvkatwijk"
-label = "Boris van Katwijk GitHub"
-color = "#ff6800"
 
-[[params.ananke.social.linkedin]]
+[params.ananke.social.linkedin]
 username = "bvankatwijk"
-label = "Boris van Katwijk LinkedIn"
-color = "#0072b1"
-rel = "me"
 
 [markup.goldmark.renderer]
 unsafe= true
