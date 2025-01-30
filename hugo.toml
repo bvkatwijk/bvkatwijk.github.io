@@ -3,21 +3,18 @@ languageCode = 'en-us'
 title = 'Boris van Katwijk'
 theme = 'ananke'
 
-[ananke.social.follow]
+[params.ananke.social.follow]
 new_window_icon = false
 networks = [
-  "facebook",
-  "bluesky",
+    "twitter",
+    "github",
   "linkedin"
 ]
-
-[[ananke.social.twitter]]
-username = "theNewDynamic"
-profilelink = "https://twitter.com/theNewDynamic"
 
 [[params.ananke.social.twitter]]
 username = "boris_katwijk"
 label = "Boris van Katwijk Twitter"
+rel = "me"
 
 [[params.ananke.social.github]]
 username = "bvkatwijk"
@@ -28,6 +25,7 @@ color = "#ff6800"
 username = "bvankatwijk"
 label = "Boris van Katwijk LinkedIn"
 color = "#0072b1"
+rel = "me"
 
 [markup.goldmark.renderer]
 unsafe= true
