@@ -48,7 +48,7 @@ checkBlog () {
     IFS=',' read -r -a array <<< "$blog"
     path="${array[0]}"
     if cat "$path" | grep "GHissueID" > /dev/null ; then
-        echo "$path already has issue"
+        echo "✅ $path already has issue"
     else
         title=$(echo "${array[0]}" | sed -r 's/content/Article/g' | sed -r 's/\// - /g')
         label="${array[2]},${array[3]}"
