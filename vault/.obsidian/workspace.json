@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Blog/Java - j2html.md",
+                "file": "Blog/Security - Link Swapping.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Java - j2html"
+              "title": "Security - Link Swapping"
             }
           }
         ]
@@ -166,8 +166,8 @@
   "active": "9b329d71268eebcd",
   "lastOpenFiles": [
     "Blog/Java - Lenses.md",
-    "Blog/Java - j2html.md",
     "Blog/Security - Link Swapping.md",
+    "Blog/Java - j2html.md",
     "Blog/Java - Unique Enum Field values.md",
     "Work/Ideas.md",
     "Wiki/Lombok.md",
