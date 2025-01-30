@@ -8,7 +8,7 @@ tags:
   - html
   - tools
 date: 2025-01-30T10:33:19+00:00
-lastmod: 2025-01-30T13:02:45+00:00
+lastmod: 2025-01-30T13:52:47+00:00
 featured_image: /images/j2html_converter.png
 title: j2html
 GHissueID: "14"
@@ -33,5 +33,6 @@ Another benefit is that business logic stays in one place and does not have to b
 HTML has no built-in way to reuse code. Creating your html with vanilla java means that you can reuse any html by extracting functions. There is no need to learn how front-end framework components or web components work.
 
 The reduction in project size and complexity is also illustrated in [Radical Simplicity](https://www.radicalsimpli.city/). The amount of time needed to change a business rule or implement a new feature is cut down from days to hours, if not minutes.
+
 ### HTML to j2html
 Building a UI quickly can involve copy-pasting ready made HTML, so we need a way to quickly convert it to j2html code. I've written an [online converter ](https://bvankatwijk.nl/j2html-converter/) that fulfills this purpose. Please consider [starring it on GitHub](https://github.com/bvkatwijk/j2html-converter), and if you notice missing or incorrect behaviour, consider creating an issue. Contributions are also more than welcome! Also, consider starring [j2html on GitHub](https://github.com/tipsy/j2html)!
