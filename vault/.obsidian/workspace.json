@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Work/TopDesk/TopDesk Exchange Sync.md",
+                "file": "Pages/Contact.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "TopDesk Exchange Sync"
+              "title": "Contact"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "publish",
+                "query": "contact",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -74,7 +74,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -165,6 +166,8 @@
   },
   "active": "9b329d71268eebcd",
   "lastOpenFiles": [
+    "_index.md",
+    "Work/TopDesk/TopDesk Exchange Sync.md",
     "Blog/Dev - Persistent Data Structures.md",
     "Blog/Dev - Intellij Hot Reload.md",
     "Blog/Java - j2html.md",
@@ -192,8 +195,6 @@
     "Pasted image 20241001210149.png",
     "Wiki/Vavr.md",
     "Work/TopDesk.md",
-    "Work/TopDesk/TopDesk Exchange Sync.md",
-    "_index.md",
     "main.md",
     "Pages",
     "Work/TopDesk",
