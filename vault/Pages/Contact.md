@@ -10,4 +10,4 @@ menu: main
 
 Feel free to reach out to me using the form below.
 
-{{< form-contact action="https://discord.com/api/webhooks/1288173747236507649/mGUb6qXGHnkBRPY6tYOOP8nGPR75MxxDbalv7zKdgx1_br1R2YO7ykpGvRy1Acva7cru" >}}
+{{< form-contact action="https://formsubmit.co/02156f81576a4b78f5478ab0ae3f680a" >}}
