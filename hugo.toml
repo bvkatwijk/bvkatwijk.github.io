@@ -35,3 +35,10 @@ username = "5722607"
 
 [markup.goldmark.renderer]
 unsafe= true
+
+[[menu.main]]
+identifier = "cv"
+pre = "" # pre is inserted before the translation (icons, image, etc)
+name = "CV"
+url = "/cv"
+weight = 30
