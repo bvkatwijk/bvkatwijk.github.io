@@ -6,8 +6,9 @@ tags:
   - test
   - api
 date: 2025-02-04T16:19:25+00:00
-lastmod: 2025-02-04T16:38:07+00:00
+lastmod: 2025-02-05T09:54:00+00:00
 title: Json Unit Testing
+featured_image: /images/json.png
 ---
 Many applications have APIs consuming and returning JSON. If you do not cover the expected inputs and output of the API you risk introducing unintentional changes. Luckily it is not hard to create these valuable test cases.
 If you have types that are used both as symmetrical inputs and outputs this test pattern will provide full coverage and give you utility methods for other tests as well.
@@ -115,6 +116,10 @@ If we already have an `AssigneeJsonTest`, all we have to do to adapt the `TaskJs
     }
 ```
 
+
+---
+## Appendix
+
 ### Spring Boot
 In a Spring Boot application, use a `@JsonTest` annotation and autowire a `JacksonTester` instead:
 ```java
@@ -124,6 +129,6 @@ class TaskJsonTest {
 }
 ```
 
-### Notes
-- I like to use random instances as it continuously will validate different data, providing a lot more powerful testing than a fixed-value unit test without having to go full property-based testing.
-- 
+### Random Testing
+I like to use random instances as it continuously will validate different data, providing a lot more powerful testing than a fixed-value unit test without having to go full property-based testing.
+
