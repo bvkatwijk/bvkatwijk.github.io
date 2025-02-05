@@ -6,8 +6,15 @@
     <description>Recent content in Test on Boris van Katwijk</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 07 Oct 2024 19:58:57 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 05 Feb 2025 09:54:00 +0000</lastBuildDate>
     <atom:link href="https://bvkatwijk.github.io/tags/test/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Json Unit Testing</title>
+      <link>https://bvkatwijk.github.io/blog/java---json-unit-testing/</link>
+      <pubDate>Tue, 04 Feb 2025 16:19:25 +0000</pubDate>
+      <guid>https://bvkatwijk.github.io/blog/java---json-unit-testing/</guid>
+      <description>&lt;p&gt;Many applications have APIs consuming and returning JSON. If you do not cover the expected inputs and output of the API you risk introducing unintentional changes. Luckily it is not hard to create these valuable test cases.&#xA;If you have types that are used both as symmetrical inputs and outputs this test pattern will provide full coverage and give you utility methods for other tests as well.&lt;/p&gt;&#xA;&lt;p&gt;For this example I&amp;rsquo;ll be using a type &lt;code&gt;Task&lt;/code&gt; having just a &lt;code&gt;name&lt;/code&gt; and a &lt;code&gt;description&lt;/code&gt; field, both &lt;code&gt;String&lt;/code&gt;s:&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Awaitility</title>
       <link>https://bvkatwijk.github.io/blog/awaitility/</link>
