@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Pages/Contact.md",
+                "file": "Blog/Java - Json Unit Testing.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Contact"
+              "title": "Java - Json Unit Testing"
             }
           }
         ]
@@ -175,6 +175,8 @@
   },
   "active": "9b329d71268eebcd",
   "lastOpenFiles": [
+    "Blog/Java - Json Unit Testing.md",
+    "Pages/Contact.md",
     "_index.md",
     "Work/TopDesk/TopDesk Exchange Sync.md",
     "Blog/Dev - Persistent Data Structures.md",
@@ -192,7 +194,6 @@
     "Blog/AWS - CDK Custom Logical Ids.md",
     "Blog/Work - An impression of Software Engineering for Absolute Beginners.md",
     "Blog/Dev - Hugo.md",
-    "Pages/Contact.md",
     "Work/HeadFirst Group/AWS CDK.md",
     "Pages/Untitled.md",
     "Work/HeadFirst Group.md",
@@ -204,7 +205,6 @@
     "Pasted image 20241001210149.png",
     "Wiki/Vavr.md",
     "Work/TopDesk.md",
-    "main.md",
     "Pages",
     "Work/TopDesk",
     "Wiki",
