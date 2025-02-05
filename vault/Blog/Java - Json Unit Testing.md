@@ -6,9 +6,10 @@ tags:
   - test
   - api
 date: 2025-02-04T16:19:25+00:00
-lastmod: 2025-02-05T09:54:00+00:00
+lastmod: 2025-02-05T10:56:30+00:00
 title: Json Unit Testing
 featured_image: /images/json.png
+GHissueID: "15"
 ---
 Many applications have APIs consuming and returning JSON. If you do not cover the expected inputs and output of the API you risk introducing unintentional changes. Luckily it is not hard to create these valuable test cases.
 If you have types that are used both as symmetrical inputs and outputs this test pattern will provide full coverage and give you utility methods for other tests as well.
@@ -81,8 +82,7 @@ class TaskJsonTest {
     void deserialize() throws Exception {  
         assertEquals(  
             instance,  
-            mapper.readValue(json(instance).toString(), Task.class)  
-        );  
+            mapper.readValue(json(instance).toString(), Task.class));  
     }  
   
     @Test  
@@ -90,14 +90,13 @@ class TaskJsonTest {
         JSONAssert.assertEquals(  
             json(instance).toString(),  
             mapper.writeValueAsString(instance),  
-            true  
-        );  
+            true);  
     }  
   
     static JSONObject json(Task it) {  
         return new JSONObject()  
             .put("name", it.name())  
-            .put("description", it.description()));  
+            .put("description", it.description());  
     }
 }
 ```
@@ -112,7 +111,7 @@ If we already have an `AssigneeJsonTest`, all we have to do to adapt the `TaskJs
         return new JSONObject()  
             .put("name", it.name())  
             .put("description", it.description())
-            .put("assignee", AssigneeJsonTest.json(it.assignee())));  
+            .put("assignee", AssigneeJsonTest.json(it.assignee()));  
     }
 ```
 
