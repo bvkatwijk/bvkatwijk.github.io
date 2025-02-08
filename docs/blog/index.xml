@@ -78,5 +78,12 @@
       <guid>https://bvkatwijk.github.io/blog/java---error-return-types/</guid>
       <description>&lt;p&gt;Writing code assuming everything will follow the happy path may not result in the best software quality or user experience. Sometimes we choose to ignore unhappy paths, or lack awareness of the existence of unhappy paths. Both of these scenarios can lead to runtime bugs and problems for customers which may be good to prevent.&lt;/p&gt;&#xA;&lt;p&gt;Many strategies and coding styles exist in different languages to give the developer tools to address this issue. In this post I&amp;rsquo;d like to explore some of them and illustrate my preferences.&lt;/p&gt;</description>
     </item>
+    <item>
+      <title></title>
+      <link>https://bvkatwijk.github.io/blog/build-pipeline-quality/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://bvkatwijk.github.io/blog/build-pipeline-quality/</guid>
+      <description>&lt;p&gt;The effectiveness of your build pipelines is very important. The value that a trustworthy pipeline can give you is a significant increase of developer speed, a decrease in production incidents and&#xA;a culture where a team can experiment.&lt;/p&gt;&#xA;&lt;p&gt;There are a few aspects that determine quality of a CI/CD process&lt;/p&gt;&#xA;&lt;h3 id=&#34;it-should-work&#34;&gt;It should work&lt;/h3&gt;&#xA;&lt;p&gt;Let&amp;rsquo;s start simple. The most basic rule is that a pipeline should run, meaning that there are no faults in the runtime or setup of the pipelines themselves. If this is not the case,&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>
