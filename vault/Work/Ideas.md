@@ -2,7 +2,7 @@
 aliases: 
 tags: 
 date: 2050-09-29T08:26:11+00:00
-lastmod: 2024-10-18T04:57:31+00:00
+lastmod: 2025-02-08T13:48:12+00:00
 ---
 - Function vs Method vs Closure vs Anonymous Function
 - Concept of Persistent Data Structure
@@ -25,7 +25,8 @@ lastmod: 2024-10-18T04:57:31+00:00
 - Application URIs (obsidian://open)
 - oh my zsh plugins
 - scala context bounds
-- Lenses
+- github pages subdomain
+- //Lenses
 - Devoxx
 	- submodule for project development
 		- gradle substitute builds

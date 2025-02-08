@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Blog/Build Pipeline Quality.md",
+                "file": "Blog/Ads on your Blog site.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Build Pipeline Quality"
+              "title": "Ads on your Blog site"
             }
           }
         ]
@@ -176,6 +176,9 @@
   "active": "74b74e857c709347",
   "lastOpenFiles": [
     "Blog/Java - Json Unit Testing.md",
+    "Blog/Ads on your Blog site.md",
+    "Work/Ideas.md",
+    "Blog/Hugo.md",
     "Blog/Build Pipeline Quality.md",
     "Pages/Contact.md",
     "_index.md",
@@ -188,13 +191,11 @@
     "Blog/Shell - Switch Statements.md",
     "Blog/Java - Lenses.md",
     "Blog/Java - Unique Enum Field values.md",
-    "Work/Ideas.md",
     "Wiki/Lombok.md",
     "Blog/Java - Lombok.md",
     "Blog/Java - Error Return Types.md",
     "Blog/AWS - CDK Custom Logical Ids.md",
     "Blog/Work - An impression of Software Engineering for Absolute Beginners.md",
-    "Blog/Dev - Hugo.md",
     "Work/HeadFirst Group/AWS CDK.md",
     "Pages/Untitled.md",
     "Work/HeadFirst Group.md",
@@ -204,7 +205,6 @@
     "Pasted image 20241001210233.png",
     "Pasted image 20241001210151.png",
     "Pasted image 20241001210149.png",
-    "Wiki/Vavr.md",
     "Pages",
     "Work/TopDesk",
     "Wiki",
