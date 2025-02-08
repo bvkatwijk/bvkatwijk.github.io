@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Blog/Java - Json Unit Testing.md",
+                "file": "Blog/Build Pipeline Quality.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Java - Json Unit Testing"
+              "title": "Build Pipeline Quality"
             }
           }
         ]
@@ -176,6 +176,7 @@
   "active": "74b74e857c709347",
   "lastOpenFiles": [
     "Blog/Java - Json Unit Testing.md",
+    "Blog/Build Pipeline Quality.md",
     "Pages/Contact.md",
     "_index.md",
     "Work/TopDesk/TopDesk Exchange Sync.md",
@@ -204,7 +205,6 @@
     "Pasted image 20241001210151.png",
     "Pasted image 20241001210149.png",
     "Wiki/Vavr.md",
-    "Work/TopDesk.md",
     "Pages",
     "Work/TopDesk",
     "Wiki",
