@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "aea3098682ebfde9",
+        "id": "3b00302d792b8f7a",
         "type": "tabs",
         "children": [
           {
-            "id": "74b74e857c709347",
+            "id": "18d6214aead5b73e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Blog/Ads on your Blog site.md",
+                "file": "Work/Ideas.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Ads on your Blog site"
+              "title": "Ideas"
             }
           }
         ]
@@ -173,10 +173,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "74b74e857c709347",
+  "active": "18d6214aead5b73e",
   "lastOpenFiles": [
-    "Blog/Java - Json Unit Testing.md",
     "Blog/Ads on your Blog site.md",
+    "Blog/Java - Json Unit Testing.md",
     "Work/Ideas.md",
     "Blog/Hugo.md",
     "Blog/Build Pipeline Quality.md",
