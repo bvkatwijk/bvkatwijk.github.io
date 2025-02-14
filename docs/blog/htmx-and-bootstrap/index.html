@@ -4,11 +4,12 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>j2html | Boris van Katwijk</title>
+    <title>Combining htmx with Bootstrap | Boris van Katwijk</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="For my full-stack projects I like to use Server-Side rendering with Javalin, j2html and htmx. Together, these libraries allow you to write interactive full-stack web applications in vanilla java. In this post I&rsquo;d like to explain how the j2html library fits in this setup, go over a few benefits, and link a converter that I wrote to make building the user interface easier.
-Server Side Rendering
-While the last decade was dominated by client-side frameworks, many applications could perhaps have saved a lot of development time by using server-side rendering. This means that the resulting html is built on the server, including its data, styling and behaviour.">
+    <meta name="description" content="Using htmx with Bootstrap is mostly a seamless experience, but I&rsquo;ve encountered a few places where a bit of extra effort is needed to smooth everything out. Since I could not find a concise description of the required fix, I&rsquo;ve created this quick post to outline the issue and the remedy.
+Bootstrap
+Since I work mostly on business-to-business administrative web applications, I need to build many interfaces, yet a slick or custom styling is usually not the highest priority. We need a well rounded set of standard component that enables data presentation with clarity.
+So let&rsquo;s just pretend we still live in the &rsquo;10s and use Bootstrap. A benefit is that all the scraping-trained AI&rsquo;s are now all Bootstrap experts, meaning that stamping out entire dashboards is trivial.">
     <meta name="generator" content="Hugo 0.142.0">
     
     
@@ -32,36 +33,37 @@ While the last decade was dominated by client-side frameworks, many applications
     
 
     
-      <link rel="canonical" href="https://bvkatwijk.github.io/blog/java---j2html/">
+      <link rel="canonical" href="https://bvkatwijk.github.io/blog/htmx-and-bootstrap/">
     
 
-    <meta property="og:url" content="https://bvkatwijk.github.io/blog/java---j2html/">
+    <meta property="og:url" content="https://bvkatwijk.github.io/blog/htmx-and-bootstrap/">
   <meta property="og:site_name" content="Boris van Katwijk">
-  <meta property="og:title" content="j2html">
-  <meta property="og:description" content="For my full-stack projects I like to use Server-Side rendering with Javalin, j2html and htmx. Together, these libraries allow you to write interactive full-stack web applications in vanilla java. In this post I’d like to explain how the j2html library fits in this setup, go over a few benefits, and link a converter that I wrote to make building the user interface easier.
-Server Side Rendering While the last decade was dominated by client-side frameworks, many applications could perhaps have saved a lot of development time by using server-side rendering. This means that the resulting html is built on the server, including its data, styling and behaviour.">
+  <meta property="og:title" content="Combining htmx with Bootstrap">
+  <meta property="og:description" content="Using htmx with Bootstrap is mostly a seamless experience, but I’ve encountered a few places where a bit of extra effort is needed to smooth everything out. Since I could not find a concise description of the required fix, I’ve created this quick post to outline the issue and the remedy.
+Bootstrap Since I work mostly on business-to-business administrative web applications, I need to build many interfaces, yet a slick or custom styling is usually not the highest priority. We need a well rounded set of standard component that enables data presentation with clarity. So let’s just pretend we still live in the ’10s and use Bootstrap. A benefit is that all the scraping-trained AI’s are now all Bootstrap experts, meaning that stamping out entire dashboards is trivial.">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="blog">
-    <meta property="article:published_time" content="2025-01-30T10:33:19+00:00">
-    <meta property="article:modified_time" content="2025-01-30T13:52:47+00:00">
-    <meta property="article:tag" content="Java">
-    <meta property="article:tag" content="Ssr">
-    <meta property="article:tag" content="Dx">
+    <meta property="article:published_time" content="2025-02-14T10:28:07+00:00">
+    <meta property="article:modified_time" content="2025-02-14T11:26:14+00:00">
+    <meta property="article:tag" content="Htmx">
+    <meta property="article:tag" content="Bootstrap">
+    <meta property="article:tag" content="Javascript">
     <meta property="article:tag" content="Html">
-    <meta property="article:tag" content="Tools">
+    <meta property="article:tag" content="Ui">
+    <meta property="article:tag" content="Ssr">
 
-  <meta itemprop="name" content="j2html">
-  <meta itemprop="description" content="For my full-stack projects I like to use Server-Side rendering with Javalin, j2html and htmx. Together, these libraries allow you to write interactive full-stack web applications in vanilla java. In this post I’d like to explain how the j2html library fits in this setup, go over a few benefits, and link a converter that I wrote to make building the user interface easier.
-Server Side Rendering While the last decade was dominated by client-side frameworks, many applications could perhaps have saved a lot of development time by using server-side rendering. This means that the resulting html is built on the server, including its data, styling and behaviour.">
-  <meta itemprop="datePublished" content="2025-01-30T10:33:19+00:00">
-  <meta itemprop="dateModified" content="2025-01-30T13:52:47+00:00">
-  <meta itemprop="wordCount" content="517">
-  <meta itemprop="keywords" content="Java,Ssr,Dx,Html,Tools">
+  <meta itemprop="name" content="Combining htmx with Bootstrap">
+  <meta itemprop="description" content="Using htmx with Bootstrap is mostly a seamless experience, but I’ve encountered a few places where a bit of extra effort is needed to smooth everything out. Since I could not find a concise description of the required fix, I’ve created this quick post to outline the issue and the remedy.
+Bootstrap Since I work mostly on business-to-business administrative web applications, I need to build many interfaces, yet a slick or custom styling is usually not the highest priority. We need a well rounded set of standard component that enables data presentation with clarity. So let’s just pretend we still live in the ’10s and use Bootstrap. A benefit is that all the scraping-trained AI’s are now all Bootstrap experts, meaning that stamping out entire dashboards is trivial.">
+  <meta itemprop="datePublished" content="2025-02-14T10:28:07+00:00">
+  <meta itemprop="dateModified" content="2025-02-14T11:26:14+00:00">
+  <meta itemprop="wordCount" content="346">
+  <meta itemprop="keywords" content="Htmx,Bootstrap,Javascript,Html,Ui,Ssr,Web">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="j2html">
-  <meta name="twitter:description" content="For my full-stack projects I like to use Server-Side rendering with Javalin, j2html and htmx. Together, these libraries allow you to write interactive full-stack web applications in vanilla java. In this post I’d like to explain how the j2html library fits in this setup, go over a few benefits, and link a converter that I wrote to make building the user interface easier.
-Server Side Rendering While the last decade was dominated by client-side frameworks, many applications could perhaps have saved a lot of development time by using server-side rendering. This means that the resulting html is built on the server, including its data, styling and behaviour.">
+  <meta name="twitter:title" content="Combining htmx with Bootstrap">
+  <meta name="twitter:description" content="Using htmx with Bootstrap is mostly a seamless experience, but I’ve encountered a few places where a bit of extra effort is needed to smooth everything out. Since I could not find a concise description of the required fix, I’ve created this quick post to outline the issue and the remedy.
+Bootstrap Since I work mostly on business-to-business administrative web applications, I need to build many interfaces, yet a slick or custom styling is usually not the highest priority. We need a well rounded set of standard component that enables data presentation with clarity. So let’s just pretend we still live in the ’10s and use Bootstrap. A benefit is that all the scraping-trained AI’s are now all Bootstrap experts, meaning that stamping out entire dashboards is trivial.">
 
       
     
@@ -77,7 +79,7 @@ Server Side Rendering While the last decade was dominated by client-side framewo
   
   
   
-  <header class="cover bg-center" style="background-image: url('https://bvkatwijk.github.io/images/j2html_converter.png');">
+  <header class="cover bg-center" style="background-image: url('https://bvkatwijk.github.io/images/htmx-bs-tooltip.png');">
     <div class="bg-black-60">
       <nav class="pv3 ph3 ph4-ns" role="navigation">
   <div class="flex-l justify-between items-center center">
@@ -142,7 +144,7 @@ Server Side Rendering While the last decade was dominated by client-side framewo
 
       <div class="tc-l pv6 ph3 ph4-ns">
         
-          <div class="f2 f1-l fw2 white-90 mb0 lh-title">j2html</div>
+          <div class="f2 f1-l fw2 white-90 mb0 lh-title">Combining htmx with Bootstrap</div>
           
         
       </div>
@@ -159,21 +161,21 @@ Server Side Rendering While the last decade was dominated by client-side framewo
       <aside class="instapaper_ignoref b helvetica tracked ttu">
           
         Blogs
-      </aside><div id="sharing" class="mt3 ananke-socials"><a href="mailto:?&amp;body=https%3A%2F%2Fbvkatwijk.github.io%2Fblog%2Fjava---j2html%2F&amp;subject=j2html"
+      </aside><div id="sharing" class="mt3 ananke-socials"><a href="mailto:?&amp;body=https%3A%2F%2Fbvkatwijk.github.io%2Fblog%2Fhtmx-and-bootstrap%2F&amp;subject=Combining&#43;htmx&#43;with&#43;Bootstrap"
         class="ananke-social-link email no-underline"
         title="Share on Email" aria-label="Share on Email"
         target="_blank" rel="nofollow noopener noreferrer">
         <span class="icon">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. --><path d="M64 112c-8.8 0-16 7.2-16 16l0 22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1l0-22.1c0-8.8-7.2-16-16-16L64 112zM48 212.2L48 384c0 8.8 7.2 16 16 16l384 0c8.8 0 16-7.2 16-16l0-171.8L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64l384 0c35.3 0 64 28.7 64 64l0 256c0 35.3-28.7 64-64 64L64 448c-35.3 0-64-28.7-64-64L0 128z"/></svg>
                 
-              </span></a><a href="https://twitter.com/intent/tweet/?&amp;text=For&#43;my&#43;full-stack&#43;projects&#43;I&#43;like&#43;to&#43;use&#43;Server-Side&#43;rendering&#43;with&#43;Javalin%2C&#43;j2html&#43;and&#43;htmx.&#43;Together%2C&#43;these&#43;libraries&#43;allow&#43;you&#43;to&#43;write&#43;interactive&#43;full-stack&#43;web&#43;applications&#43;in&#43;vanilla&#43;java.&#43;In&#43;this&#43;post&#43;I%26amp%3Brsquo%3Bd&#43;like&#43;to&#43;explain&#43;how&#43;the&#43;j2html&#43;library&#43;fits&#43;in&#43;this&#43;setup%2C&#43;go&#43;over&#43;a&#43;few&#43;benefits%2C&#43;and&#43;link&#43;a&#43;converter&#43;that&#43;I&#43;wrote&#43;to&#43;make&#43;building&#43;the&#43;user&#43;interface&#43;easier.%0AServer&#43;Side&#43;Rendering&#43;While&#43;the&#43;last&#43;decade&#43;was&#43;dominated&#43;by&#43;client-side&#43;frameworks%2C&#43;many&#43;applications&#43;could&#43;perhaps&#43;have&#43;saved&#43;a&#43;lot&#43;of&#43;development&#43;time&#43;by&#43;using&#43;server-side&#43;rendering.&#43;This&#43;means&#43;that&#43;the&#43;resulting&#43;html&#43;is&#43;built&#43;on&#43;the&#43;server%2C&#43;including&#43;its&#43;data%2C&#43;styling&#43;and&#43;behaviour.%0A&amp;url=https%3A%2F%2Fbvkatwijk.github.io%2Fblog%2Fjava---j2html%2F"
+              </span></a><a href="https://twitter.com/intent/tweet/?&amp;text=Using&#43;htmx&#43;with&#43;Bootstrap&#43;is&#43;mostly&#43;a&#43;seamless&#43;experience%2C&#43;but&#43;I%26amp%3Brsquo%3Bve&#43;encountered&#43;a&#43;few&#43;places&#43;where&#43;a&#43;bit&#43;of&#43;extra&#43;effort&#43;is&#43;needed&#43;to&#43;smooth&#43;everything&#43;out.&#43;Since&#43;I&#43;could&#43;not&#43;find&#43;a&#43;concise&#43;description&#43;of&#43;the&#43;required&#43;fix%2C&#43;I%26amp%3Brsquo%3Bve&#43;created&#43;this&#43;quick&#43;post&#43;to&#43;outline&#43;the&#43;issue&#43;and&#43;the&#43;remedy.%0ABootstrap&#43;Since&#43;I&#43;work&#43;mostly&#43;on&#43;business-to-business&#43;administrative&#43;web&#43;applications%2C&#43;I&#43;need&#43;to&#43;build&#43;many&#43;interfaces%2C&#43;yet&#43;a&#43;slick&#43;or&#43;custom&#43;styling&#43;is&#43;usually&#43;not&#43;the&#43;highest&#43;priority.&#43;We&#43;need&#43;a&#43;well&#43;rounded&#43;set&#43;of&#43;standard&#43;component&#43;that&#43;enables&#43;data&#43;presentation&#43;with&#43;clarity.&#43;So&#43;let%26amp%3Brsquo%3Bs&#43;just&#43;pretend&#43;we&#43;still&#43;live&#43;in&#43;the&#43;%26amp%3Brsquo%3B10s&#43;and&#43;use&#43;Bootstrap.&#43;A&#43;benefit&#43;is&#43;that&#43;all&#43;the&#43;scraping-trained&#43;AI%26amp%3Brsquo%3Bs&#43;are&#43;now&#43;all&#43;Bootstrap&#43;experts%2C&#43;meaning&#43;that&#43;stamping&#43;out&#43;entire&#43;dashboards&#43;is&#43;trivial.%0A&amp;url=https%3A%2F%2Fbvkatwijk.github.io%2Fblog%2Fhtmx-and-bootstrap%2F"
         class="ananke-social-link twitter no-underline"
         title="Share on Twitter" aria-label="Share on Twitter"
         target="_blank" rel="nofollow noopener noreferrer">
         <span class="icon">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. --><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
                 
-              </span></a><a href="https://www.linkedin.com/shareArticle?&amp;mini=true&amp;source=https%3A%2F%2Fbvkatwijk.github.io%2Fblog%2Fjava---j2html%2F&amp;summary=For&#43;my&#43;full-stack&#43;projects&#43;I&#43;like&#43;to&#43;use&#43;Server-Side&#43;rendering&#43;with&#43;Javalin%2C&#43;j2html&#43;and&#43;htmx.&#43;Together%2C&#43;these&#43;libraries&#43;allow&#43;you&#43;to&#43;write&#43;interactive&#43;full-stack&#43;web&#43;applications&#43;in&#43;vanilla&#43;java.&#43;In&#43;this&#43;post&#43;I%26amp%3Brsquo%3Bd&#43;like&#43;to&#43;explain&#43;how&#43;the&#43;j2html&#43;library&#43;fits&#43;in&#43;this&#43;setup%2C&#43;go&#43;over&#43;a&#43;few&#43;benefits%2C&#43;and&#43;link&#43;a&#43;converter&#43;that&#43;I&#43;wrote&#43;to&#43;make&#43;building&#43;the&#43;user&#43;interface&#43;easier.%0AServer&#43;Side&#43;Rendering&#43;While&#43;the&#43;last&#43;decade&#43;was&#43;dominated&#43;by&#43;client-side&#43;frameworks%2C&#43;many&#43;applications&#43;could&#43;perhaps&#43;have&#43;saved&#43;a&#43;lot&#43;of&#43;development&#43;time&#43;by&#43;using&#43;server-side&#43;rendering.&#43;This&#43;means&#43;that&#43;the&#43;resulting&#43;html&#43;is&#43;built&#43;on&#43;the&#43;server%2C&#43;including&#43;its&#43;data%2C&#43;styling&#43;and&#43;behaviour.%0A&amp;title=j2html&amp;url=https%3A%2F%2Fbvkatwijk.github.io%2Fblog%2Fjava---j2html%2F"
+              </span></a><a href="https://www.linkedin.com/shareArticle?&amp;mini=true&amp;source=https%3A%2F%2Fbvkatwijk.github.io%2Fblog%2Fhtmx-and-bootstrap%2F&amp;summary=Using&#43;htmx&#43;with&#43;Bootstrap&#43;is&#43;mostly&#43;a&#43;seamless&#43;experience%2C&#43;but&#43;I%26amp%3Brsquo%3Bve&#43;encountered&#43;a&#43;few&#43;places&#43;where&#43;a&#43;bit&#43;of&#43;extra&#43;effort&#43;is&#43;needed&#43;to&#43;smooth&#43;everything&#43;out.&#43;Since&#43;I&#43;could&#43;not&#43;find&#43;a&#43;concise&#43;description&#43;of&#43;the&#43;required&#43;fix%2C&#43;I%26amp%3Brsquo%3Bve&#43;created&#43;this&#43;quick&#43;post&#43;to&#43;outline&#43;the&#43;issue&#43;and&#43;the&#43;remedy.%0ABootstrap&#43;Since&#43;I&#43;work&#43;mostly&#43;on&#43;business-to-business&#43;administrative&#43;web&#43;applications%2C&#43;I&#43;need&#43;to&#43;build&#43;many&#43;interfaces%2C&#43;yet&#43;a&#43;slick&#43;or&#43;custom&#43;styling&#43;is&#43;usually&#43;not&#43;the&#43;highest&#43;priority.&#43;We&#43;need&#43;a&#43;well&#43;rounded&#43;set&#43;of&#43;standard&#43;component&#43;that&#43;enables&#43;data&#43;presentation&#43;with&#43;clarity.&#43;So&#43;let%26amp%3Brsquo%3Bs&#43;just&#43;pretend&#43;we&#43;still&#43;live&#43;in&#43;the&#43;%26amp%3Brsquo%3B10s&#43;and&#43;use&#43;Bootstrap.&#43;A&#43;benefit&#43;is&#43;that&#43;all&#43;the&#43;scraping-trained&#43;AI%26amp%3Brsquo%3Bs&#43;are&#43;now&#43;all&#43;Bootstrap&#43;experts%2C&#43;meaning&#43;that&#43;stamping&#43;out&#43;entire&#43;dashboards&#43;is&#43;trivial.%0A&amp;title=Combining&#43;htmx&#43;with&#43;Bootstrap&amp;url=https%3A%2F%2Fbvkatwijk.github.io%2Fblog%2Fhtmx-and-bootstrap%2F"
         class="ananke-social-link linkedin no-underline"
         title="Share on LinkedIn" aria-label="Share on LinkedIn"
         target="_blank" rel="nofollow noopener noreferrer">
@@ -181,47 +183,62 @@ Server Side Rendering While the last decade was dominated by client-side framewo
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. --><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
                 
               </span></a></div>
-<h1 class="f1 athelas mt3 mb1">j2html</h1>
+<h1 class="f1 athelas mt3 mb1">Combining htmx with Bootstrap</h1>
       
       
       
-      <time class="f6 mv4 dib tracked" datetime="2025-01-30T10:33:19Z">January 30, 2025</time>
+      <time class="f6 mv4 dib tracked" datetime="2025-02-14T10:28:07Z">February 14, 2025</time>
       
 
       
       
     </header>
-    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>For my full-stack projects I like to use Server-Side rendering with <a href="https://javalin.io/">Javalin</a>, <a href="https://j2html.com/">j2html</a> and <a href="https://htmx.org/">htmx</a>. Together, these libraries allow you to write interactive full-stack web applications in vanilla java. In this post I&rsquo;d like to explain how the <a href="https://j2html.com/">j2html</a> library fits in this setup, go over a few benefits, and link a <a href="https://bvankatwijk.nl/j2html-converter/">converter</a> that I wrote to make building the user interface easier.</p>
-<h3 id="server-side-rendering">Server Side Rendering</h3>
-<p>While the last decade was dominated by client-side frameworks, many applications could perhaps have saved a lot of development time by using server-side rendering. This means that the resulting html is built on the server, including its data, styling and behaviour.</p>
-<p>With the incredible stability and performance of servers and networks nowadays, a lot of arguments to move work to the client side have become less relevant. Servers can render the page within a millisecond and the client can immediately display it without invoking front-end data processing. With parallel processing, servers can easily handle thousands of requests per second.</p>
-<h3 id="suitable-projects">Suitable projects</h3>
-<p>Not every project is a great fit, but in my view, too many B2B projects reach for elaborate heavy frameworks by default without considering the speed and simplicity of just doing all the work on the server. The most suitable projects are administrative business projects needing to show data fast, reliable and cleanly.</p>
-<h3 id="benefits">Benefits</h3>
-<p>Using j2html for server-side rendering gives you a number of immediate benefits:</p>
-<h4 id="1-no-framework">1. No Framework</h4>
-<p>Since it is just a libary, learning <a href="https://j2html.com/">j2html</a> takes about ten seconds. There is no framework to learn. This allows you and your team to use the tool you already know best - the programming language itself - without spending time learning a lot of framework quirks.</p>
-<h4 id="2-no-api">2. No API</h4>
-<p>Since there is no front-end framework demanding an API to communicate with, you can skip creating it entirely. Not having to create and maintain an API saves a lot of time and effort.</p>
-<h4 id="3-no-business-logic-replication">3. No business logic replication</h4>
-<p>Another benefit is that business logic stays in one place and does not have to be replicated inside front-end code. This can save an enormous amount of time up front, and when evolving a project. Changing a business rule can be done in a single place in server-side code.</p>
-<h4 id="4-no-html-duplication">4. No HTML duplication</h4>
-<p>HTML has no built-in way to reuse code. Creating your html with vanilla java means that you can reuse any html by extracting functions. There is no need to learn how front-end framework components or web components work.</p>
-<p>The reduction in project size and complexity is also illustrated in <a href="https://www.radicalsimpli.city/">Radical Simplicity</a>. The amount of time needed to change a business rule or implement a new feature is cut down from days to hours, if not minutes.</p>
-<h3 id="html-to-j2html">HTML to j2html</h3>
-<p>Building a UI quickly can involve copy-pasting ready made HTML, so we need a way to quickly convert it to j2html code. I&rsquo;ve written an <a href="https://bvankatwijk.nl/j2html-converter/">online converter </a> that fulfills this purpose. Please consider <a href="https://github.com/bvkatwijk/j2html-converter">starring it on GitHub</a>, and if you notice missing or incorrect behaviour, consider creating an issue. Contributions are also more than welcome! Also, consider starring <a href="https://github.com/tipsy/j2html">j2html on GitHub</a>!</p>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>Using <a href="http://htmx.org/">htmx</a> with <a href="https://getbootstrap.com/">Bootstrap</a> is mostly a seamless experience, but I&rsquo;ve encountered a few places where a bit of extra effort is needed to smooth everything out. Since I could not find a concise description of the required fix, I&rsquo;ve created this quick post to outline the issue and the remedy.</p>
+<h3 id="bootstrap">Bootstrap</h3>
+<p>Since I work mostly on business-to-business administrative web applications, I need to build many interfaces, yet a slick or custom styling is usually not the highest priority. We need a well rounded set of standard component that enables data presentation with clarity.
+So let&rsquo;s just pretend we still live in the &rsquo;10s and use <a href="https://getbootstrap.com/">Bootstrap</a>. A benefit is that all the scraping-trained AI&rsquo;s are now all Bootstrap experts, meaning that stamping out entire dashboards is trivial.</p>
+<h3 id="javascript-behaviour">Javascript behaviour</h3>
+<p>Some elements in Bootstrap require javascript to function properly. To help performance, it is up to the developer to trigger this when appropriate. Bootstrap uses <a href="https://floating-ui.com/">Floating UI</a> (Previously called popper.js)</p>
+<p>An example of this is when using tooltips, which need to be registered:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>document.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;DOMContentLoaded&#34;</span>, <span style="color:#66d9ef">function</span>() {
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">tooltipTriggerList</span> <span style="color:#f92672">=</span> [].<span style="color:#a6e22e">slice</span>
+</span></span><span style="display:flex;"><span>		.<span style="color:#a6e22e">call</span>(document.<span style="color:#a6e22e">querySelectorAll</span>(<span style="color:#e6db74">&#39;[data-bs-toggle=&#34;tooltip&#34;]&#39;</span>));
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">tooltipTriggerList</span>.<span style="color:#a6e22e">map</span>(<span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">tooltipTriggerEl</span>) {
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">bootstrap</span>.<span style="color:#a6e22e">Tooltip</span>(<span style="color:#a6e22e">tooltipTriggerEl</span>, {
+</span></span><span style="display:flex;"><span>			<span style="color:#a6e22e">boundary</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;window&#34;</span>
+</span></span><span style="display:flex;"><span>		});
+</span></span><span style="display:flex;"><span>	});
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><h3 id="htmx">HTMX</h3>
+<p><a href="http://htmx.org/">htmx</a> is a tiny frontend framework, which may allow you to remove or omit the client-side stack entirely (I can now use <a href="https://bvkatwijk.github.io/blog/j2html/">j2html</a> instead). One of the main features of htmx is that it allows any element to issue <a href="https://en.wikipedia.org/wiki/Ajax_(programming)">AJAX</a> requests, and expects hypermedia back which it will swap in-place.</p>
+<p>This means that HTMX will cause UI elements to be added to the page dynamically, and in newer versions of Bootstrap, they will not be registered. This causes issues when javascript behaviour needs to be added using a listener.</p>
+<h3 id="register-dynamic-htmx-elements">Register Dynamic htmx Elements</h3>
+<p>So in addtion to triggering this logic at <code>DOMContentLoaded</code> , we also trigger it on <code>htmx:afterRequest</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">registerElements</span>() {
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">tooltipTriggerList</span> <span style="color:#f92672">=</span> [].<span style="color:#a6e22e">slice</span>
+</span></span><span style="display:flex;"><span>		.<span style="color:#a6e22e">call</span>(document.<span style="color:#a6e22e">querySelectorAll</span>(<span style="color:#e6db74">&#39;[data-bs-toggle=&#34;tooltip&#34;]&#39;</span>));
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">tooltipTriggerList</span>.<span style="color:#a6e22e">map</span>(<span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">tooltipTriggerEl</span>) {
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">bootstrap</span>.<span style="color:#a6e22e">Tooltip</span>(<span style="color:#a6e22e">tooltipTriggerEl</span>, {
+</span></span><span style="display:flex;"><span>			<span style="color:#a6e22e">boundary</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;window&#34;</span>
+</span></span><span style="display:flex;"><span>		});
+</span></span><span style="display:flex;"><span>	});
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>document.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;DOMContentLoaded&#34;</span>, <span style="color:#a6e22e">registerElements</span>);
+</span></span><span style="display:flex;"><span>document.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;htmx:afterRequest&#34;</span>, <span style="color:#a6e22e">registerElements</span>);
+</span></span></code></pre></div><p>You can add more initialisation to <code>registerElements</code> as needed when using more javascript-based elements from Bootstrap, for example Popovers.</p>
 <ul class="pa0">
   
    <li class="list di">
-     <a href="/tags/java/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Java</a>
+     <a href="/tags/htmx/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Htmx</a>
    </li>
   
    <li class="list di">
-     <a href="/tags/ssr/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Ssr</a>
+     <a href="/tags/bootstrap/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Bootstrap</a>
    </li>
   
    <li class="list di">
-     <a href="/tags/dx/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Dx</a>
+     <a href="/tags/javascript/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Javascript</a>
    </li>
   
    <li class="list di">
@@ -229,7 +246,15 @@ Server Side Rendering While the last decade was dominated by client-side framewo
    </li>
   
    <li class="list di">
-     <a href="/tags/tools/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Tools</a>
+     <a href="/tags/ui/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Ui</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/ssr/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Ssr</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/web/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Web</a>
    </li>
   
 </ul>
@@ -250,7 +275,7 @@ Server Side Rendering While the last decade was dominated by client-side framewo
           
             <link rel="stylesheet" href="/css/comments.css" />
 <script>
-    var id = "14";
+    var id = "16";
   
     if (id)
     {
@@ -332,15 +357,7 @@ Server Side Rendering While the last decade was dominated by client-side framewo
     <ul class="pa0 list">
 	   
 	     <li  class="mb2">
-          <a href="/blog/awaitility/">Awaitility</a>
-        </li>
-	    
-	     <li  class="mb2">
-          <a href="/blog/java---error-return-types/">Java - Error Return Types</a>
-        </li>
-	    
-	     <li  class="mb2">
-          <a href="/blog/java---lenses/">Lenses</a>
+          <a href="/blog/j2html/">j2html</a>
         </li>
 	    
 	     <li  class="mb2">
@@ -349,10 +366,6 @@ Server Side Rendering While the last decade was dominated by client-side framewo
 	    
 	     <li  class="mb2">
           <a href="/blog/hugo/">Hugo</a>
-        </li>
-	    
-	     <li  class="mb2">
-          <a href="/blog/java---unique-enum-field-values/">Java - Unique Enum Field values</a>
         </li>
 	    
     </ul>

@@ -25,6 +25,7 @@ lastmod: 2025-02-08T13:48:12+00:00
 - Application URIs (obsidian://open)
 - oh my zsh plugins
 - scala context bounds
+-  ASDF version manager
 - github pages subdomain
 - //Lenses
 - Devoxx

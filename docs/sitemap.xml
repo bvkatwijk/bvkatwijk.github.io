@@ -3,13 +3,40 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://bvkatwijk.github.io/blog/</loc>
-    <lastmod>2025-02-08T14:18:27+00:00</lastmod>
+    <lastmod>2025-02-14T11:28:05+00:00</lastmod>
   </url><url>
     <loc>https://bvkatwijk.github.io/work/</loc>
     <lastmod>2025-02-08T13:48:12+00:00</lastmod>
   </url><url>
     <loc>https://bvkatwijk.github.io/wiki/</loc>
     <lastmod>2024-10-18T05:54:11+00:00</lastmod>
+  </url><url>
+    <loc>https://bvkatwijk.github.io/tags/bootstrap/</loc>
+    <lastmod>2025-02-14T11:26:14+00:00</lastmod>
+  </url><url>
+    <loc>https://bvkatwijk.github.io/blog/htmx-and-bootstrap/</loc>
+    <lastmod>2025-02-14T11:26:14+00:00</lastmod>
+  </url><url>
+    <loc>https://bvkatwijk.github.io/tags/html/</loc>
+    <lastmod>2025-02-14T11:26:14+00:00</lastmod>
+  </url><url>
+    <loc>https://bvkatwijk.github.io/tags/htmx/</loc>
+    <lastmod>2025-02-14T11:26:14+00:00</lastmod>
+  </url><url>
+    <loc>https://bvkatwijk.github.io/tags/javascript/</loc>
+    <lastmod>2025-02-14T11:26:14+00:00</lastmod>
+  </url><url>
+    <loc>https://bvkatwijk.github.io/tags/ssr/</loc>
+    <lastmod>2025-02-14T11:26:14+00:00</lastmod>
+  </url><url>
+    <loc>https://bvkatwijk.github.io/tags/</loc>
+    <lastmod>2025-02-14T11:26:14+00:00</lastmod>
+  </url><url>
+    <loc>https://bvkatwijk.github.io/tags/ui/</loc>
+    <lastmod>2025-02-14T11:26:14+00:00</lastmod>
+  </url><url>
+    <loc>https://bvkatwijk.github.io/tags/web/</loc>
+    <lastmod>2025-02-14T11:26:14+00:00</lastmod>
   </url><url>
     <loc>https://bvkatwijk.github.io/tags/api/</loc>
     <lastmod>2025-02-05T10:56:30+00:00</lastmod>
@@ -23,22 +50,13 @@
     <loc>https://bvkatwijk.github.io/blog/java---json-unit-testing/</loc>
     <lastmod>2025-02-05T10:56:30+00:00</lastmod>
   </url><url>
-    <loc>https://bvkatwijk.github.io/tags/</loc>
-    <lastmod>2025-02-08T13:47:50+00:00</lastmod>
-  </url><url>
     <loc>https://bvkatwijk.github.io/tags/test/</loc>
     <lastmod>2025-02-05T10:56:30+00:00</lastmod>
   </url><url>
     <loc>https://bvkatwijk.github.io/tags/dx/</loc>
     <lastmod>2025-02-08T13:47:50+00:00</lastmod>
   </url><url>
-    <loc>https://bvkatwijk.github.io/tags/html/</loc>
-    <lastmod>2025-01-30T13:52:47+00:00</lastmod>
-  </url><url>
-    <loc>https://bvkatwijk.github.io/blog/java---j2html/</loc>
-    <lastmod>2025-01-30T13:52:47+00:00</lastmod>
-  </url><url>
-    <loc>https://bvkatwijk.github.io/tags/ssr/</loc>
+    <loc>https://bvkatwijk.github.io/blog/j2html/</loc>
     <lastmod>2025-01-30T13:52:47+00:00</lastmod>
   </url><url>
     <loc>https://bvkatwijk.github.io/tags/tools/</loc>
@@ -77,9 +95,6 @@
     <loc>https://bvkatwijk.github.io/tags/security/</loc>
     <lastmod>2025-01-30T12:33:43+00:00</lastmod>
   </url><url>
-    <loc>https://bvkatwijk.github.io/tags/web/</loc>
-    <lastmod>2025-02-08T13:47:50+00:00</lastmod>
-  </url><url>
     <loc>https://bvkatwijk.github.io/blog/hugo/</loc>
     <lastmod>2025-02-08T13:47:50+00:00</lastmod>
   </url><url>
@@ -115,8 +130,6 @@
   </url><url>
     <loc>https://bvkatwijk.github.io/wiki/lombok/</loc>
     <lastmod>2024-10-18T05:54:11+00:00</lastmod>
-  </url><url>
-    <loc>https://bvkatwijk.github.io/blog/build-pipeline-quality/</loc>
   </url><url>
     <loc>https://bvkatwijk.github.io/categories/</loc>
   </url>

@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Ssr on Boris van Katwijk</title>
-    <link>https://bvkatwijk.github.io/tags/ssr/</link>
-    <description>Recent content in Ssr on Boris van Katwijk</description>
+    <title>Javascript on Boris van Katwijk</title>
+    <link>https://bvkatwijk.github.io/tags/javascript/</link>
+    <description>Recent content in Javascript on Boris van Katwijk</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 14 Feb 2025 11:26:14 +0000</lastBuildDate>
-    <atom:link href="https://bvkatwijk.github.io/tags/ssr/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://bvkatwijk.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Combining htmx with Bootstrap</title>
       <link>https://bvkatwijk.github.io/blog/htmx-and-bootstrap/</link>
       <pubDate>Fri, 14 Feb 2025 10:28:07 +0000</pubDate>
       <guid>https://bvkatwijk.github.io/blog/htmx-and-bootstrap/</guid>
       <description>&lt;p&gt;Using &lt;a href=&#34;http://htmx.org/&#34;&gt;htmx&lt;/a&gt; with &lt;a href=&#34;https://getbootstrap.com/&#34;&gt;Bootstrap&lt;/a&gt; is mostly a seamless experience, but I&amp;rsquo;ve encountered a few places where a bit of extra effort is needed to smooth everything out. Since I could not find a concise description of the required fix, I&amp;rsquo;ve created this quick post to outline the issue and the remedy.&lt;/p&gt;&#xA;&lt;h3 id=&#34;bootstrap&#34;&gt;Bootstrap&lt;/h3&gt;&#xA;&lt;p&gt;Since I work mostly on business-to-business administrative web applications, I need to build many interfaces, yet a slick or custom styling is usually not the highest priority. We need a well rounded set of standard component that enables data presentation with clarity.&#xA;So let&amp;rsquo;s just pretend we still live in the &amp;rsquo;10s and use &lt;a href=&#34;https://getbootstrap.com/&#34;&gt;Bootstrap&lt;/a&gt;. A benefit is that all the scraping-trained AI&amp;rsquo;s are now all Bootstrap experts, meaning that stamping out entire dashboards is trivial.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>j2html</title>
-      <link>https://bvkatwijk.github.io/blog/j2html/</link>
-      <pubDate>Thu, 30 Jan 2025 10:33:19 +0000</pubDate>
-      <guid>https://bvkatwijk.github.io/blog/j2html/</guid>
-      <description>&lt;p&gt;For my full-stack projects I like to use Server-Side rendering with &lt;a href=&#34;https://javalin.io/&#34;&gt;Javalin&lt;/a&gt;, &lt;a href=&#34;https://j2html.com/&#34;&gt;j2html&lt;/a&gt; and &lt;a href=&#34;https://htmx.org/&#34;&gt;htmx&lt;/a&gt;. Together, these libraries allow you to write interactive full-stack web applications in vanilla java. In this post I&amp;rsquo;d like to explain how the &lt;a href=&#34;https://j2html.com/&#34;&gt;j2html&lt;/a&gt; library fits in this setup, go over a few benefits, and link a &lt;a href=&#34;https://bvankatwijk.nl/j2html-converter/&#34;&gt;converter&lt;/a&gt; that I wrote to make building the user interface easier.&lt;/p&gt;&#xA;&lt;h3 id=&#34;server-side-rendering&#34;&gt;Server Side Rendering&lt;/h3&gt;&#xA;&lt;p&gt;While the last decade was dominated by client-side frameworks, many applications could perhaps have saved a lot of development time by using server-side rendering. This means that the resulting html is built on the server, including its data, styling and behaviour.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

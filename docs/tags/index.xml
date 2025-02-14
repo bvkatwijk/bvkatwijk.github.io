@@ -6,8 +6,57 @@
     <description>Recent content in Tags on Boris van Katwijk</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 08 Feb 2025 13:47:50 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 14 Feb 2025 11:26:14 +0000</lastBuildDate>
     <atom:link href="https://bvkatwijk.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bootstrap</title>
+      <link>https://bvkatwijk.github.io/tags/bootstrap/</link>
+      <pubDate>Fri, 14 Feb 2025 10:28:07 +0000</pubDate>
+      <guid>https://bvkatwijk.github.io/tags/bootstrap/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Html</title>
+      <link>https://bvkatwijk.github.io/tags/html/</link>
+      <pubDate>Fri, 14 Feb 2025 10:28:07 +0000</pubDate>
+      <guid>https://bvkatwijk.github.io/tags/html/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Htmx</title>
+      <link>https://bvkatwijk.github.io/tags/htmx/</link>
+      <pubDate>Fri, 14 Feb 2025 10:28:07 +0000</pubDate>
+      <guid>https://bvkatwijk.github.io/tags/htmx/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Javascript</title>
+      <link>https://bvkatwijk.github.io/tags/javascript/</link>
+      <pubDate>Fri, 14 Feb 2025 10:28:07 +0000</pubDate>
+      <guid>https://bvkatwijk.github.io/tags/javascript/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ssr</title>
+      <link>https://bvkatwijk.github.io/tags/ssr/</link>
+      <pubDate>Fri, 14 Feb 2025 10:28:07 +0000</pubDate>
+      <guid>https://bvkatwijk.github.io/tags/ssr/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ui</title>
+      <link>https://bvkatwijk.github.io/tags/ui/</link>
+      <pubDate>Fri, 14 Feb 2025 10:28:07 +0000</pubDate>
+      <guid>https://bvkatwijk.github.io/tags/ui/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Web</title>
+      <link>https://bvkatwijk.github.io/tags/web/</link>
+      <pubDate>Fri, 14 Feb 2025 10:28:07 +0000</pubDate>
+      <guid>https://bvkatwijk.github.io/tags/web/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Api</title>
       <link>https://bvkatwijk.github.io/tags/api/</link>
@@ -41,20 +90,6 @@
       <link>https://bvkatwijk.github.io/tags/dx/</link>
       <pubDate>Thu, 30 Jan 2025 10:33:19 +0000</pubDate>
       <guid>https://bvkatwijk.github.io/tags/dx/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Html</title>
-      <link>https://bvkatwijk.github.io/tags/html/</link>
-      <pubDate>Thu, 30 Jan 2025 10:33:19 +0000</pubDate>
-      <guid>https://bvkatwijk.github.io/tags/html/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Ssr</title>
-      <link>https://bvkatwijk.github.io/tags/ssr/</link>
-      <pubDate>Thu, 30 Jan 2025 10:33:19 +0000</pubDate>
-      <guid>https://bvkatwijk.github.io/tags/ssr/</guid>
       <description></description>
     </item>
     <item>
@@ -111,13 +146,6 @@
       <link>https://bvkatwijk.github.io/tags/security/</link>
       <pubDate>Tue, 01 Oct 2024 09:14:11 +0000</pubDate>
       <guid>https://bvkatwijk.github.io/tags/security/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Web</title>
-      <link>https://bvkatwijk.github.io/tags/web/</link>
-      <pubDate>Tue, 01 Oct 2024 09:14:11 +0000</pubDate>
-      <guid>https://bvkatwijk.github.io/tags/web/</guid>
       <description></description>
     </item>
     <item>

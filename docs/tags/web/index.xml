@@ -6,8 +6,15 @@
     <description>Recent content in Web on Boris van Katwijk</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 08 Feb 2025 13:47:50 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 14 Feb 2025 11:26:14 +0000</lastBuildDate>
     <atom:link href="https://bvkatwijk.github.io/tags/web/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Combining htmx with Bootstrap</title>
+      <link>https://bvkatwijk.github.io/blog/htmx-and-bootstrap/</link>
+      <pubDate>Fri, 14 Feb 2025 10:28:07 +0000</pubDate>
+      <guid>https://bvkatwijk.github.io/blog/htmx-and-bootstrap/</guid>
+      <description>&lt;p&gt;Using &lt;a href=&#34;http://htmx.org/&#34;&gt;htmx&lt;/a&gt; with &lt;a href=&#34;https://getbootstrap.com/&#34;&gt;Bootstrap&lt;/a&gt; is mostly a seamless experience, but I&amp;rsquo;ve encountered a few places where a bit of extra effort is needed to smooth everything out. Since I could not find a concise description of the required fix, I&amp;rsquo;ve created this quick post to outline the issue and the remedy.&lt;/p&gt;&#xA;&lt;h3 id=&#34;bootstrap&#34;&gt;Bootstrap&lt;/h3&gt;&#xA;&lt;p&gt;Since I work mostly on business-to-business administrative web applications, I need to build many interfaces, yet a slick or custom styling is usually not the highest priority. We need a well rounded set of standard component that enables data presentation with clarity.&#xA;So let&amp;rsquo;s just pretend we still live in the &amp;rsquo;10s and use &lt;a href=&#34;https://getbootstrap.com/&#34;&gt;Bootstrap&lt;/a&gt;. A benefit is that all the scraping-trained AI&amp;rsquo;s are now all Bootstrap experts, meaning that stamping out entire dashboards is trivial.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Link Swapping</title>
       <link>https://bvkatwijk.github.io/blog/security---link-swapping/</link>

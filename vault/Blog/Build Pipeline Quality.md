@@ -1,3 +1,10 @@
+---
+aliases: 
+tags: 
+date: 2025-02-08T08:01:03+00:00
+lastmod: 2025-02-14T11:28:05+00:00
+draft: "true"
+---
 The effectiveness of your build pipelines is very important. The value that a trustworthy pipeline can give you is a significant increase of developer speed, a decrease in production incidents and
 a culture where a team can experiment.
 

@@ -6,7 +6,7 @@ tags:
   - monetization
   - advertisement
 date: 2025-02-08T13:34:32+00:00
-lastmod: 2025-02-08T14:18:27+00:00
+lastmod: 2025-02-14T11:24:20+00:00
 title: Ads on your Blog site
 featured_image: /images/ads.jpg
 draft: "true"
@@ -18,9 +18,11 @@ Luckily the process was very easy. Which makes sense, given that it is Google's 
 First step is to [log into AdSense](https://www.google.com/adsense/login) and register your website. 
 
 ### Add account data to your site
-After you have done this, you need to place a bit of data on your site. Two values inside the `<head>` section of each page, and an `Ads.txt` file hosted on your domain.
+After you have done this, you need to place a bit of data on your site. Two values inside the `<head>` section of each page, and an `ads.txt` file hosted on your domain.
 
-Using a Hugo blog this is very easy to do, as each page is generated from a template. Since I am using the Ananke theme on my [[Hugo]] blog, I can just edit `head-additions.html` to add the required html. The `Ads.txt` file can be created inside the `static` directory.
+A lot of documentation on the Google Adsense pages mentions `Ads.txt` instead of `ads.txt`. Using a capital letter A does not work! I have reported this and hope they will fix this confusing aspect of the documentation soon.
+
+Using a Hugo blog this is very easy to do, as each page is generated from a template. Since I am using the Ananke theme on my [[Hugo]] blog, I can just edit `head-additions.html` to add the required html. The `ads.txt` file can be created inside the `static` directory.
 
 ### Add Display Ad Units
 Next step is to create Ad Units, which are the actual ads you want to host on your site. I chose an ad at the end of each article (to minimize reading disruption) and an ad in the sidebar which you automatically scroll past. I doubt that this is a very profitable strategy, but that is not really my goal.
@@ -29,5 +31,13 @@ The html snippets for these Display Ad Units should be added to your html. In th
 
 ### Wait for review
 A background process will review your website. It's likely that you'll see `Getting ready` on the Approval Status tab. I'm waiting too, so I'll wrap up this article once it is done, be right back!
+
+### Approved
+After a day the status changed to `Approved`. I had some delay, probably due to the incorrect file name of the `ads.txt` file mentioned earlier.
+
+On navigating to the site, I noticed two ads where added on the indicated places. Success!
+
+### Cookie Consent Pop-Up
+An unfortunate consequence is that I now have to ask for consent to use cookies. I am trying to find a way to use a cookieless strategy, but I have not found out how to do this yet.
 
 

@@ -6,8 +6,15 @@
     <description>Recent content on Boris van Katwijk</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 08 Feb 2025 13:47:50 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 14 Feb 2025 11:26:14 +0000</lastBuildDate>
     <atom:link href="https://bvkatwijk.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Combining htmx with Bootstrap</title>
+      <link>https://bvkatwijk.github.io/blog/htmx-and-bootstrap/</link>
+      <pubDate>Fri, 14 Feb 2025 10:28:07 +0000</pubDate>
+      <guid>https://bvkatwijk.github.io/blog/htmx-and-bootstrap/</guid>
+      <description>&lt;p&gt;Using &lt;a href=&#34;http://htmx.org/&#34;&gt;htmx&lt;/a&gt; with &lt;a href=&#34;https://getbootstrap.com/&#34;&gt;Bootstrap&lt;/a&gt; is mostly a seamless experience, but I&amp;rsquo;ve encountered a few places where a bit of extra effort is needed to smooth everything out. Since I could not find a concise description of the required fix, I&amp;rsquo;ve created this quick post to outline the issue and the remedy.&lt;/p&gt;&#xA;&lt;h3 id=&#34;bootstrap&#34;&gt;Bootstrap&lt;/h3&gt;&#xA;&lt;p&gt;Since I work mostly on business-to-business administrative web applications, I need to build many interfaces, yet a slick or custom styling is usually not the highest priority. We need a well rounded set of standard component that enables data presentation with clarity.&#xA;So let&amp;rsquo;s just pretend we still live in the &amp;rsquo;10s and use &lt;a href=&#34;https://getbootstrap.com/&#34;&gt;Bootstrap&lt;/a&gt;. A benefit is that all the scraping-trained AI&amp;rsquo;s are now all Bootstrap experts, meaning that stamping out entire dashboards is trivial.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Json Unit Testing</title>
       <link>https://bvkatwijk.github.io/blog/java---json-unit-testing/</link>
@@ -17,9 +24,9 @@
     </item>
     <item>
       <title>j2html</title>
-      <link>https://bvkatwijk.github.io/blog/java---j2html/</link>
+      <link>https://bvkatwijk.github.io/blog/j2html/</link>
       <pubDate>Thu, 30 Jan 2025 10:33:19 +0000</pubDate>
-      <guid>https://bvkatwijk.github.io/blog/java---j2html/</guid>
+      <guid>https://bvkatwijk.github.io/blog/j2html/</guid>
       <description>&lt;p&gt;For my full-stack projects I like to use Server-Side rendering with &lt;a href=&#34;https://javalin.io/&#34;&gt;Javalin&lt;/a&gt;, &lt;a href=&#34;https://j2html.com/&#34;&gt;j2html&lt;/a&gt; and &lt;a href=&#34;https://htmx.org/&#34;&gt;htmx&lt;/a&gt;. Together, these libraries allow you to write interactive full-stack web applications in vanilla java. In this post I&amp;rsquo;d like to explain how the &lt;a href=&#34;https://j2html.com/&#34;&gt;j2html&lt;/a&gt; library fits in this setup, go over a few benefits, and link a &lt;a href=&#34;https://bvankatwijk.nl/j2html-converter/&#34;&gt;converter&lt;/a&gt; that I wrote to make building the user interface easier.&lt;/p&gt;&#xA;&lt;h3 id=&#34;server-side-rendering&#34;&gt;Server Side Rendering&lt;/h3&gt;&#xA;&lt;p&gt;While the last decade was dominated by client-side frameworks, many applications could perhaps have saved a lot of development time by using server-side rendering. This means that the resulting html is built on the server, including its data, styling and behaviour.&lt;/p&gt;</description>
     </item>
     <item>
@@ -91,13 +98,6 @@
       <pubDate>Wed, 18 Sep 2024 11:31:32 +0000</pubDate>
       <guid>https://bvkatwijk.github.io/wiki/lombok/</guid>
       <description>&lt;p&gt;One of my favourite tools in the Java ecosystem is &lt;a href=&#34;https://projectlombok.org/&#34;&gt;Lombok&lt;/a&gt;. It eliminates boilerplate by automatically generating it at compile-time. This has two important side effects: you cannot make mistakes in this generated code, and generated code keeps up to date with code changes.&lt;/p&gt;&#xA;&lt;p&gt;These days I usually include this &lt;code&gt;lombok.config&lt;/code&gt; &lt;a href=&#34;https://projectlombok.org/features/configuration&#34;&gt;configuration file&lt;/a&gt; in the root of my projects:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-config&#34; data-lang=&#34;config&#34;&gt;config.stopBubbling = true&#xA;lombok.addLombokGeneratedAnnotation = true&#xA;lombok.fieldDefaults.defaultPrivate = true&#xA;lombok.fieldDefaults.defaultFinal = true&#xA;lombok.accessors.chain = true&#xA;lombok.accessors.fluent = true&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;configuration&#34;&gt;Configuration&lt;/h3&gt;&#xA;&lt;p&gt;When I use setters, I prefer to return the instance I&amp;rsquo;m working on to be able to chain a lot of calls together. This is set as the default using &lt;code&gt;lombok.accessors.chain = true&lt;/code&gt;.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://bvkatwijk.github.io/blog/build-pipeline-quality/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://bvkatwijk.github.io/blog/build-pipeline-quality/</guid>
-      <description>&lt;p&gt;The effectiveness of your build pipelines is very important. The value that a trustworthy pipeline can give you is a significant increase of developer speed, a decrease in production incidents and&#xA;a culture where a team can experiment.&lt;/p&gt;&#xA;&lt;p&gt;There are a few aspects that determine quality of a CI/CD process&lt;/p&gt;&#xA;&lt;h3 id=&#34;it-should-work&#34;&gt;It should work&lt;/h3&gt;&#xA;&lt;p&gt;Let&amp;rsquo;s start simple. The most basic rule is that a pipeline should run, meaning that there are no faults in the runtime or setup of the pipelines themselves. If this is not the case,&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

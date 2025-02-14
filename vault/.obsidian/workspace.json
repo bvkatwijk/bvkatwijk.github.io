@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "3b00302d792b8f7a",
+        "id": "defbe5201bc0ddea",
         "type": "tabs",
         "children": [
           {
-            "id": "18d6214aead5b73e",
+            "id": "60ddc60c02753ae1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Work/Ideas.md",
+                "file": "Blog/Build Pipeline Quality.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Ideas"
+              "title": "Build Pipeline Quality"
             }
           }
         ]
@@ -50,7 +50,8 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "alphabetical",
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -83,8 +84,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -173,11 +173,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "18d6214aead5b73e",
+  "active": "60ddc60c02753ae1",
   "lastOpenFiles": [
-    "Blog/Ads on your Blog site.md",
-    "Blog/Java - Json Unit Testing.md",
+    "Blog/HTMX and Bootstrap.md",
+    "Blog/j2html.md",
+    "Blog/Google AdSense.md",
     "Work/Ideas.md",
+    "Blog/Java - Json Unit Testing.md",
     "Blog/Hugo.md",
     "Blog/Build Pipeline Quality.md",
     "Pages/Contact.md",
@@ -185,7 +187,6 @@
     "Work/TopDesk/TopDesk Exchange Sync.md",
     "Blog/Dev - Persistent Data Structures.md",
     "Blog/Dev - Intellij Hot Reload.md",
-    "Blog/Java - j2html.md",
     "Blog/Awaitility.md",
     "Blog/Security - Link Swapping.md",
     "Blog/Shell - Switch Statements.md",
@@ -201,7 +202,6 @@
     "Work/HeadFirst Group.md",
     "Work/HeadFirst Group/Untitled.md",
     "Work/HeadFirst Group",
-    "Blog/AI - The Brainmade Mark.md",
     "Pasted image 20241001210233.png",
     "Pasted image 20241001210151.png",
     "Pasted image 20241001210149.png",
