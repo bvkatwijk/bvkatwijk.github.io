@@ -37,10 +37,10 @@ cmdRun () {
 }
 
 cmdPublish () {
-    npx -y pagefind --site public
     rm -rf docs/*
     obsidian_to_hugo
     HUGO_ENV=production hugo --destination docs
+    npx -y pagefind --site docs
     echo -n "bvankatwijk.nl" > ./docs/CNAME
 }
 
