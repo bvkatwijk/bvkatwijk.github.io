@@ -6,8 +6,15 @@
     <description>Recent content in Pages on Boris van Katwijk</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 02 Feb 2025 10:06:06 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 05 Mar 2025 08:19:59 +0000</lastBuildDate>
     <atom:link href="https://bvkatwijk.github.io/pages/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Search</title>
+      <link>https://bvkatwijk.github.io/pages/search/</link>
+      <pubDate>Wed, 05 Mar 2025 08:10:34 +0000</pubDate>
+      <guid>https://bvkatwijk.github.io/pages/search/</guid>
+      <description>&lt;p&gt;Below you can search for content. Powered by &lt;a href=&#34;https://pagefind.app/&#34;&gt;pagefind&lt;/a&gt;&lt;/p&gt;&#xA;&lt;link href=&#34;https://bvkatwijk.github.io/pagefind/pagefind-ui.css&#34; rel=&#34;stylesheet&#34;&gt;&#xA;&lt;script src=&#34;https://bvkatwijk.github.io/pagefind/pagefind-ui.js&#34;&gt;&lt;/script&gt;&#xA;&lt;div id=&#34;search&#34;&gt;&lt;/div&gt;&#xA;&lt;script&gt;&#xA;    window.addEventListener(&#39;DOMContentLoaded&#39;, (event) =&gt; {&#xA;        new PagefindUI({ element: &#34;#search&#34;, showSubResults: true });&#xA;    });&#xA;&lt;/script&gt;</description>
+    </item>
     <item>
       <title>Contact</title>
       <link>https://bvkatwijk.github.io/pages/contact/</link>
