@@ -32,10 +32,12 @@ listBlogs() {
 
 cmdRun () {
     obsidian_to_hugo
+    npx -y pagefind --site public
     hugo server -D
 }
 
 cmdPublish () {
+    npx -y pagefind --site public
     rm -rf docs/*
     obsidian_to_hugo
     HUGO_ENV=production hugo --destination docs
