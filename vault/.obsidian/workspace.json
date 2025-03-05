@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Pages/Search.md",
+                "file": "Awesome Libraries.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Search"
+              "title": "Awesome Libraries"
             }
           }
         ]
@@ -175,8 +175,8 @@
   },
   "active": "5225edcede3b76f7",
   "lastOpenFiles": [
-    "Pages/Contact.md",
     "Pages/Search.md",
+    "Pages/Contact.md",
     "Awesome Libraries.md",
     "Markdown Util.md",
     "Pasted image 20250218171549.png",
