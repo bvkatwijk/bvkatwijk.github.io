@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Blog/Google AdSense.md",
+                "file": "Pages/Search.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Google AdSense"
+              "title": "Search"
             }
           }
         ]
@@ -175,24 +175,26 @@
   },
   "active": "5225edcede3b76f7",
   "lastOpenFiles": [
+    "Pages/Contact.md",
+    "Pages/Search.md",
+    "Awesome Libraries.md",
+    "Markdown Util.md",
+    "Pasted image 20250218171549.png",
+    "Microservice Latency.md",
+    "Blog/Hugo.md",
+    "Blog/Google AdSense.md",
     "Blog/HTMX and Bootstrap.md",
     "Blog/AWS Names and Identifiers.md",
     "Blog/Awaitility.md",
     "Blog/Build Pipeline Quality.md",
-    "Blog/Google AdSense.md",
     "Blog/Shell - Switch Statements.md",
     "Blog/Work - An impression of Software Engineering for Absolute Beginners.md",
     "Blog/j2html.md",
     "Blog/Dev - Intellij Hot Reload.md",
     "Work/HeadFirst Group/AWS CDK.md",
     "Blog/Concurrent Wiremock Stubs.md",
-    "Markdown Util.md",
-    "Microservice Latency.md",
-    "Pasted image 20250218171549.png",
     "Work/Ideas.md",
     "Blog/Java - Json Unit Testing.md",
-    "Blog/Hugo.md",
-    "Pages/Contact.md",
     "_index.md",
     "Work/TopDesk/TopDesk Exchange Sync.md",
     "Blog/Dev - Persistent Data Structures.md",
@@ -200,8 +202,6 @@
     "Blog/Java - Lenses.md",
     "Blog/Java - Unique Enum Field values.md",
     "Wiki/Lombok.md",
-    "Blog/Java - Lombok.md",
-    "Blog/Java - Error Return Types.md",
     "Work/HeadFirst Group",
     "Pasted image 20241001210233.png",
     "Pasted image 20241001210151.png",

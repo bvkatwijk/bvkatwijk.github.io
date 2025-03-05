@@ -1,8 +1,9 @@
 ---
 aliases: 
 tags: 
-date: 2025-02-18T16:13:57+00:00
-lastmod: 2025-02-18T16:14:00+00:00
+date: 2050-02-18T16:13:57+00:00
+lastmod: 2025-03-05T07:51:38+00:00
+draft: "true"
 ---
 I've worked in multiple situations where the microservices trend was booming - where many of the advantages boiled down to a bit of organisation and scoping. No mention of bounded contexts, language agnosticism, single service team ownership, or other possible justifications for choosing this direction.
 
@@ -14,6 +15,5 @@ people dont understand
 
 illustration of speed
 
-![[Pasted image 20250218171549.png]]
 
 Comparing a web request with a 
