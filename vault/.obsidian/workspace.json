@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "9db3519ac9d46d1f",
+        "id": "f169be02e6f0c009",
         "type": "tabs",
         "children": [
           {
-            "id": "5225edcede3b76f7",
+            "id": "ca3665452cc0358d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Awesome Libraries.md",
+                "file": "Blog/AWS Names and Identifiers.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Awesome Libraries"
+              "title": "AWS Names and Identifiers"
             }
           }
         ]
@@ -173,16 +173,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "5225edcede3b76f7",
+  "active": "ca3665452cc0358d",
   "lastOpenFiles": [
+    "Work/HeadFirst Group/AWS CDK.md",
+    "Awesome Libraries.md",
+    "Blog/Google AdSense.md",
     "Pages/Search.md",
     "Pages/Contact.md",
-    "Awesome Libraries.md",
     "Markdown Util.md",
     "Pasted image 20250218171549.png",
     "Microservice Latency.md",
     "Blog/Hugo.md",
-    "Blog/Google AdSense.md",
     "Blog/HTMX and Bootstrap.md",
     "Blog/AWS Names and Identifiers.md",
     "Blog/Awaitility.md",
@@ -191,7 +192,6 @@
     "Blog/Work - An impression of Software Engineering for Absolute Beginners.md",
     "Blog/j2html.md",
     "Blog/Dev - Intellij Hot Reload.md",
-    "Work/HeadFirst Group/AWS CDK.md",
     "Blog/Concurrent Wiremock Stubs.md",
     "Work/Ideas.md",
     "Blog/Java - Json Unit Testing.md",

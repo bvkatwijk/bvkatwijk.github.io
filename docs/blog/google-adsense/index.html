@@ -4,12 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>Combining htmx with Bootstrap | Boris van Katwijk</title>
+    <title>Ads on your Blog site | Boris van Katwijk</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="Using htmx with Bootstrap is mostly a seamless experience, but I&rsquo;ve encountered a few places where a bit of extra effort is needed to smooth everything out. Since I could not find a concise description of the required fix, I&rsquo;ve created this quick post to outline the issue and the remedy.
-Bootstrap
-Since I work mostly on business-to-business administrative web applications, I need to build many interfaces, yet a slick or custom styling is usually not the highest priority. We need a well rounded set of standard component that enables data presentation with clarity.
-So let&rsquo;s just pretend we still live in the &rsquo;10s and use Bootstrap. A benefit is that all the scraping-trained AI&rsquo;s are now all Bootstrap experts, meaning that stamping out entire dashboards is trivial.">
+    <meta name="description" content="For a side project I had to add some advertisements, and while I was at it, I also added Google Ads onto my blog. Not so much as to make money (I don&rsquo;t expect a lot of traffic here) but to learn how to do it in various environments. It can be a very useful skill if you are running a free website to cover hosting or if you want to provide this as a service to others.">
     <meta name="generator" content="Hugo 0.142.0">
     
     
@@ -33,37 +30,32 @@ So let&rsquo;s just pretend we still live in the &rsquo;10s and use Bootstrap. A
     
 
     
-      <link rel="canonical" href="https://bvkatwijk.github.io/blog/htmx-and-bootstrap/">
+      <link rel="canonical" href="https://bvkatwijk.github.io/blog/google-adsense/">
     
 
-    <meta property="og:url" content="https://bvkatwijk.github.io/blog/htmx-and-bootstrap/">
+    <meta property="og:url" content="https://bvkatwijk.github.io/blog/google-adsense/">
   <meta property="og:site_name" content="Boris van Katwijk">
-  <meta property="og:title" content="Combining htmx with Bootstrap">
-  <meta property="og:description" content="Using htmx with Bootstrap is mostly a seamless experience, but I’ve encountered a few places where a bit of extra effort is needed to smooth everything out. Since I could not find a concise description of the required fix, I’ve created this quick post to outline the issue and the remedy.
-Bootstrap Since I work mostly on business-to-business administrative web applications, I need to build many interfaces, yet a slick or custom styling is usually not the highest priority. We need a well rounded set of standard component that enables data presentation with clarity. So let’s just pretend we still live in the ’10s and use Bootstrap. A benefit is that all the scraping-trained AI’s are now all Bootstrap experts, meaning that stamping out entire dashboards is trivial.">
+  <meta property="og:title" content="Ads on your Blog site">
+  <meta property="og:description" content="For a side project I had to add some advertisements, and while I was at it, I also added Google Ads onto my blog. Not so much as to make money (I don’t expect a lot of traffic here) but to learn how to do it in various environments. It can be a very useful skill if you are running a free website to cover hosting or if you want to provide this as a service to others.">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="blog">
-    <meta property="article:published_time" content="2025-02-14T10:28:07+00:00">
-    <meta property="article:modified_time" content="2025-02-14T11:26:14+00:00">
-    <meta property="article:tag" content="Htmx">
-    <meta property="article:tag" content="Bootstrap">
-    <meta property="article:tag" content="Javascript">
+    <meta property="article:published_time" content="2025-02-08T13:34:32+00:00">
+    <meta property="article:modified_time" content="2025-03-05T11:00:10+00:00">
     <meta property="article:tag" content="Html">
-    <meta property="article:tag" content="Ui">
-    <meta property="article:tag" content="Ssr">
+    <meta property="article:tag" content="Hugo">
+    <meta property="article:tag" content="Monetization">
+    <meta property="article:tag" content="Advertisement">
 
-  <meta itemprop="name" content="Combining htmx with Bootstrap">
-  <meta itemprop="description" content="Using htmx with Bootstrap is mostly a seamless experience, but I’ve encountered a few places where a bit of extra effort is needed to smooth everything out. Since I could not find a concise description of the required fix, I’ve created this quick post to outline the issue and the remedy.
-Bootstrap Since I work mostly on business-to-business administrative web applications, I need to build many interfaces, yet a slick or custom styling is usually not the highest priority. We need a well rounded set of standard component that enables data presentation with clarity. So let’s just pretend we still live in the ’10s and use Bootstrap. A benefit is that all the scraping-trained AI’s are now all Bootstrap experts, meaning that stamping out entire dashboards is trivial.">
-  <meta itemprop="datePublished" content="2025-02-14T10:28:07+00:00">
-  <meta itemprop="dateModified" content="2025-02-14T11:26:14+00:00">
-  <meta itemprop="wordCount" content="346">
-  <meta itemprop="keywords" content="Htmx,Bootstrap,Javascript,Html,Ui,Ssr,Web">
+  <meta itemprop="name" content="Ads on your Blog site">
+  <meta itemprop="description" content="For a side project I had to add some advertisements, and while I was at it, I also added Google Ads onto my blog. Not so much as to make money (I don’t expect a lot of traffic here) but to learn how to do it in various environments. It can be a very useful skill if you are running a free website to cover hosting or if you want to provide this as a service to others.">
+  <meta itemprop="datePublished" content="2025-02-08T13:34:32+00:00">
+  <meta itemprop="dateModified" content="2025-03-05T11:00:10+00:00">
+  <meta itemprop="wordCount" content="509">
+  <meta itemprop="keywords" content="Html,Hugo,Monetization,Advertisement">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Combining htmx with Bootstrap">
-  <meta name="twitter:description" content="Using htmx with Bootstrap is mostly a seamless experience, but I’ve encountered a few places where a bit of extra effort is needed to smooth everything out. Since I could not find a concise description of the required fix, I’ve created this quick post to outline the issue and the remedy.
-Bootstrap Since I work mostly on business-to-business administrative web applications, I need to build many interfaces, yet a slick or custom styling is usually not the highest priority. We need a well rounded set of standard component that enables data presentation with clarity. So let’s just pretend we still live in the ’10s and use Bootstrap. A benefit is that all the scraping-trained AI’s are now all Bootstrap experts, meaning that stamping out entire dashboards is trivial.">
+  <meta name="twitter:title" content="Ads on your Blog site">
+  <meta name="twitter:description" content="For a side project I had to add some advertisements, and while I was at it, I also added Google Ads onto my blog. Not so much as to make money (I don’t expect a lot of traffic here) but to learn how to do it in various environments. It can be a very useful skill if you are running a free website to cover hosting or if you want to provide this as a service to others.">
 
       
     
@@ -79,7 +71,7 @@ Bootstrap Since I work mostly on business-to-business administrative web applica
   
   
   
-  <header class="cover bg-center" style="background-image: url('https://bvkatwijk.github.io/images/htmx-bs-tooltip.png');">
+  <header class="cover bg-center" style="background-image: url('https://bvkatwijk.github.io/images/ads.jpg');">
     <div class="bg-black-60">
       <nav class="pv3 ph3 ph4-ns" role="navigation">
   <div class="flex-l justify-between items-center center">
@@ -150,7 +142,7 @@ Bootstrap Since I work mostly on business-to-business administrative web applica
 
       <div class="tc-l pv6 ph3 ph4-ns">
         
-          <div class="f2 f1-l fw2 white-90 mb0 lh-title">Combining htmx with Bootstrap</div>
+          <div class="f2 f1-l fw2 white-90 mb0 lh-title">Ads on your Blog site</div>
           
         
       </div>
@@ -167,21 +159,21 @@ Bootstrap Since I work mostly on business-to-business administrative web applica
       <aside class="instapaper_ignoref b helvetica tracked ttu">
           
         Blogs
-      </aside><div id="sharing" class="mt3 ananke-socials"><a href="mailto:?&amp;body=https%3A%2F%2Fbvkatwijk.github.io%2Fblog%2Fhtmx-and-bootstrap%2F&amp;subject=Combining&#43;htmx&#43;with&#43;Bootstrap"
+      </aside><div id="sharing" class="mt3 ananke-socials"><a href="mailto:?&amp;body=https%3A%2F%2Fbvkatwijk.github.io%2Fblog%2Fgoogle-adsense%2F&amp;subject=Ads&#43;on&#43;your&#43;Blog&#43;site"
         class="ananke-social-link email no-underline"
         title="Share on Email" aria-label="Share on Email"
         target="_blank" rel="nofollow noopener noreferrer">
         <span class="icon">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. --><path d="M64 112c-8.8 0-16 7.2-16 16l0 22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1l0-22.1c0-8.8-7.2-16-16-16L64 112zM48 212.2L48 384c0 8.8 7.2 16 16 16l384 0c8.8 0 16-7.2 16-16l0-171.8L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64l384 0c35.3 0 64 28.7 64 64l0 256c0 35.3-28.7 64-64 64L64 448c-35.3 0-64-28.7-64-64L0 128z"/></svg>
                 
-              </span></a><a href="https://twitter.com/intent/tweet/?&amp;text=Using&#43;htmx&#43;with&#43;Bootstrap&#43;is&#43;mostly&#43;a&#43;seamless&#43;experience%2C&#43;but&#43;I%26amp%3Brsquo%3Bve&#43;encountered&#43;a&#43;few&#43;places&#43;where&#43;a&#43;bit&#43;of&#43;extra&#43;effort&#43;is&#43;needed&#43;to&#43;smooth&#43;everything&#43;out.&#43;Since&#43;I&#43;could&#43;not&#43;find&#43;a&#43;concise&#43;description&#43;of&#43;the&#43;required&#43;fix%2C&#43;I%26amp%3Brsquo%3Bve&#43;created&#43;this&#43;quick&#43;post&#43;to&#43;outline&#43;the&#43;issue&#43;and&#43;the&#43;remedy.%0ABootstrap&#43;Since&#43;I&#43;work&#43;mostly&#43;on&#43;business-to-business&#43;administrative&#43;web&#43;applications%2C&#43;I&#43;need&#43;to&#43;build&#43;many&#43;interfaces%2C&#43;yet&#43;a&#43;slick&#43;or&#43;custom&#43;styling&#43;is&#43;usually&#43;not&#43;the&#43;highest&#43;priority.&#43;We&#43;need&#43;a&#43;well&#43;rounded&#43;set&#43;of&#43;standard&#43;component&#43;that&#43;enables&#43;data&#43;presentation&#43;with&#43;clarity.&#43;So&#43;let%26amp%3Brsquo%3Bs&#43;just&#43;pretend&#43;we&#43;still&#43;live&#43;in&#43;the&#43;%26amp%3Brsquo%3B10s&#43;and&#43;use&#43;Bootstrap.&#43;A&#43;benefit&#43;is&#43;that&#43;all&#43;the&#43;scraping-trained&#43;AI%26amp%3Brsquo%3Bs&#43;are&#43;now&#43;all&#43;Bootstrap&#43;experts%2C&#43;meaning&#43;that&#43;stamping&#43;out&#43;entire&#43;dashboards&#43;is&#43;trivial.%0A&amp;url=https%3A%2F%2Fbvkatwijk.github.io%2Fblog%2Fhtmx-and-bootstrap%2F"
+              </span></a><a href="https://twitter.com/intent/tweet/?&amp;text=For&#43;a&#43;side&#43;project&#43;I&#43;had&#43;to&#43;add&#43;some&#43;advertisements%2C&#43;and&#43;while&#43;I&#43;was&#43;at&#43;it%2C&#43;I&#43;also&#43;added&#43;Google&#43;Ads&#43;onto&#43;my&#43;blog.&#43;Not&#43;so&#43;much&#43;as&#43;to&#43;make&#43;money&#43;%28I&#43;don%26amp%3Brsquo%3Bt&#43;expect&#43;a&#43;lot&#43;of&#43;traffic&#43;here%29&#43;but&#43;to&#43;learn&#43;how&#43;to&#43;do&#43;it&#43;in&#43;various&#43;environments.&#43;It&#43;can&#43;be&#43;a&#43;very&#43;useful&#43;skill&#43;if&#43;you&#43;are&#43;running&#43;a&#43;free&#43;website&#43;to&#43;cover&#43;hosting&#43;or&#43;if&#43;you&#43;want&#43;to&#43;provide&#43;this&#43;as&#43;a&#43;service&#43;to&#43;others.%0A&amp;url=https%3A%2F%2Fbvkatwijk.github.io%2Fblog%2Fgoogle-adsense%2F"
         class="ananke-social-link twitter no-underline"
         title="Share on Twitter" aria-label="Share on Twitter"
         target="_blank" rel="nofollow noopener noreferrer">
         <span class="icon">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. --><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
                 
-              </span></a><a href="https://www.linkedin.com/shareArticle?&amp;mini=true&amp;source=https%3A%2F%2Fbvkatwijk.github.io%2Fblog%2Fhtmx-and-bootstrap%2F&amp;summary=Using&#43;htmx&#43;with&#43;Bootstrap&#43;is&#43;mostly&#43;a&#43;seamless&#43;experience%2C&#43;but&#43;I%26amp%3Brsquo%3Bve&#43;encountered&#43;a&#43;few&#43;places&#43;where&#43;a&#43;bit&#43;of&#43;extra&#43;effort&#43;is&#43;needed&#43;to&#43;smooth&#43;everything&#43;out.&#43;Since&#43;I&#43;could&#43;not&#43;find&#43;a&#43;concise&#43;description&#43;of&#43;the&#43;required&#43;fix%2C&#43;I%26amp%3Brsquo%3Bve&#43;created&#43;this&#43;quick&#43;post&#43;to&#43;outline&#43;the&#43;issue&#43;and&#43;the&#43;remedy.%0ABootstrap&#43;Since&#43;I&#43;work&#43;mostly&#43;on&#43;business-to-business&#43;administrative&#43;web&#43;applications%2C&#43;I&#43;need&#43;to&#43;build&#43;many&#43;interfaces%2C&#43;yet&#43;a&#43;slick&#43;or&#43;custom&#43;styling&#43;is&#43;usually&#43;not&#43;the&#43;highest&#43;priority.&#43;We&#43;need&#43;a&#43;well&#43;rounded&#43;set&#43;of&#43;standard&#43;component&#43;that&#43;enables&#43;data&#43;presentation&#43;with&#43;clarity.&#43;So&#43;let%26amp%3Brsquo%3Bs&#43;just&#43;pretend&#43;we&#43;still&#43;live&#43;in&#43;the&#43;%26amp%3Brsquo%3B10s&#43;and&#43;use&#43;Bootstrap.&#43;A&#43;benefit&#43;is&#43;that&#43;all&#43;the&#43;scraping-trained&#43;AI%26amp%3Brsquo%3Bs&#43;are&#43;now&#43;all&#43;Bootstrap&#43;experts%2C&#43;meaning&#43;that&#43;stamping&#43;out&#43;entire&#43;dashboards&#43;is&#43;trivial.%0A&amp;title=Combining&#43;htmx&#43;with&#43;Bootstrap&amp;url=https%3A%2F%2Fbvkatwijk.github.io%2Fblog%2Fhtmx-and-bootstrap%2F"
+              </span></a><a href="https://www.linkedin.com/shareArticle?&amp;mini=true&amp;source=https%3A%2F%2Fbvkatwijk.github.io%2Fblog%2Fgoogle-adsense%2F&amp;summary=For&#43;a&#43;side&#43;project&#43;I&#43;had&#43;to&#43;add&#43;some&#43;advertisements%2C&#43;and&#43;while&#43;I&#43;was&#43;at&#43;it%2C&#43;I&#43;also&#43;added&#43;Google&#43;Ads&#43;onto&#43;my&#43;blog.&#43;Not&#43;so&#43;much&#43;as&#43;to&#43;make&#43;money&#43;%28I&#43;don%26amp%3Brsquo%3Bt&#43;expect&#43;a&#43;lot&#43;of&#43;traffic&#43;here%29&#43;but&#43;to&#43;learn&#43;how&#43;to&#43;do&#43;it&#43;in&#43;various&#43;environments.&#43;It&#43;can&#43;be&#43;a&#43;very&#43;useful&#43;skill&#43;if&#43;you&#43;are&#43;running&#43;a&#43;free&#43;website&#43;to&#43;cover&#43;hosting&#43;or&#43;if&#43;you&#43;want&#43;to&#43;provide&#43;this&#43;as&#43;a&#43;service&#43;to&#43;others.%0A&amp;title=Ads&#43;on&#43;your&#43;Blog&#43;site&amp;url=https%3A%2F%2Fbvkatwijk.github.io%2Fblog%2Fgoogle-adsense%2F"
         class="ananke-social-link linkedin no-underline"
         title="Share on LinkedIn" aria-label="Share on LinkedIn"
         target="_blank" rel="nofollow noopener noreferrer">
@@ -189,78 +181,52 @@ Bootstrap Since I work mostly on business-to-business administrative web applica
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. --><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
                 
               </span></a></div>
-<h1 class="f1 athelas mt3 mb1">Combining htmx with Bootstrap</h1>
+<h1 class="f1 athelas mt3 mb1">Ads on your Blog site</h1>
       
       
       
-      <time class="f6 mv4 dib tracked" datetime="2025-02-14T10:28:07Z">February 14, 2025</time>
+      <time class="f6 mv4 dib tracked" datetime="2025-02-08T13:34:32Z">February 8, 2025</time>
       
 
       
       
     </header>
-    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>Using <a href="http://htmx.org/">htmx</a> with <a href="https://getbootstrap.com/">Bootstrap</a> is mostly a seamless experience, but I&rsquo;ve encountered a few places where a bit of extra effort is needed to smooth everything out. Since I could not find a concise description of the required fix, I&rsquo;ve created this quick post to outline the issue and the remedy.</p>
-<h3 id="bootstrap">Bootstrap</h3>
-<p>Since I work mostly on business-to-business administrative web applications, I need to build many interfaces, yet a slick or custom styling is usually not the highest priority. We need a well rounded set of standard component that enables data presentation with clarity.
-So let&rsquo;s just pretend we still live in the &rsquo;10s and use <a href="https://getbootstrap.com/">Bootstrap</a>. A benefit is that all the scraping-trained AI&rsquo;s are now all Bootstrap experts, meaning that stamping out entire dashboards is trivial.</p>
-<h3 id="javascript-behaviour">Javascript behaviour</h3>
-<p>Some elements in Bootstrap require javascript to function properly. To help performance, it is up to the developer to trigger this when appropriate. Bootstrap uses <a href="https://floating-ui.com/">Floating UI</a> (Previously called popper.js)</p>
-<p>An example of this is when using tooltips, which need to be registered:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>document.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;DOMContentLoaded&#34;</span>, <span style="color:#66d9ef">function</span>() {
-</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">tooltipTriggerList</span> <span style="color:#f92672">=</span> [].<span style="color:#a6e22e">slice</span>
-</span></span><span style="display:flex;"><span>		.<span style="color:#a6e22e">call</span>(document.<span style="color:#a6e22e">querySelectorAll</span>(<span style="color:#e6db74">&#39;[data-bs-toggle=&#34;tooltip&#34;]&#39;</span>));
-</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">tooltipTriggerList</span>.<span style="color:#a6e22e">map</span>(<span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">tooltipTriggerEl</span>) {
-</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">bootstrap</span>.<span style="color:#a6e22e">Tooltip</span>(<span style="color:#a6e22e">tooltipTriggerEl</span>, {
-</span></span><span style="display:flex;"><span>			<span style="color:#a6e22e">boundary</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;window&#34;</span>
-</span></span><span style="display:flex;"><span>		});
-</span></span><span style="display:flex;"><span>	});
-</span></span><span style="display:flex;"><span>});
-</span></span></code></pre></div><h3 id="htmx">HTMX</h3>
-<p><a href="http://htmx.org/">htmx</a> is a tiny frontend framework, which may allow you to remove or omit the client-side stack entirely (I can now use <a href="https://bvkatwijk.github.io/blog/j2html/">j2html</a> instead). One of the main features of htmx is that it allows any element to issue <a href="https://en.wikipedia.org/wiki/Ajax_(programming)">AJAX</a> requests, and expects hypermedia back which it will swap in-place.</p>
-<p>This means that HTMX will cause UI elements to be added to the page dynamically, and in newer versions of Bootstrap, they will not be registered. This causes issues when javascript behaviour needs to be added using a listener.</p>
-<h3 id="register-dynamic-htmx-elements">Register Dynamic htmx Elements</h3>
-<p>So in addtion to triggering this logic at <code>DOMContentLoaded</code> , we also trigger it on <code>htmx:afterRequest</code>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">registerElements</span>() {
-</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">tooltipTriggerList</span> <span style="color:#f92672">=</span> [].<span style="color:#a6e22e">slice</span>
-</span></span><span style="display:flex;"><span>		.<span style="color:#a6e22e">call</span>(document.<span style="color:#a6e22e">querySelectorAll</span>(<span style="color:#e6db74">&#39;[data-bs-toggle=&#34;tooltip&#34;]&#39;</span>));
-</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">tooltipTriggerList</span>.<span style="color:#a6e22e">map</span>(<span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">tooltipTriggerEl</span>) {
-</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">bootstrap</span>.<span style="color:#a6e22e">Tooltip</span>(<span style="color:#a6e22e">tooltipTriggerEl</span>, {
-</span></span><span style="display:flex;"><span>			<span style="color:#a6e22e">boundary</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;window&#34;</span>
-</span></span><span style="display:flex;"><span>		});
-</span></span><span style="display:flex;"><span>	});
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>document.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;DOMContentLoaded&#34;</span>, <span style="color:#a6e22e">registerElements</span>);
-</span></span><span style="display:flex;"><span>document.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;htmx:afterRequest&#34;</span>, <span style="color:#a6e22e">registerElements</span>);
-</span></span></code></pre></div><p>You can add more initialisation to <code>registerElements</code> as needed when using more javascript-based elements from Bootstrap, for example Popovers.</p>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>For a side project I had to add some advertisements, and while I was at it, I also added Google Ads onto my blog. Not so much as to make money (I don&rsquo;t expect a lot of traffic here) but to learn how to do it in various environments. It can be a very useful skill if you are running a free website to cover hosting or if you want to provide this as a service to others.</p>
+<p>The process was quite easy. The work can be done within an hour, but there may be some waiting time until everything is verified on their end.</p>
+<h3 id="signing-up-for-adsense">Signing up for AdSense</h3>
+<p>First step is to <a href="https://www.google.com/adsense/login">log into AdSense</a> and register your website.</p>
+<h3 id="add-account-data-to-your-site">Add account data to your site</h3>
+<p>After you have done this, you need to place a bit of data on your site. Two values inside the <code>&lt;head&gt;</code> section of each page, and an <code>ads.txt</code> file hosted on your domain.</p>
+<p>A lot of documentation on the Google Adsense pages mentions <code>Ads.txt</code> instead of <code>ads.txt</code>. Using a capital letter <code>A</code> does not work! I have reported this and hope they will fix this confusing aspect of the documentation soon.</p>
+<p>Using a Hugo blog this is very easy to do, as each page is generated from a template. Since I am using the Ananke theme on my <a href="https://bvkatwijk.github.io/blog/hugo/">Hugo</a> blog, I can just edit <code>head-additions.html</code> to add the required html. The <code>ads.txt</code> file can be created inside the <code>static</code> directory.</p>
+<h3 id="add-display-ad-units">Add Display Ad Units</h3>
+<p>Next step is to create Ad Units, which are the actual ads you want to host on your site. I chose an ad at the end of each article (to minimize reading disruption) and an ad in the sidebar which you automatically scroll past. I doubt that this is a very profitable strategy, but that is not really my goal.</p>
+<p>The html snippets for these Display Ad Units should be added to your html. In the case of Hugo, placing it inside the template of a page means that it is inserted into each of your pages.</p>
+<h3 id="dynamic-ads">Dynamic Ads</h3>
+<p>You can also let google decide where to best place ads. Personally I found that the placements were too intrusive and I did not use this feature.</p>
+<h3 id="wait-for-review">Wait for review</h3>
+<p>A background process will review your website. It&rsquo;s likely that you&rsquo;ll see <code>Getting ready</code> on the Approval Status tab. I&rsquo;m waiting too, so I&rsquo;ll wrap up this article once it is done, be right back!</p>
+<h3 id="approved">Approved</h3>
+<p>After a day the status changed to <code>Approved</code>. I had some delay, probably due to the incorrect file name of the <code>ads.txt</code> file mentioned earlier.</p>
+<p>On navigating to the site, I noticed two ads where added on the indicated places. Success!</p>
+<h3 id="cookie-consent-pop-up">Cookie Consent Pop-Up</h3>
+<p>In the section <code>Privacy and Messaging</code>, you can set up GDPR compliancy to show user targeted ads. This could increase accuracy and revenue, but it also means that a cookie consent modal will pop up. Because I personally found this too intrusive for the user experience I disabled this option.</p>
 <ul class="pa0">
-  
-   <li class="list di">
-     <a href="/tags/htmx/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Htmx</a>
-   </li>
-  
-   <li class="list di">
-     <a href="/tags/bootstrap/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Bootstrap</a>
-   </li>
-  
-   <li class="list di">
-     <a href="/tags/javascript/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Javascript</a>
-   </li>
   
    <li class="list di">
      <a href="/tags/html/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Html</a>
    </li>
   
    <li class="list di">
-     <a href="/tags/ui/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Ui</a>
+     <a href="/tags/hugo/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Hugo</a>
    </li>
   
    <li class="list di">
-     <a href="/tags/ssr/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Ssr</a>
+     <a href="/tags/monetization/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Monetization</a>
    </li>
   
    <li class="list di">
-     <a href="/tags/web/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Web</a>
+     <a href="/tags/advertisement/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Advertisement</a>
    </li>
   
 </ul>
@@ -279,72 +245,7 @@ So let&rsquo;s just pretend we still live in the &rsquo;10s and use <a href="htt
       <div class="mt6 instapaper_ignoref">
         <div id="comments">
           
-            <link rel="stylesheet" href="/css/comments.css" />
-<script>
-    var id = "16";
-  
-    if (id)
-    {
-      let url = "https://github.com/bvkatwijk/bvkatwijk.github.io/issues/".concat(id);
-      let api_url = "https://api.github.com/repos/bvkatwijk/bvkatwijk.github.io/issues/".concat(id, "/comments");
-      
-      var commentsDiv = document.getElementById("comments");
-  
-      let xhr = new XMLHttpRequest();
-      xhr.responseType = "json";
-      xhr.open("GET", api_url);
-      xhr.setRequestHeader("Accept", "application/vnd.github.v3.html+json");
-      xhr.send();
-  
-      xhr.onload = function()
-      {
-        if (xhr.status != 200)
-        {
-          let errorText = document.createElement("p");
-          errorText.innerHTML = "<i>Comments for this post yet are not opened yet (or you have GitHub scripts disabled).</i>";
-          commentsDiv.appendChild(errorText);
-        }
-        else
-        {
-          let comments = xhr.response;
-  
-          let mainHeader = document.createElement("h2");
-          mainHeader.innerHTML = "Comments: ".concat(comments.length);
-          commentsDiv.appendChild(mainHeader);
-  
-          let issueLink = document.createElement("p");
-          issueLink.innerHTML = "<i>You can leave a comment using this <a href='".concat(url, "'>GitHub issue</a>.</i>");
-          commentsDiv.appendChild(issueLink);
-          
-          comments.forEach(function(comment)
-          {
-              let commentContent = document.createElement("div");
-              commentContent.setAttribute('class', 'gh-comment')
-              commentContent.innerHTML = "".concat(
-                  "<div class='gh-header'>",
-                    "<img src='", comment.user.avatar_url, "' />",
-                    "<div style='margin:auto 0;'>",
-                      "<b><a class='gh-username' href='", comment.user.html_url, "'>", comment.user.login, "</a></b>",
-                      " commented at <em>", new Date(comment.created_at), "</em>",
-                    "</div>",
-                  "</div>",
-                  "<div class='gh-body'>",
-                    comment.body_html,
-                  "</div>"
-              );
-              commentsDiv.appendChild(commentContent);
-          });
-        }
-      };
-  
-      xhr.onerror = function()
-      {
-        let errorText = document.createElement("p");
-        errorText.innerHTML = "<i>Some error loading comments.</i>";
-        commentsDiv.appendChild(errorText);
-      };
-    }
-  </script>
+            
           
         </div>
       
@@ -368,14 +269,6 @@ So let&rsquo;s just pretend we still live in the &rsquo;10s and use <a href="htt
 	    
 	     <li  class="mb2">
           <a href="/blog/security---link-swapping/">Link Swapping</a>
-        </li>
-	    
-	     <li  class="mb2">
-          <a href="/blog/google-adsense/">Ads on your Blog site</a>
-        </li>
-	    
-	     <li  class="mb2">
-          <a href="/blog/hugo/">Hugo</a>
         </li>
 	    
     </ul>

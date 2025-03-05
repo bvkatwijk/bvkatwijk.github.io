@@ -5,8 +5,8 @@ tags:
   - cdk
   - hash
   - identity
-date: 2025-03-05T07:28:32+00:00
-lastmod: 2025-03-05T07:43:02+00:00
+date: 2050-03-05T07:28:32+00:00
+lastmod: 2025-03-05T11:00:55+00:00
 draft: "true"
 ---
 [AWS CDK] allows you to develop your cloud setup using source code in a language of your choice. Resulting resources will be automatically set up and changed if necessary. While working in a medium-sized CDK project I encountered a few issues where resources could not be replaced by CloudFormation, and this post describes a workaround for this problem.
