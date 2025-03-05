@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "defbe5201bc0ddea",
+        "id": "9db3519ac9d46d1f",
         "type": "tabs",
         "children": [
           {
-            "id": "60ddc60c02753ae1",
+            "id": "5225edcede3b76f7",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Blog/Build Pipeline Quality.md",
+                "file": "Blog/Google AdSense.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Build Pipeline Quality"
+              "title": "Google AdSense"
             }
           }
         ]
@@ -173,34 +173,35 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "60ddc60c02753ae1",
+  "active": "5225edcede3b76f7",
   "lastOpenFiles": [
     "Blog/HTMX and Bootstrap.md",
-    "Blog/j2html.md",
+    "Blog/AWS Names and Identifiers.md",
+    "Blog/Awaitility.md",
+    "Blog/Build Pipeline Quality.md",
     "Blog/Google AdSense.md",
+    "Blog/Shell - Switch Statements.md",
+    "Blog/Work - An impression of Software Engineering for Absolute Beginners.md",
+    "Blog/j2html.md",
+    "Blog/Dev - Intellij Hot Reload.md",
+    "Work/HeadFirst Group/AWS CDK.md",
+    "Blog/Concurrent Wiremock Stubs.md",
+    "Markdown Util.md",
+    "Microservice Latency.md",
+    "Pasted image 20250218171549.png",
     "Work/Ideas.md",
     "Blog/Java - Json Unit Testing.md",
     "Blog/Hugo.md",
-    "Blog/Build Pipeline Quality.md",
     "Pages/Contact.md",
     "_index.md",
     "Work/TopDesk/TopDesk Exchange Sync.md",
     "Blog/Dev - Persistent Data Structures.md",
-    "Blog/Dev - Intellij Hot Reload.md",
-    "Blog/Awaitility.md",
     "Blog/Security - Link Swapping.md",
-    "Blog/Shell - Switch Statements.md",
     "Blog/Java - Lenses.md",
     "Blog/Java - Unique Enum Field values.md",
     "Wiki/Lombok.md",
     "Blog/Java - Lombok.md",
     "Blog/Java - Error Return Types.md",
-    "Blog/AWS - CDK Custom Logical Ids.md",
-    "Blog/Work - An impression of Software Engineering for Absolute Beginners.md",
-    "Work/HeadFirst Group/AWS CDK.md",
-    "Pages/Untitled.md",
-    "Work/HeadFirst Group.md",
-    "Work/HeadFirst Group/Untitled.md",
     "Work/HeadFirst Group",
     "Pasted image 20241001210233.png",
     "Pasted image 20241001210151.png",

@@ -6,7 +6,7 @@ tags:
   - monetization
   - advertisement
 date: 2025-02-08T13:34:32+00:00
-lastmod: 2025-02-14T11:24:20+00:00
+lastmod: 2025-02-25T09:29:50+00:00
 title: Ads on your Blog site
 featured_image: /images/ads.jpg
 draft: "true"
@@ -38,6 +38,5 @@ After a day the status changed to `Approved`. I had some delay, probably due to 
 On navigating to the site, I noticed two ads where added on the indicated places. Success!
 
 ### Cookie Consent Pop-Up
-An unfortunate consequence is that I now have to ask for consent to use cookies. I am trying to find a way to use a cookieless strategy, but I have not found out how to do this yet.
-
+In the section `Privacy and Messaging`, you can set up GDPR compliancy to show user targeted ads. This could increase accuracy and revenue, but it also means that a cookie consent modal will pop up. Because I personally found this too intrusive for the user experience I disabled this option.
 
