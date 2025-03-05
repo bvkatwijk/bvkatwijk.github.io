@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Blog/AWS Names and Identifiers.md",
+                "file": "Blog/Google AdSense.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "AWS Names and Identifiers"
+              "title": "Google AdSense"
             }
           }
         ]
@@ -175,6 +175,7 @@
   },
   "active": "ca3665452cc0358d",
   "lastOpenFiles": [
+    "Blog/AWS Names and Identifiers.md",
     "Work/HeadFirst Group/AWS CDK.md",
     "Awesome Libraries.md",
     "Blog/Google AdSense.md",
@@ -185,7 +186,6 @@
     "Microservice Latency.md",
     "Blog/Hugo.md",
     "Blog/HTMX and Bootstrap.md",
-    "Blog/AWS Names and Identifiers.md",
     "Blog/Awaitility.md",
     "Blog/Build Pipeline Quality.md",
     "Blog/Shell - Switch Statements.md",
