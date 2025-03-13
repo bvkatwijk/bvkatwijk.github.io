@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "f169be02e6f0c009",
+        "id": "7af15f8217522442",
         "type": "tabs",
         "children": [
           {
-            "id": "ca3665452cc0358d",
+            "id": "65b44cf70c8d6f60",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Blog/Google AdSense.md",
+                "file": "Blog/Java - Annotation Processor Testing.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Google AdSense"
+              "title": "Java - Annotation Processor Testing"
             }
           }
         ]
@@ -63,7 +63,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "contact",
+                "query": "Appendix",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -84,7 +84,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -173,12 +174,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ca3665452cc0358d",
+  "active": "65b44cf70c8d6f60",
   "lastOpenFiles": [
-    "Blog/AWS Names and Identifiers.md",
+    "Blog/AWS CDK Names and Identifiers.md",
+    "Blog/Java - Annotation Processor Testing.md",
+    "Blog/Google AdSense.md",
     "Work/HeadFirst Group/AWS CDK.md",
     "Awesome Libraries.md",
-    "Blog/Google AdSense.md",
     "Pages/Search.md",
     "Pages/Contact.md",
     "Markdown Util.md",
@@ -201,7 +203,6 @@
     "Blog/Security - Link Swapping.md",
     "Blog/Java - Lenses.md",
     "Blog/Java - Unique Enum Field values.md",
-    "Wiki/Lombok.md",
     "Work/HeadFirst Group",
     "Pasted image 20241001210233.png",
     "Pasted image 20241001210151.png",
