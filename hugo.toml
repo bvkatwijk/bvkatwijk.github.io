@@ -6,7 +6,6 @@ theme = 'ananke'
 [params.ananke.social.follow]
 new_window_icon = false
 networks = [
-    "twitter",
     "github",
   "linkedin",
   "stackoverflow"
@@ -17,12 +16,8 @@ icons = true
 sharetext = true
 networks = [
   "email",
-  "twitter",
   "linkedin"
 ]
-
-[params.ananke.social.twitter]
-username = "boris_katwijk"
 
 [params.ananke.social.github]
 username = "bvkatwijk"

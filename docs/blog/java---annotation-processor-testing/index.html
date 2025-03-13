@@ -18,7 +18,7 @@ In Java, Annotations allow compile-time metaprogramming, meaning that it allows 
     
 
     
-<link rel="stylesheet" href="/ananke/css/main.min.620dc94fff2f59025403afe2a886ebd695c6462d223c5e69aef5afee80911874.css" >
+<link rel="stylesheet" href="/ananke/css/main.min.cc33c29fca37433a0f50b3eab4cd905b7f873249d1495d9c2b60759798f69d75.css" >
 
 
 
@@ -110,14 +110,7 @@ Annotation Processing In Java, Annotations allow compile-time metaprogramming, m
           
         </ul>
       
-      <div class="ananke-socials"><a href="https://twitter.com/boris_katwijk" target="_blank" rel="noopener"
-        class="ananke-social-link link-transition twitter link dib z-999 pt3 pt0-l mr1"
-        title="follow on Twitter - Opens in a new window"
-        aria-label="follow on Twitter - Opens in a new window">
-      <span class="icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. --><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
-            
-          </span></a><a href="https://github.com/bvkatwijk/" target="_blank" rel="noopener"
+      <div class="ananke-socials"><a href="https://github.com/bvkatwijk/" target="_blank" rel="noopener"
         class="ananke-social-link link-transition github link dib z-999 pt3 pt0-l mr1"
         title="follow on GitHub - Opens in a new window"
         aria-label="follow on GitHub - Opens in a new window">
@@ -169,13 +162,6 @@ Annotation Processing In Java, Annotations allow compile-time metaprogramming, m
         target="_blank" rel="nofollow noopener noreferrer">
         <span class="icon">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. --><path d="M64 112c-8.8 0-16 7.2-16 16l0 22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1l0-22.1c0-8.8-7.2-16-16-16L64 112zM48 212.2L48 384c0 8.8 7.2 16 16 16l384 0c8.8 0 16-7.2 16-16l0-171.8L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64l384 0c35.3 0 64 28.7 64 64l0 256c0 35.3-28.7 64-64 64L64 448c-35.3 0-64-28.7-64-64L0 128z"/></svg>
-                
-              </span></a><a href="https://twitter.com/intent/tweet/?&amp;text=Creating&#43;an&#43;Annotation&#43;Processor&#43;means&#43;that&#43;you&#43;will&#43;likely&#43;also&#43;want&#43;to&#43;add&#43;tests%2C&#43;but&#43;this&#43;can&#43;be&#43;tricky&#43;since&#43;the&#43;runtime&#43;is&#43;the&#43;compilation&#43;process&#43;itself%2C&#43;meaning&#43;that&#43;you&#43;will&#43;have&#43;to&#43;invoke&#43;a&#43;compilation&#43;step&#43;during&#43;test&#43;execution.&#43;In&#43;this&#43;post&#43;I%26amp%3Brsquo%3Bd&#43;like&#43;to&#43;outline&#43;what&#43;you&#43;can&#43;do&#43;to&#43;ensure&#43;proper&#43;test&#43;coverage.%0AAnnotation&#43;Processing&#43;In&#43;Java%2C&#43;Annotations&#43;allow&#43;compile-time&#43;metaprogramming%2C&#43;meaning&#43;that&#43;it&#43;allows&#43;creating&#43;code&#43;based&#43;on&#43;other&#43;source&#43;code.&#43;I&#43;use&#43;this&#43;in&#43;Java&#43;-&#43;Lenses&#43;to&#43;create&#43;auxiliary&#43;classes&#43;for&#43;annotated&#43;records.&#43;These&#43;contain&#43;various&#43;instances&#43;and&#43;functions&#43;which&#43;need&#43;the&#43;type&#43;information&#43;of&#43;the&#43;annotated&#43;records%2C&#43;meaning&#43;that&#43;there&#43;is&#43;no&#43;way&#43;to&#43;this&#43;directly&#43;in&#43;the&#43;source&#43;code&#43;itself.%0A&amp;url=https%3A%2F%2Fbvkatwijk.github.io%2Fblog%2Fjava---annotation-processor-testing%2F"
-        class="ananke-social-link twitter no-underline"
-        title="Share on Twitter" aria-label="Share on Twitter"
-        target="_blank" rel="nofollow noopener noreferrer">
-        <span class="icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. --><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
                 
               </span></a><a href="https://www.linkedin.com/shareArticle?&amp;mini=true&amp;source=https%3A%2F%2Fbvkatwijk.github.io%2Fblog%2Fjava---annotation-processor-testing%2F&amp;summary=Creating&#43;an&#43;Annotation&#43;Processor&#43;means&#43;that&#43;you&#43;will&#43;likely&#43;also&#43;want&#43;to&#43;add&#43;tests%2C&#43;but&#43;this&#43;can&#43;be&#43;tricky&#43;since&#43;the&#43;runtime&#43;is&#43;the&#43;compilation&#43;process&#43;itself%2C&#43;meaning&#43;that&#43;you&#43;will&#43;have&#43;to&#43;invoke&#43;a&#43;compilation&#43;step&#43;during&#43;test&#43;execution.&#43;In&#43;this&#43;post&#43;I%26amp%3Brsquo%3Bd&#43;like&#43;to&#43;outline&#43;what&#43;you&#43;can&#43;do&#43;to&#43;ensure&#43;proper&#43;test&#43;coverage.%0AAnnotation&#43;Processing&#43;In&#43;Java%2C&#43;Annotations&#43;allow&#43;compile-time&#43;metaprogramming%2C&#43;meaning&#43;that&#43;it&#43;allows&#43;creating&#43;code&#43;based&#43;on&#43;other&#43;source&#43;code.&#43;I&#43;use&#43;this&#43;in&#43;Java&#43;-&#43;Lenses&#43;to&#43;create&#43;auxiliary&#43;classes&#43;for&#43;annotated&#43;records.&#43;These&#43;contain&#43;various&#43;instances&#43;and&#43;functions&#43;which&#43;need&#43;the&#43;type&#43;information&#43;of&#43;the&#43;annotated&#43;records%2C&#43;meaning&#43;that&#43;there&#43;is&#43;no&#43;way&#43;to&#43;this&#43;directly&#43;in&#43;the&#43;source&#43;code&#43;itself.%0A&amp;title=Annotation&#43;Processor&#43;Testing&amp;url=https%3A%2F%2Fbvkatwijk.github.io%2Fblog%2Fjava---annotation-processor-testing%2F"
         class="ananke-social-link linkedin no-underline"
@@ -391,14 +377,7 @@ and <code>testAnnotationProcessor</code>, or sometimes it is not used in the <co
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://bvkatwijk.github.io/" >
     &copy;  Boris van Katwijk 2025 
   </a>
-    <div><div class="ananke-socials"><a href="https://twitter.com/boris_katwijk" target="_blank" rel="noopener"
-        class="ananke-social-link link-transition twitter link dib z-999 pt3 pt0-l mr1"
-        title="follow on Twitter - Opens in a new window"
-        aria-label="follow on Twitter - Opens in a new window">
-      <span class="icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. --><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
-            
-          </span></a><a href="https://github.com/bvkatwijk/" target="_blank" rel="noopener"
+    <div><div class="ananke-socials"><a href="https://github.com/bvkatwijk/" target="_blank" rel="noopener"
         class="ananke-social-link link-transition github link dib z-999 pt3 pt0-l mr1"
         title="follow on GitHub - Opens in a new window"
         aria-label="follow on GitHub - Opens in a new window">
