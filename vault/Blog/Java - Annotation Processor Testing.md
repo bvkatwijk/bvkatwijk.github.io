@@ -5,7 +5,7 @@ tags:
   - annotations
   - test
 date: 2025-03-13T12:47:34+00:00
-lastmod: 2025-03-13T14:57:50+00:00
+lastmod: 2025-03-13T15:02:24+00:00
 title: Annotation Processor Testing
 featured_image: /images/annotations.png
 ---
@@ -104,6 +104,11 @@ void verifyOutput() {
 }  
 ```
 
+### Links
+- [compile-testing](https://mvnrepository.com/artifact/com.google.testing.compile/compile-testing)
+- [approvaltests](https://mvnrepository.com/artifact/com.approvaltests/approvaltests)
+- [java-lens](https://github.com/bvkatwijk/java-lens)
+
 ---
 
 ## Appendix
@@ -129,3 +134,5 @@ Compiler.javac()
         (Processor) lombokClaimingProcessor.getDeclaredConstructor().newInstance(),  
         lensProcessor)
 ```
+
+This strategy was outlined in [this issue](https://github.com/google/compile-testing/issues/329).
