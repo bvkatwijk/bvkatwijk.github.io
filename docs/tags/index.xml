@@ -6,8 +6,29 @@
     <description>Recent content in Tags on Boris van Katwijk</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 05 Mar 2025 11:03:16 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 13 Mar 2025 14:44:19 +0000</lastBuildDate>
     <atom:link href="https://bvkatwijk.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Annotations</title>
+      <link>https://bvkatwijk.github.io/tags/annotations/</link>
+      <pubDate>Thu, 13 Mar 2025 12:47:34 +0000</pubDate>
+      <guid>https://bvkatwijk.github.io/tags/annotations/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Java</title>
+      <link>https://bvkatwijk.github.io/tags/java/</link>
+      <pubDate>Thu, 13 Mar 2025 12:47:34 +0000</pubDate>
+      <guid>https://bvkatwijk.github.io/tags/java/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Test</title>
+      <link>https://bvkatwijk.github.io/tags/test/</link>
+      <pubDate>Thu, 13 Mar 2025 12:47:34 +0000</pubDate>
+      <guid>https://bvkatwijk.github.io/tags/test/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Advertisement</title>
       <link>https://bvkatwijk.github.io/tags/advertisement/</link>
@@ -86,24 +107,10 @@
       <description></description>
     </item>
     <item>
-      <title>Java</title>
-      <link>https://bvkatwijk.github.io/tags/java/</link>
-      <pubDate>Tue, 04 Feb 2025 16:19:25 +0000</pubDate>
-      <guid>https://bvkatwijk.github.io/tags/java/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Json</title>
       <link>https://bvkatwijk.github.io/tags/json/</link>
       <pubDate>Tue, 04 Feb 2025 16:19:25 +0000</pubDate>
       <guid>https://bvkatwijk.github.io/tags/json/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Test</title>
-      <link>https://bvkatwijk.github.io/tags/test/</link>
-      <pubDate>Tue, 04 Feb 2025 16:19:25 +0000</pubDate>
-      <guid>https://bvkatwijk.github.io/tags/test/</guid>
       <description></description>
     </item>
     <item>

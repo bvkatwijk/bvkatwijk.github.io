@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Annotation Processor Testing | Boris van Katwijk</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="Creating an Annotation Processor means that you will likely also add tests, but you can run into some issues since the runtime is the compilation process itself - meaning that you will have multiple options when it comes to testing. In this post I&rsquo;d like to outline what you can do to ensure proper test coverage.
+Annotation Processing
+In Java, Annotations allow compile-time metaprogramming, meaning that it allows creating code based on other source code. I use this in Java - Lenses to create auxiliary classes for annotated records. These contain various instances and functions which need the type information of the annotated records, meaning that there is no way to this directly in the source code itself.">
+    <meta name="generator" content="Hugo 0.142.0">
+    
+    
+    
+      <meta name="robots" content="index, follow">
+    
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.620dc94fff2f59025403afe2a886ebd695c6462d223c5e69aef5afee80911874.css" >
+
+
+
+    
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="https://bvkatwijk.github.io/blog/java---annotation-processor-testing/">
+    
+
+    <meta property="og:url" content="https://bvkatwijk.github.io/blog/java---annotation-processor-testing/">
+  <meta property="og:site_name" content="Boris van Katwijk">
+  <meta property="og:title" content="Annotation Processor Testing">
+  <meta property="og:description" content="Creating an Annotation Processor means that you will likely also add tests, but you can run into some issues since the runtime is the compilation process itself - meaning that you will have multiple options when it comes to testing. In this post I’d like to outline what you can do to ensure proper test coverage.
+Annotation Processing In Java, Annotations allow compile-time metaprogramming, meaning that it allows creating code based on other source code. I use this in Java - Lenses to create auxiliary classes for annotated records. These contain various instances and functions which need the type information of the annotated records, meaning that there is no way to this directly in the source code itself.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2025-03-13T12:47:34+00:00">
+    <meta property="article:modified_time" content="2025-03-13T14:44:19+00:00">
+    <meta property="article:tag" content="Java">
+    <meta property="article:tag" content="Annotations">
+    <meta property="article:tag" content="Test">
+
+  <meta itemprop="name" content="Annotation Processor Testing">
+  <meta itemprop="description" content="Creating an Annotation Processor means that you will likely also add tests, but you can run into some issues since the runtime is the compilation process itself - meaning that you will have multiple options when it comes to testing. In this post I’d like to outline what you can do to ensure proper test coverage.
+Annotation Processing In Java, Annotations allow compile-time metaprogramming, meaning that it allows creating code based on other source code. I use this in Java - Lenses to create auxiliary classes for annotated records. These contain various instances and functions which need the type information of the annotated records, meaning that there is no way to this directly in the source code itself.">
+  <meta itemprop="datePublished" content="2025-03-13T12:47:34+00:00">
+  <meta itemprop="dateModified" content="2025-03-13T14:44:19+00:00">
+  <meta itemprop="wordCount" content="608">
+  <meta itemprop="keywords" content="Java,Annotations,Test">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Annotation Processor Testing">
+  <meta name="twitter:description" content="Creating an Annotation Processor means that you will likely also add tests, but you can run into some issues since the runtime is the compilation process itself - meaning that you will have multiple options when it comes to testing. In this post I’d like to outline what you can do to ensure proper test coverage.
+Annotation Processing In Java, Annotations allow compile-time metaprogramming, meaning that it allows creating code based on other source code. I use this in Java - Lenses to create auxiliary classes for annotated records. These contain various instances and functions which need the type information of the annotated records, meaning that there is no way to this directly in the source code itself.">
+
+      
+    
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6756053174023051"
+     crossorigin="anonymous"></script>
+<meta name="google-adsense-account" content="ca-pub-6756053174023051">
+  </head><body class="ma0 avenir bg-near-white production">
+
+    
+   
+  
+
+  
+  
+  
+  <header class="cover bg-center" style="background-image: url('https://bvkatwijk.github.io/images/annotations.png');">
+    <div class="bg-black-60">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        Boris van Katwijk
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/cv" title="CV page">
+              CV
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/pages/contact/" title="Contact page">
+              Contact
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/pages/search/" title="Search page">
+              Search
+            </a>
+          </li>
+          
+        </ul>
+      
+      <div class="ananke-socials"><a href="https://twitter.com/boris_katwijk" target="_blank" rel="noopener"
+        class="ananke-social-link link-transition twitter link dib z-999 pt3 pt0-l mr1"
+        title="follow on Twitter - Opens in a new window"
+        aria-label="follow on Twitter - Opens in a new window">
+      <span class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. --><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+            
+          </span></a><a href="https://github.com/bvkatwijk/" target="_blank" rel="noopener"
+        class="ananke-social-link link-transition github link dib z-999 pt3 pt0-l mr1"
+        title="follow on GitHub - Opens in a new window"
+        aria-label="follow on GitHub - Opens in a new window">
+      <span class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. --><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+            
+          </span></a><a href="http://linkedin.com/in/bvankatwijk" target="_blank" rel="noopener"
+        class="ananke-social-link link-transition linkedin link dib z-999 pt3 pt0-l mr1"
+        title="follow on LinkedIn - Opens in a new window"
+        aria-label="follow on LinkedIn - Opens in a new window">
+      <span class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. --><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+            
+          </span></a><a href="https://stackoverflow.com/users/5722607" target="_blank" rel="noopener"
+        class="ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1"
+        title="follow on Stack Overflow - Opens in a new window"
+        aria-label="follow on Stack Overflow - Opens in a new window">
+      <span class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. --><path d="M290.7 311L95 269.7 86.8 309l195.7 41zm51-87L188.2 95.7l-25.5 30.8 153.5 128.3zm-31.2 39.7L129.2 179l-16.7 36.5L293.7 300zM262 32l-32 24 119.3 160.3 32-24zm20.5 328h-200v39.7h200zm39.7 80H42.7V320h-40v160h359.5V320h-40z"/></svg>
+            
+          </span></a></div>
+
+    </div>
+  </div>
+</nav>
+
+      <div class="tc-l pv6 ph3 ph4-ns">
+        
+          <div class="f2 f1-l fw2 white-90 mb0 lh-title">Annotation Processor Testing</div>
+          
+        
+      </div>
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Blogs
+      </aside><div id="sharing" class="mt3 ananke-socials"><a href="mailto:?&amp;body=https%3A%2F%2Fbvkatwijk.github.io%2Fblog%2Fjava---annotation-processor-testing%2F&amp;subject=Annotation&#43;Processor&#43;Testing"
+        class="ananke-social-link email no-underline"
+        title="Share on Email" aria-label="Share on Email"
+        target="_blank" rel="nofollow noopener noreferrer">
+        <span class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. --><path d="M64 112c-8.8 0-16 7.2-16 16l0 22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1l0-22.1c0-8.8-7.2-16-16-16L64 112zM48 212.2L48 384c0 8.8 7.2 16 16 16l384 0c8.8 0 16-7.2 16-16l0-171.8L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64l384 0c35.3 0 64 28.7 64 64l0 256c0 35.3-28.7 64-64 64L64 448c-35.3 0-64-28.7-64-64L0 128z"/></svg>
+                
+              </span></a><a href="https://twitter.com/intent/tweet/?&amp;text=Creating&#43;an&#43;Annotation&#43;Processor&#43;means&#43;that&#43;you&#43;will&#43;likely&#43;also&#43;add&#43;tests%2C&#43;but&#43;you&#43;can&#43;run&#43;into&#43;some&#43;issues&#43;since&#43;the&#43;runtime&#43;is&#43;the&#43;compilation&#43;process&#43;itself&#43;-&#43;meaning&#43;that&#43;you&#43;will&#43;have&#43;multiple&#43;options&#43;when&#43;it&#43;comes&#43;to&#43;testing.&#43;In&#43;this&#43;post&#43;I%26amp%3Brsquo%3Bd&#43;like&#43;to&#43;outline&#43;what&#43;you&#43;can&#43;do&#43;to&#43;ensure&#43;proper&#43;test&#43;coverage.%0AAnnotation&#43;Processing&#43;In&#43;Java%2C&#43;Annotations&#43;allow&#43;compile-time&#43;metaprogramming%2C&#43;meaning&#43;that&#43;it&#43;allows&#43;creating&#43;code&#43;based&#43;on&#43;other&#43;source&#43;code.&#43;I&#43;use&#43;this&#43;in&#43;Java&#43;-&#43;Lenses&#43;to&#43;create&#43;auxiliary&#43;classes&#43;for&#43;annotated&#43;records.&#43;These&#43;contain&#43;various&#43;instances&#43;and&#43;functions&#43;which&#43;need&#43;the&#43;type&#43;information&#43;of&#43;the&#43;annotated&#43;records%2C&#43;meaning&#43;that&#43;there&#43;is&#43;no&#43;way&#43;to&#43;this&#43;directly&#43;in&#43;the&#43;source&#43;code&#43;itself.%0A&amp;url=https%3A%2F%2Fbvkatwijk.github.io%2Fblog%2Fjava---annotation-processor-testing%2F"
+        class="ananke-social-link twitter no-underline"
+        title="Share on Twitter" aria-label="Share on Twitter"
+        target="_blank" rel="nofollow noopener noreferrer">
+        <span class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. --><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+                
+              </span></a><a href="https://www.linkedin.com/shareArticle?&amp;mini=true&amp;source=https%3A%2F%2Fbvkatwijk.github.io%2Fblog%2Fjava---annotation-processor-testing%2F&amp;summary=Creating&#43;an&#43;Annotation&#43;Processor&#43;means&#43;that&#43;you&#43;will&#43;likely&#43;also&#43;add&#43;tests%2C&#43;but&#43;you&#43;can&#43;run&#43;into&#43;some&#43;issues&#43;since&#43;the&#43;runtime&#43;is&#43;the&#43;compilation&#43;process&#43;itself&#43;-&#43;meaning&#43;that&#43;you&#43;will&#43;have&#43;multiple&#43;options&#43;when&#43;it&#43;comes&#43;to&#43;testing.&#43;In&#43;this&#43;post&#43;I%26amp%3Brsquo%3Bd&#43;like&#43;to&#43;outline&#43;what&#43;you&#43;can&#43;do&#43;to&#43;ensure&#43;proper&#43;test&#43;coverage.%0AAnnotation&#43;Processing&#43;In&#43;Java%2C&#43;Annotations&#43;allow&#43;compile-time&#43;metaprogramming%2C&#43;meaning&#43;that&#43;it&#43;allows&#43;creating&#43;code&#43;based&#43;on&#43;other&#43;source&#43;code.&#43;I&#43;use&#43;this&#43;in&#43;Java&#43;-&#43;Lenses&#43;to&#43;create&#43;auxiliary&#43;classes&#43;for&#43;annotated&#43;records.&#43;These&#43;contain&#43;various&#43;instances&#43;and&#43;functions&#43;which&#43;need&#43;the&#43;type&#43;information&#43;of&#43;the&#43;annotated&#43;records%2C&#43;meaning&#43;that&#43;there&#43;is&#43;no&#43;way&#43;to&#43;this&#43;directly&#43;in&#43;the&#43;source&#43;code&#43;itself.%0A&amp;title=Annotation&#43;Processor&#43;Testing&amp;url=https%3A%2F%2Fbvkatwijk.github.io%2Fblog%2Fjava---annotation-processor-testing%2F"
+        class="ananke-social-link linkedin no-underline"
+        title="Share on LinkedIn" aria-label="Share on LinkedIn"
+        target="_blank" rel="nofollow noopener noreferrer">
+        <span class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. --><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+                
+              </span></a></div>
+<h1 class="f1 athelas mt3 mb1">Annotation Processor Testing</h1>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2025-03-13T12:47:34Z">March 13, 2025</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>Creating an Annotation Processor means that you will likely also add tests, but you can run into some issues since the runtime is the compilation process itself - meaning that you will have multiple options when it comes to testing. In this post I&rsquo;d like to outline what you can do to ensure proper test coverage.</p>
+<h3 id="annotation-processing">Annotation Processing</h3>
+<p>In Java, Annotations allow compile-time metaprogramming, meaning that it allows creating code based on other source code. I use this in <a href="https://bvkatwijk.github.io/blog/java---lenses/">Java - Lenses</a> to create auxiliary classes for annotated records. These contain various instances and functions which need the type information of the annotated records, meaning that there is no way to this directly in the source code itself.</p>
+<h3 id="testing">Testing</h3>
+<p>Writing an annotation processor is done in Java, and we can use the testing tools that we are familiar with. But an important consideration is that we have various contexts in which our code can be tested. Aside from default vanilla unit tests on regular code:</p>
+<ul>
+<li>We want to run our annotation processor on actual source code and verify the output</li>
+<li>We want to run unit tests on logic that handles internal compilation types instantiated during the annotation processor process.</li>
+</ul>
+<h3 id="e2e-test">E2E Test</h3>
+<p>We can create an end-to-end test of our annotation processor by applying the following steps:</p>
+<ul>
+<li>Create a source file</li>
+<li>Invoke a compilation process with our annotation processor specified</li>
+<li>Validating the resulting created file(s)</li>
+</ul>
+<p>We do this by:</p>
+<ul>
+<li>Adding a source file under <code>src/test/resources</code> (or <code>src/test/java</code> if you want to also use it elsewhere)</li>
+<li>Add our project to the <code>testAnnotationProcessor</code> configuration</li>
+<li>Use Google&rsquo;s <a href="https://mvnrepository.com/artifact/com.google.testing.compile/compile-testing">compile-testing</a> to initialize a compilation process on the source file</li>
+<li>Compare the output using <a href="https://mvnrepository.com/artifact/com.approvaltests/approvaltests">Approval Testing</a></li>
+</ul>
+<p>The resulting test case looks like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Test</span>  
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@SneakyThrows</span>  
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">verifyOutput</span>() {  
+</span></span><span style="display:flex;"><span>    Compilation compile <span style="color:#f92672">=</span> Compiler.<span style="color:#a6e22e">javac</span>()  
+</span></span><span style="display:flex;"><span>        .<span style="color:#a6e22e">withProcessors</span>(<span style="color:#66d9ef">new</span> LensProcessor())
+</span></span><span style="display:flex;"><span>        .<span style="color:#a6e22e">compile</span>(load(<span style="color:#e6db74">&#34;nl/bvkatwijk/lens/example/Person.java&#34;</span>));  
+</span></span><span style="display:flex;"><span>    assertThat(compile).<span style="color:#a6e22e">succeeded</span>();  
+</span></span><span style="display:flex;"><span>    Approvals.<span style="color:#a6e22e">verify</span>(compile.<span style="color:#a6e22e">generatedSourceFiles</span>()  
+</span></span><span style="display:flex;"><span>        .<span style="color:#a6e22e">getFirst</span>()  
+</span></span><span style="display:flex;"><span>        .<span style="color:#a6e22e">getCharContent</span>(<span style="color:#66d9ef">true</span>)  
+</span></span><span style="display:flex;"><span>        .<span style="color:#a6e22e">toString</span>());  
+</span></span><span style="display:flex;"><span>}  
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@SneakyThrows</span>  
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">static</span> JavaFileObject <span style="color:#a6e22e">load</span>(String packagePath) {  
+</span></span><span style="display:flex;"><span>    Path path <span style="color:#f92672">=</span> Paths.<span style="color:#a6e22e">get</span>(<span style="color:#e6db74">&#34;src/test/java&#34;</span>, packagePath);  
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> JavaFileObjects.<span style="color:#a6e22e">forSourceString</span>(  
+</span></span><span style="display:flex;"><span>        packagePath.<span style="color:#a6e22e">replace</span>(<span style="color:#e6db74">&#39;/&#39;</span>, <span style="color:#e6db74">&#39;.&#39;</span>).<span style="color:#a6e22e">replace</span>(<span style="color:#e6db74">&#34;.java&#34;</span>, <span style="color:#e6db74">&#34;&#34;</span>),  
+</span></span><span style="display:flex;"><span>        Files.<span style="color:#a6e22e">readString</span>(path));  
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="unit-testing-on-compile-time-instances">Unit testing on compile-time instances</h3>
+<p>Since I also have intermediary logic during the annotation processing I would like to unit test it too. However, instantiating or mocking the values that result from such a process is both tedious and does not prove anything about the real process. So I would like to start annotation processing and capture the values I am interested in so that I can validate small pieces of logic.</p>
+<p>For example, I have a function to extract the name of the field parameter in a <code>record</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> String <span style="color:#a6e22e">fieldName</span>(RecordComponentElement it) {  
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> it.<span style="color:#a6e22e">getSimpleName</span>().<span style="color:#a6e22e">toString</span>();  
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><code>RecordComponentElement</code> is an instance created during the annotation processing. I capture these during annotation processing:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Getter</span>  
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@SupportedSourceVersion</span>(SourceVersion.<span style="color:#a6e22e">RELEASE_23</span>)  
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@SupportedAnnotationTypes</span>(Const.<span style="color:#a6e22e">LENS_ANNOTATION_QUALIFIED</span>)  
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">LensProcessor</span> <span style="color:#66d9ef">extends</span> AbstractProcessor {  
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@NonFinal</span>  
+</span></span><span style="display:flex;"><span>    List<span style="color:#f92672">&lt;</span>RecordComponentElement<span style="color:#f92672">&gt;</span> elements <span style="color:#f92672">=</span> List.<span style="color:#a6e22e">of</span>();
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">@Override</span>  
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">@SneakyThrows</span>  
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">process</span>(Set<span style="color:#f92672">&lt;?</span> <span style="color:#66d9ef">extends</span> TypeElement<span style="color:#f92672">&gt;</span> annotations, RoundEnvironment roundEnv) {
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">// ...</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">elements</span> <span style="color:#f92672">=</span> elements.<span style="color:#a6e22e">appendAll</span>(elements);
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">// ...</span>
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>This way, we can call our function under test using the resulting values inside the processor field:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Test</span>  
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@SneakyThrows</span>  
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">verifyOutput</span>() {  
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">var</span> lensProcessor <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> LensProcessor();
+</span></span><span style="display:flex;"><span>    Compilation compile <span style="color:#f92672">=</span> Compiler.<span style="color:#a6e22e">javac</span>()  
+</span></span><span style="display:flex;"><span>        .<span style="color:#a6e22e">withProcessors</span>(lensProcessor)
+</span></span><span style="display:flex;"><span>        .<span style="color:#a6e22e">compile</span>(load(<span style="color:#e6db74">&#34;nl/bvkatwijk/lens/example/Person.java&#34;</span>));  
+</span></span><span style="display:flex;"><span>    assertThat(compile).<span style="color:#a6e22e">succeeded</span>();  
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> element <span style="color:#f92672">=</span> lensProcessor.<span style="color:#a6e22e">elements</span>().<span style="color:#a6e22e">head</span>();
+</span></span><span style="display:flex;"><span>    assertEquals(<span style="color:#e6db74">&#34;street&#34;</span>, ElementOps.<span style="color:#a6e22e">fieldName</span>(STRING_STREET));  
+</span></span><span style="display:flex;"><span>}  
+</span></span></code></pre></div><hr>
+<h2 id="appendix">Appendix</h2>
+<h3 id="add-lombok-to-the-compilation-process">Add Lombok to the compilation process</h3>
+<p>In my case, I use <code>Lombok</code> in the source code that I want to compile, meaning that I also have to supply <code>Lombok</code> to the compile process. This is done by adding Lombok to the <code>testImplementation</code> configuration. Normally <code>Lombok</code> only requires <code>testCompileOnly</code>
+and <code>testAnnotationProcessor</code>, or sometimes it is not used in the <code>test</code> configurations at all.</p>
+<p>We then load their annotation processors dynamically since they are hidden from us:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> lombokAnnotationProcessor <span style="color:#f92672">=</span> getClass().<span style="color:#a6e22e">getClassLoader</span>().<span style="color:#a6e22e">loadClass</span>(<span style="color:#e6db74">&#34;lombok.launch.AnnotationProcessorHider$AnnotationProcessor&#34;</span>);  
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> lombokClaimingProcessor <span style="color:#f92672">=</span> getClass().<span style="color:#a6e22e">getClassLoader</span>().<span style="color:#a6e22e">loadClass</span>(<span style="color:#e6db74">&#34;lombok.launch.AnnotationProcessorHider$ClaimingProcessor&#34;</span>);
+</span></span></code></pre></div><p>And hook them into the compilation process:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>Compiler.<span style="color:#a6e22e">javac</span>()  
+</span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">withProcessors</span>(  
+</span></span><span style="display:flex;"><span>        (Processor) lombokAnnotationProcessor.<span style="color:#a6e22e">getDeclaredConstructor</span>().<span style="color:#a6e22e">newInstance</span>(),  
+</span></span><span style="display:flex;"><span>        (Processor) lombokClaimingProcessor.<span style="color:#a6e22e">getDeclaredConstructor</span>().<span style="color:#a6e22e">newInstance</span>(),  
+</span></span><span style="display:flex;"><span>        lensProcessor)
+</span></span></code></pre></div><ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/java/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Java</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/annotations/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Annotations</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/test/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Test</a>
+   </li>
+  
+</ul>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6756053174023051"
+     crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-6756053174023051"
+     data-ad-slot="6820244581"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+      <div class="mt6 instapaper_ignoref">
+        <div id="comments">
+          
+            
+          
+        </div>
+      
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/blog/java---json-unit-testing/">Json Unit Testing</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/blog/awaitility/">Awaitility</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/blog/java---unique-enum-field-values/">Java - Unique Enum Field values</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/blog/j2html/">j2html</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/blog/java---lenses/">Lenses</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/blog/java---error-return-types/">Java - Error Return Types</a>
+        </li>
+	    
+    </ul>
+</div>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6756053174023051"
+     crossorigin="anonymous"></script>
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-6756053174023051"
+     data-ad-slot="1073093886"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+    </aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://bvkatwijk.github.io/" >
+    &copy;  Boris van Katwijk 2025 
+  </a>
+    <div><div class="ananke-socials"><a href="https://twitter.com/boris_katwijk" target="_blank" rel="noopener"
+        class="ananke-social-link link-transition twitter link dib z-999 pt3 pt0-l mr1"
+        title="follow on Twitter - Opens in a new window"
+        aria-label="follow on Twitter - Opens in a new window">
+      <span class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. --><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+            
+          </span></a><a href="https://github.com/bvkatwijk/" target="_blank" rel="noopener"
+        class="ananke-social-link link-transition github link dib z-999 pt3 pt0-l mr1"
+        title="follow on GitHub - Opens in a new window"
+        aria-label="follow on GitHub - Opens in a new window">
+      <span class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. --><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+            
+          </span></a><a href="http://linkedin.com/in/bvankatwijk" target="_blank" rel="noopener"
+        class="ananke-social-link link-transition linkedin link dib z-999 pt3 pt0-l mr1"
+        title="follow on LinkedIn - Opens in a new window"
+        aria-label="follow on LinkedIn - Opens in a new window">
+      <span class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. --><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+            
+          </span></a><a href="https://stackoverflow.com/users/5722607" target="_blank" rel="noopener"
+        class="ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1"
+        title="follow on Stack Overflow - Opens in a new window"
+        aria-label="follow on Stack Overflow - Opens in a new window">
+      <span class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. --><path d="M290.7 311L95 269.7 86.8 309l195.7 41zm51-87L188.2 95.7l-25.5 30.8 153.5 128.3zm-31.2 39.7L129.2 179l-16.7 36.5L293.7 300zM262 32l-32 24 119.3 160.3 32-24zm20.5 328h-200v39.7h200zm39.7 80H42.7V320h-40v160h359.5V320h-40z"/></svg>
+            
+          </span></a></div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>
