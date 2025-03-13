@@ -5,8 +5,9 @@ tags:
   - annotations
   - test
 date: 2025-03-13T12:47:34+00:00
-lastmod: 2025-03-13T14:35:43+00:00
+lastmod: 2025-03-13T14:44:19+00:00
 title: Annotation Processor Testing
+featured_image: /images/annotations.png
 ---
 Creating an Annotation Processor means that you will likely also add tests, but you can run into some issues since the runtime is the compilation process itself - meaning that you will have multiple options when it comes to testing. In this post I'd like to outline what you can do to ensure proper test coverage.
 
