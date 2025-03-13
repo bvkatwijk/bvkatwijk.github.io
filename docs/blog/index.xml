@@ -6,14 +6,14 @@
     <description>Recent content in Blogs on Boris van Katwijk</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 13 Mar 2025 14:44:19 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 13 Mar 2025 14:57:50 +0000</lastBuildDate>
     <atom:link href="https://bvkatwijk.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Annotation Processor Testing</title>
       <link>https://bvkatwijk.github.io/blog/java---annotation-processor-testing/</link>
       <pubDate>Thu, 13 Mar 2025 12:47:34 +0000</pubDate>
       <guid>https://bvkatwijk.github.io/blog/java---annotation-processor-testing/</guid>
-      <description>&lt;p&gt;Creating an Annotation Processor means that you will likely also add tests, but you can run into some issues since the runtime is the compilation process itself - meaning that you will have multiple options when it comes to testing. In this post I&amp;rsquo;d like to outline what you can do to ensure proper test coverage.&lt;/p&gt;&#xA;&lt;h3 id=&#34;annotation-processing&#34;&gt;Annotation Processing&lt;/h3&gt;&#xA;&lt;p&gt;In Java, Annotations allow compile-time metaprogramming, meaning that it allows creating code based on other source code. I use this in &lt;a href=&#34;https://bvkatwijk.github.io/blog/java---lenses/&#34;&gt;Java - Lenses&lt;/a&gt; to create auxiliary classes for annotated records. These contain various instances and functions which need the type information of the annotated records, meaning that there is no way to this directly in the source code itself.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Creating an Annotation Processor means that you will likely also want to add tests, but this can be tricky since the runtime is the compilation process itself, meaning that you will have to invoke a compilation step during test execution. In this post I&amp;rsquo;d like to outline what you can do to ensure proper test coverage.&lt;/p&gt;&#xA;&lt;h3 id=&#34;annotation-processing&#34;&gt;Annotation Processing&lt;/h3&gt;&#xA;&lt;p&gt;In Java, Annotations allow compile-time metaprogramming, meaning that it allows creating code based on other source code. I use this in &lt;a href=&#34;https://bvkatwijk.github.io/blog/java---lenses/&#34;&gt;Java - Lenses&lt;/a&gt; to create auxiliary classes for annotated records. These contain various instances and functions which need the type information of the annotated records, meaning that there is no way to this directly in the source code itself.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ads on your Blog site</title>

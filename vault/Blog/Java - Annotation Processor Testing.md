@@ -5,11 +5,11 @@ tags:
   - annotations
   - test
 date: 2025-03-13T12:47:34+00:00
-lastmod: 2025-03-13T14:44:19+00:00
+lastmod: 2025-03-13T14:57:50+00:00
 title: Annotation Processor Testing
 featured_image: /images/annotations.png
 ---
-Creating an Annotation Processor means that you will likely also add tests, but you can run into some issues since the runtime is the compilation process itself - meaning that you will have multiple options when it comes to testing. In this post I'd like to outline what you can do to ensure proper test coverage.
+Creating an Annotation Processor means that you will likely also want to add tests, but this can be tricky since the runtime is the compilation process itself, meaning that you will have to invoke a compilation step during test execution. In this post I'd like to outline what you can do to ensure proper test coverage.
 
 ### Annotation Processing
 In Java, Annotations allow compile-time metaprogramming, meaning that it allows creating code based on other source code. I use this in [[Java - Lenses]] to create auxiliary classes for annotated records. These contain various instances and functions which need the type information of the annotated records, meaning that there is no way to this directly in the source code itself.
