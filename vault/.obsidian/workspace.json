@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Blog/LinkedIn - Interview Fail.md",
+                "file": "Blog/Rails - ERB Partials.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "LinkedIn - Interview Fail"
+              "title": "Rails - ERB Partials"
             }
           }
         ]
@@ -176,8 +176,11 @@
   },
   "active": "609b24960c983ac8",
   "lastOpenFiles": [
-    "Blog/Build Pipeline Quality.md",
+    "Blog/Java - Lenses.md",
+    "Blog/Rails - ERB Partials.md",
+    "Blog/Shell - Switch Statements.md",
     "Blog/LinkedIn - Interview Fail.md",
+    "Blog/Build Pipeline Quality.md",
     "Blog/Hugo.md",
     "Blog/HTMX and Bootstrap.md",
     "Blog/Google AdSense.md",
@@ -195,14 +198,11 @@
     "Pasted image 20250218171549.png",
     "Microservice Latency.md",
     "Blog/Awaitility.md",
-    "Blog/Shell - Switch Statements.md",
     "Blog/j2html.md",
     "Blog/Dev - Intellij Hot Reload.md",
     "Blog/Concurrent Wiremock Stubs.md",
     "Work/Ideas.md",
     "Blog/Java - Json Unit Testing.md",
-    "_index.md",
-    "Work/TopDesk/TopDesk Exchange Sync.md",
     "Work/HeadFirst Group",
     "Pasted image 20241001210233.png",
     "Pasted image 20241001210151.png",
