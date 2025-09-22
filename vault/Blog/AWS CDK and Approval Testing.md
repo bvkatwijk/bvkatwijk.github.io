@@ -53,9 +53,7 @@ class ApplicationTest {
 
 ## Parametrized Testing
 
-If you want to automatically test all your stacks, you can use Parametrized Testing. 
-
-First we rewrite our `Application` to provide a way to output all `Stack`s that we create:
+It is nice to not burden developers with having to set this up each time. It would be nice if Approval Testing is automatically enabled for all stacks created in our application. To achieve this, first we rewrite our `Application` to provide a way to output all `Stack`s that we create:
 
 ```java
 public class Application {

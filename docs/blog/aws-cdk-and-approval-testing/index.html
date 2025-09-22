@@ -59,7 +59,7 @@ Examples here will use Java, but the principles work in any language, and approp
 Approval Testing With Approval Tests, you take a snapshot of the output of your code, and verify that this output is consistent with earlier results. If the output has not changed, the test passes. The expected output is not expressed in source code but stored as data in a file. This is also shown in the example on Approvals:">
   <meta itemprop="datePublished" content="2025-09-22T14:41:38+00:00">
   <meta itemprop="dateModified" content="2025-09-22T14:41:46+00:00">
-  <meta itemprop="wordCount" content="495">
+  <meta itemprop="wordCount" content="516">
   <meta itemprop="keywords" content="Aws,Cdk,Java,Test,Dx">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Boris van Katwijk">
@@ -213,9 +213,8 @@ Approval Testing With Approval Tests, you take a snapshot of the output of your 
 </span></span><span style="display:flex;"><span>		Approvals.<span style="color:#a6e22e">verify</span>(Template.<span style="color:#a6e22e">fromStack</span>(<span style="color:#66d9ef">new</span> MyStack(<span style="color:#66d9ef">new</span> App()));
 </span></span><span style="display:flex;"><span>	}
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h2 id="full-testing">Full Testing</h2>
-<p>If you want to automatically test all your stacks, you can use Parametrized Testing.</p>
-<p>First we rewrite our <code>Application</code> to provide a way to output all <code>Stack</code>s that we create:</p>
+</span></span></code></pre></div><h2 id="parametrized-testing">Parametrized Testing</h2>
+<p>It is nice to not burden developers with having to set this up each time. It would be nice if Approval Testing is automatically enabled for all stacks created in our application. To achieve this, first we rewrite our <code>Application</code> to provide a way to output all <code>Stack</code>s that we create:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Application</span> {
 </span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) {
 </span></span><span style="display:flex;"><span>		createStacks();
@@ -248,8 +247,8 @@ Approval Testing With Approval Tests, you take a snapshot of the output of your 
 </span></span></code></pre></div><p>Each <code>Stack</code> in the <code>List</code> will individually be checked for changes. If anything changes, you will get a popup with the <code>diff</code>, with the ability to accept changes.</p>
 <h2 id="conclusion">Conclusion</h2>
 <ul>
-<li>Classic unit testing on CDK code has its limitations, since many changes are not easily tested at synthesis time</li>
-<li>Approval Testing can notify you when outputs change, which is especially useful during refactoring</li>
+<li>Classic unit testing on CDK code has its limitations, since many changes are not easily tested at synthesis time.</li>
+<li>Approval Testing can notify you when outputs change, which is especially useful during refactoring.</li>
 <li>Using Parametrized Tests, you can automatically test all stacks present in your application without any extra effort.</li>
 </ul>
 <ul class="pa0">
