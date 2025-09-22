@@ -9,9 +9,11 @@ tags:
 date: 2025-09-22T14:41:38+00:00
 lastmod: 2025-09-22T14:41:46+00:00
 ---
-With [AWS CDK], you can practice infrastructure-as-code using your programming language of choice. Since this code is setting up cloud infrastructure, many classical unit testing approaches are not feasible. Adding Approval Testing to your project can increase confidence and safety.
+With [AWS CDK](https://github.com/aws/aws-cdk), you can practice infrastructure-as-code using your programming language of choice. Since this code is setting up cloud infrastructure, many classical unit testing approaches are not feasible. Adding Approval Testing to your project can increase confidence and safety.
 
-### Approval Testing
+Examples here will use Java, but the principles work in any language, and [appropriate libraries](https://approvaltests.com/) are available.
+
+## Approval Testing
 
 With Approval Tests, you take a snapshot of the output of your code, and verify that this output is consistent with earlier results. If the output has not changed, the test passes. The expected output is not expressed in source code but stored as data in a file. This is also shown in the example on [Approvals](https://approvaltests.com/):
 
@@ -34,7 +36,7 @@ public class Application {
 }
 ```
 
-This will result in a template for `MyStack`, which can be deployed using `cdk`.
+This will result in a template for `MyStack`, which can be deployed using `cdk`. To disambiguate the different stages of deployment, we call the runtime of this `Application` code **synthesis time**, while **deployment time** is when these templates are actually supplied to CloudFormation. 
 
 ## Template Approval
 
@@ -93,7 +95,7 @@ class ApplicationTest {
 
 Each `Stack` in the `List` will individually be checked for changes. If anything changes, you will get a popup with the `diff`, with the ability to accept changes.
 
-## Conclustion
+## Conclusion
 
 - Classic unit testing on CDK code has its limitations, since many changes are not easily tested at synthesis time
 - Approval Testing can notify you when outputs change, which is especially useful during refactoring

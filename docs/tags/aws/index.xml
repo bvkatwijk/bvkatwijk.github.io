@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Aws on Boris van Katwijk</title>
+    <link>https://bvkatwijk.github.io/tags/aws/</link>
+    <description>Recent content in Aws on Boris van Katwijk</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 22 Sep 2025 14:41:46 +0000</lastBuildDate>
+    <atom:link href="https://bvkatwijk.github.io/tags/aws/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://bvkatwijk.github.io/blog/aws-cdk-and-approval-testing/</link>
+      <pubDate>Mon, 22 Sep 2025 14:41:38 +0000</pubDate>
+      <guid>https://bvkatwijk.github.io/blog/aws-cdk-and-approval-testing/</guid>
+      <description>&lt;p&gt;With &lt;a href=&#34;https://github.com/aws/aws-cdk&#34;&gt;AWS CDK&lt;/a&gt;, you can practice infrastructure-as-code using your programming language of choice. Since this code is setting up cloud infrastructure, many classical unit testing approaches are not feasible. Adding Approval Testing to your project can increase confidence and safety.&lt;/p&gt;&#xA;&lt;p&gt;Examples here will use Java, but the principles work in any language, and &lt;a href=&#34;https://approvaltests.com/&#34;&gt;appropriate libraries&lt;/a&gt; are available.&lt;/p&gt;&#xA;&lt;h2 id=&#34;approval-testing&#34;&gt;Approval Testing&lt;/h2&gt;&#xA;&lt;p&gt;With Approval Tests, you take a snapshot of the output of your code, and verify that this output is consistent with earlier results. If the output has not changed, the test passes. The expected output is not expressed in source code but stored as data in a file. This is also shown in the example on &lt;a href=&#34;https://approvaltests.com/&#34;&gt;Approvals&lt;/a&gt;:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
