@@ -59,7 +59,7 @@ Examples here will use Java, but the principles work in any language, and approp
 Approval Testing With Approval Tests, you take a snapshot of the output of your code, and verify that this output is consistent with earlier results. If the output has not changed, the test passes. The expected output is not expressed in source code but stored as data in a file. This is also shown in the example on Approvals:">
   <meta itemprop="datePublished" content="2025-09-22T14:41:38+00:00">
   <meta itemprop="dateModified" content="2025-09-22T14:41:46+00:00">
-  <meta itemprop="wordCount" content="497">
+  <meta itemprop="wordCount" content="495">
   <meta itemprop="keywords" content="Aws,Cdk,Java,Test,Dx">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Boris van Katwijk">
@@ -81,7 +81,7 @@ Approval Testing With Approval Tests, you take a snapshot of the output of your 
   
   
   
-  <header class="cover bg-center" style="background-image: url('https://bvkatwijk.github.io/images/background.png');">
+  <header class="cover bg-center" style="background-image: url('https://bvkatwijk.github.io/images/cdk_diff2.png');">
     <div class="bg-black-60">
       <nav class="pv3 ph3 ph4-ns" role="navigation">
   <div class="flex-l justify-between items-center center">
@@ -196,13 +196,12 @@ Approval Testing With Approval Tests, you take a snapshot of the output of your 
 </blockquote>
 <p>If the output changes, you will get a test failure and the differences between the expected and actual result is shown.</p>
 <h2 id="cdk">CDK</h2>
-<p>When writing CDK code, you create a runnable <code>Application</code> that outputs CloudFormation Templates when run. A simple CDK project could start out like this:</p>
+<p>When writing CDK code, you create a runnable <code>Application</code> that outputs CloudFormation Templates when run. <a href="https://github.com/aws-samples/aws-cdk-examples/blob/main/java/backup-s3/src/main/java/com/myorg/BackupS3App.java">A simple CDK project</a> could start out like this:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Application</span> {
 </span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) {
 </span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">var</span> app <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> App();
 </span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">new</span> MyStack(app);
 </span></span><span style="display:flex;"><span>		app.<span style="color:#a6e22e">synth</span>();
-</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> stacks;
 </span></span><span style="display:flex;"><span>	}
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>This will result in a template for <code>MyStack</code>, which can be deployed using <code>cdk</code>. To disambiguate the different stages of deployment, we call the runtime of this <code>Application</code> code <strong>synthesis time</strong>, while <strong>deployment time</strong> is when these templates are actually supplied to CloudFormation.</p>

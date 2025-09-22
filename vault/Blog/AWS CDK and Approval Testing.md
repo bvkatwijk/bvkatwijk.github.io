@@ -8,6 +8,7 @@ tags:
   - dx
 date: 2025-09-22T14:41:38+00:00
 lastmod: 2025-09-22T14:41:46+00:00
+featured_image: /images/cdk_diff2.png
 ---
 With [AWS CDK](https://github.com/aws/aws-cdk), you can practice infrastructure-as-code using your programming language of choice. Since this code is setting up cloud infrastructure, many classical unit testing approaches are not feasible. Adding Approval Testing to your project can increase confidence and safety.
 
@@ -23,7 +24,7 @@ If the output changes, you will get a test failure and the differences between t
 
 ## CDK
 
-When writing CDK code, you create a runnable `Application` that outputs CloudFormation Templates when run. A simple CDK project could start out like this:
+When writing CDK code, you create a runnable `Application` that outputs CloudFormation Templates when run. [A simple CDK project](https://github.com/aws-samples/aws-cdk-examples/blob/main/java/backup-s3/src/main/java/com/myorg/BackupS3App.java) could start out like this:
 
 ```java
 public class Application {
@@ -31,7 +32,6 @@ public class Application {
 		var app = new App();
 		new MyStack(app);
 		app.synth();
-		return stacks;
 	}
 }
 ```

@@ -1,0 +1,22 @@
+"ScheduledRule": {
+  "Type": "AWS::Events::Rule",
+  "Properties": {
+    "Description": "ScheduledRule",
+    "ScheduleExpression": "rate(10 minutes)",
+    "State": "ENABLED",
+    "Targets": [
+      {
+        "Arn": {
+          "Fn::GetAtt": [
+            "myLambda",
+            "Arn"
+          ]
+        },
+        "Id": "TargetFunctionV1",
+        "Input": {
+          "mykey1": "Some Value"
+        }
+      }
+    ]
+  }
+}
