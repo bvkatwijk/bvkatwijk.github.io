@@ -7,3 +7,4 @@ themes/
 content/
 *.env
 !example.env
+.idea/
