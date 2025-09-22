@@ -11,10 +11,24 @@
             "id": "e296aca33271d265",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Blog/AWS CDK and Approval Testing.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "AWS CDK and Approval Testing"
             }
           }
         ]
@@ -162,6 +176,8 @@
   },
   "active": "e296aca33271d265",
   "lastOpenFiles": [
+    "Blog/AWS CDK Names and Identifiers.md",
+    "Blog/AWS CDK and Approval Testing.md",
     "Blog/Java - Lenses.md",
     "Blog/Rails - ERB Partials.md",
     "Blog/Shell - Switch Statements.md",
@@ -175,7 +191,6 @@
     "Blog/Work - An impression of Software Engineering for Absolute Beginners.md",
     "Blog/Java - Modern Habits.md",
     "Blog/Java - Annotation Processor Testing.md",
-    "Blog/AWS CDK Names and Identifiers.md",
     "Work/HeadFirst Group/AWS CDK.md",
     "Awesome Libraries.md",
     "Pages/Search.md",
@@ -188,7 +203,6 @@
     "Blog/Dev - Intellij Hot Reload.md",
     "Blog/Concurrent Wiremock Stubs.md",
     "Work/Ideas.md",
-    "Blog/Java - Json Unit Testing.md",
     "Work/HeadFirst Group",
     "Pasted image 20241001210233.png",
     "Pasted image 20241001210151.png",
