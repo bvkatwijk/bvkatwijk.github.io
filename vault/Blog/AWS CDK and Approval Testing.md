@@ -51,7 +51,7 @@ class ApplicationTest {
 }
 ```
 
-## Full Testing
+## Parametrized Testing
 
 If you want to automatically test all your stacks, you can use Parametrized Testing. 
 
@@ -97,6 +97,6 @@ Each `Stack` in the `List` will individually be checked for changes. If anything
 
 ## Conclusion
 
-- Classic unit testing on CDK code has its limitations, since many changes are not easily tested at synthesis time
-- Approval Testing can notify you when outputs change, which is especially useful during refactoring
+- Classic unit testing on CDK code has its limitations, since many changes are not easily tested at synthesis time.
+- Approval Testing can notify you when outputs change, which is especially useful during refactoring.
 - Using Parametrized Tests, you can automatically test all stacks present in your application without any extra effort.
