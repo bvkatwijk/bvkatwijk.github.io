@@ -30,8 +30,33 @@
               "icon": "lucide-file",
               "title": "AWS CDK and Approval Testing"
             }
+          },
+          {
+            "id": "36868449f50118df",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Blog/Dev - Persistent Data Structures.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Dev - Persistent Data Structures"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -63,7 +88,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "lead",
+                "query": "gradle",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -174,8 +199,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e296aca33271d265",
+  "active": "36868449f50118df",
   "lastOpenFiles": [
+    "Blog/Google AdSense.md",
+    "Blog/Hugo.md",
+    "Blog/j2html.md",
+    "Blog/Java - Valhalla.md",
+    "Work/HeadFirst Group.md",
+    "Work/Ideas.md",
     "Blog/Java - Annotation Processor Testing.md",
     "Blog/Java - Error Return Types.md",
     "Blog/AWS CDK and Approval Testing.md",
@@ -185,9 +216,7 @@
     "Blog/Shell - Switch Statements.md",
     "Blog/LinkedIn - Interview Fail.md",
     "Blog/Build Pipeline Quality.md",
-    "Blog/Hugo.md",
     "Blog/HTMX and Bootstrap.md",
-    "Blog/Google AdSense.md",
     "Blog/Dev - Persistent Data Structures.md",
     "Blog/Lessons From Development.md",
     "Blog/Work - An impression of Software Engineering for Absolute Beginners.md",
@@ -199,10 +228,6 @@
     "Markdown Util.md",
     "Pasted image 20250218171549.png",
     "Microservice Latency.md",
-    "Blog/Awaitility.md",
-    "Blog/j2html.md",
-    "Blog/Dev - Intellij Hot Reload.md",
-    "Blog/Concurrent Wiremock Stubs.md",
     "Work/HeadFirst Group",
     "Pasted image 20241001210233.png",
     "Pasted image 20241001210151.png",

@@ -1,6 +1,7 @@
 ---
-aliases: 
-tags: 
+aliases:
+tags:
+  - idea
 date: 2050-09-29T08:26:11+00:00
 lastmod: 2025-02-08T13:48:12+00:00
 ---
@@ -15,7 +16,6 @@ lastmod: 2025-02-08T13:48:12+00:00
 - Terrain Simulation with Perlin Noise
 - Infrastructure UI
 - Monoid in the category of endofunctors
-- Lichess' Thibault: the 138x developer
 - Stack vs Heap Memory
 - // Brainmade (NoBoilerplate)
 - graphviz on source code graph
