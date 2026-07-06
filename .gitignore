@@ -8,3 +8,4 @@ content/
 *.env
 !example.env
 .idea/
+vault/.obsidian/workspace.json
